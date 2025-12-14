@@ -1475,22 +1475,37 @@
             const baseUrl = window.location.href.replace(/\/[^\/]*$/, '/');
 
             try {
-                const response = await fetch(baseUrl);
-                const html = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const links = doc.querySelectorAll('a');
+                let jsonFiles = [];
 
-                const jsonFiles = [];
-                links.forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (href && href.endsWith('.json') && href.includes('wag_gold_scene')) {
-                        if (!href.includes('(1)') && !href.includes('test-')) {
-                            jsonFiles.push(href);
-                        }
+                // Try manifest first (GitHub Pages compatible)
+                try {
+                    const manifestResponse = await fetch(baseUrl + 'scenes_manifest.json');
+                    if (manifestResponse.ok) {
+                        jsonFiles = await manifestResponse.json();
+                        console.log('Loaded scenes from manifest');
+                    } else {
+                        throw new Error('No manifest');
                     }
-                });
+                } catch (e) {
+                    // Fallback to directory scraping (Localhost compatible)
+                    console.log('Manifest not found, falling back to directory scraping');
+                    const response = await fetch(baseUrl);
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const links = doc.querySelectorAll('a');
 
+                    links.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href && href.endsWith('.json') && href.includes('wag_gold_scene')) {
+                            if (!href.includes('(1)') && !href.includes('test-')) {
+                                jsonFiles.push(href);
+                            }
+                        }
+                    });
+                }
+
+                // Sort just in case the manifest isn't sorted
                 jsonFiles.sort((a, b) => extractDateFromFilename(a) - extractDateFromFilename(b));
 
                 for (const file of jsonFiles) {
@@ -1500,11 +1515,9 @@
 
                         // Check if corresponding PNG exists
                         const pngPath = baseUrl + file.replace('.json', '.png');
-                        const pngCheck = await fetch(pngPath, { method: 'HEAD' });
-                        if (!pngCheck.ok) {
-                            console.warn('Skipping scene without image:', file);
-                            continue;
-                        }
+
+                        // Optimization: Don't HEAD check on GH Pages to save requests, assume manifest is accurate.
+                        // On localhost it's fast.
 
                         // Extract Name and Author from MPD content
                         const metadata = extractMpdMetadata(data.mpd_content || '');
@@ -1524,10 +1537,9 @@
                     }
                 }
             } catch (e) {
-                console.warn('Directory listing not available');
+                console.warn('Scene discovery failed', e);
             }
         }
-
         // Extract Name and Author from MPD content
         // Skips the boilerplate "untitled.mpd" header to find the real name
         function extractMpdMetadata(content) {

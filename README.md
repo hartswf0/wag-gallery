@@ -43,8 +43,8 @@ A premium, dark-mode slideshow viewer for presenting generated LDraw scenes.
 ### Workflows
 
 #### Setting Up the Gallery
-1.  Place your `.mpd` files in the `scenes/` directory.
-2.  Update the `scenes.json` manifest with the file details.
+1.  Place your `.mpd` files in the `scenes/` directory (or root).
+2.  **Generate Manifest**: Run `python3 generate_manifest.py` to index the new files. This is required for GitHub Pages.
 3.  Open `wag-gold-gallery.html` to view.
 
 #### "Production Set" Workflow

@@ -5,9 +5,17 @@ import re
 def main():
     files = [f for f in os.listdir('.') if f.endswith('.json') and 'wag_gold_scene' in f]
     
-    # Filter out potential dupes or tests if needed, matching the JS logic
-    # JS: !href.includes('(1)') && !href.includes('test-')
-    valid_files = [f for f in files if '(1)' not in f and 'test-' not in f]
+    valid_files = []
+    for f in files:
+        if '(1)' in f or 'test-' in f:
+            continue
+        
+        # Check if corresponding PNG exists
+        png_file = f.replace('.json', '.png')
+        if os.path.exists(png_file):
+            valid_files.append(f)
+        else:
+            print(f"Skipping {f} - missing image {png_file}")
     
     # Sort by date extracted from filename (matching JS logic roughly)
     # Filename format: wag_gold_scene_N_YYYY-MM-DD_...

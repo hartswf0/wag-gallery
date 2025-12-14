@@ -1460,6 +1460,10 @@
 
         // Initialize
         async function init() {
+            if (window.location.protocol === 'file:') {
+                alert("⚠️ SECURITY WARNING ⚠️\n\nYou are running this file directly from your computer (file://).\nBrowsers block loading external data (scenes.json) in this mode.\n\nPlease use the Local Server:\nhttp://localhost:8090/wag-gold-gallery.html");
+                return;
+            }
             await discoverScenes();
             if (scenes.length > 0) {
                 loadScene(0);

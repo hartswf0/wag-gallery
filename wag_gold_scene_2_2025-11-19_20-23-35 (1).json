@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_2_2025-11-19_20-23-35.png",
+  "scene": "Scene 2",
+  "date": "2025-11-19",
+  "time": "20-23-35",
+  "timestamp": "2025-11-19T01:23:35.408Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 34,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE wag_courage_test_stack_floor.mpd\n0 Name: WAG-Courage Test 2 – Brick Stack and Tiled Floor\n0 Author: DCE-GYO Undaunted Pipeline\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 BASEPLATE – 16 x 16\n1 1 0 0 0  1 0 0  0 1 0  0 0 1  3811.dat\n\n \n0  - Valid: perfectly stacked\n1 1 -40 8 0  1 0 0  0 1 0  0 0 1  3001.dat\n1 1 -40 16 0  1 0 0  0 1 0  0 0 1  3001.dat\n1 1 -40 24 0  1 0 0  0 1 0  0 0 1  3001.dat\n\n0 MISALIGNED BRICK – shifted half a stud in X (overlap)\n1 1 -30 32 0  1 0 0  0 1 0  0 0 1  3001.dat\n\n0 TILED FLOOR – 2 x 2 tiles, 4 x 4 grid\n0  - Valid coverage in near corner\n1 1  0  8 -40  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 20  8 -40  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 40  8 -40  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 60  8 -40  1 0 0  0 1 0  0 0 1  3068b.dat\n\n1 1  0  8 -20  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 20  8 -20  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 40  8 -20  1 0 0  0 1 0  0 0 1  3068b.dat\n1 1 60  8 -20  1 0 0  0 1 0  0 0 1  3068b.dat\n\n0 MISALIGNED TILE – sunk slightly into baseplate (overlap)\n1 1 80  4 -40  1 0 0  0 1 0  0 0 1  3068b.dat\n"
+}

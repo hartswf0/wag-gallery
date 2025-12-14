@@ -1,0 +1,238 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-27_18-49-59.png",
+  "scene": "Scene 1",
+  "date": "2025-11-27",
+  "time": "18-49-59",
+  "timestamp": "2025-11-27T23:49:59.963Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 115,
+  "locked_lines": [],
+  "theme": "light",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Thanksgiving_Final_Lit.mpd\n0 Name: The Essential Form (Fixed & Lit)\n0 Author: LEGOS-GPT\n0 !LDRAW_ORG Model\n0 NOFILE\n0 BFC CERTIFY CCW\n\n0 // ========================================================================\n0 // ZONE 4: THE SHELL (Preserved)\n0 // ========================================================================\n0 // FLOOR: Baseplate at Y=8 (Preserved User Setting)\n1 14 0 8 0 1 0 0 0 1 0 0 0 1 6099p03.dat\n\n0 // DOOR FRAME: North Wall (A5)\n1 72 0 0 -140 1 0 0 0 1 0 0 0 1 60599s01.dat\n\n0 // WINDOW: West Wall. Lifted to Y=-120.\n1 0 -140 -120 0 0 0 1 0 1 0 -1 0 0 4347c01d08.dat\n\n0 // ========================================================================\n0 // LIGHTING: THE AVENUE (Added)\n0 // ========================================================================\n0 // NOTE: Lamps placed at X=110/-110 to flank the scene.\n0 // Rotated to face the Center Table (0,0,0).\n\n0 // WEST BANK (X=-110). Facing East (Inward).\n0 // Matrix: 0 0 -1 / 0 1 0 / 1 0 0\n1 72 -110 0 -60 0 0 -1 0 1 0 1 0 0 723.dat\n1 72 -110 0 0 0 0 -1 0 1 0 1 0 0 723.dat\n1 72 -110 0 60 0 0 -1 0 1 0 1 0 0 723.dat\n\n0 // EAST BANK (X=110). Facing West (Inward).\n0 // Matrix: 0 0 1 / 0 1 0 / -1 0 0\n1 72 110 0 -60 0 0 1 0 1 0 -1 0 0 723.dat\n1 72 110 0 0 0 0 1 0 1 0 -1 0 0 723.dat\n1 72 110 0 60 0 0 1 0 1 0 -1 0 0 723.dat\n\n0 // ========================================================================\n0 // ZONE 3: THE PERIMETER (Preserved)\n0 // ========================================================================\n0 // SIDEBOARD: Boat Hull (South). Y=-28 (Preserved).\n1 72 0 -28 100 1 0 0 0 1 0 0 0 1 18912.dat\n\n0 // TREE STUMP & FOLIAGE (SE)\n1 2 120 0 120 1 0 0 0 1 0 0 0 1 30131.dat\n1 2 120 -24 120 1 0 0 0 1 0 0 0 1 u9213s01.dat\n\n0 // TOY TRAIN: Floor Level\n1 0 100 0 100 0.5 0 0 0 0.5 0 0 0 0.5 285.dat\n1 0 100 -20 80 0.5 0 0 0 0.5 0 0 0 0.5 4866d01.dat\n\n0 // CAT: On Sideboard. FACING NORTH.\n1 0 40 -30 120 1 0 0 0 1 0 0 0 1 13786.dat\n\n0 // ========================================================================\n0 // ZONE 1: THE FEAST (Preserved)\n0 // ========================================================================\n0 // TABLE\n1 70 0 -24 0 1 0 0 0 1 0 0 0 1 3001.dat\n1 70 -40 -24 0 1 0 0 0 1 0 0 0 1 3001.dat\n1 70 40 -24 0 1 0 0 0 1 0 0 0 1 3001.dat\n\n0 // TURKEY\n1 12 -20 -24 0 1 0 0 0 1 0 0 0 1 33051.dat\n0 // DRUMSTICK\n1 12 15 -24 10 0.9 0 0.4 0 1 0 -0.4 0 0.9 33048.dat\n\n0 // MUGS\n1 47 -50 -48 -15 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 -50 -48 15 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 50 -48 -15 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 50 -48 15 1 0 0 0 1 0 0 0 1 3899.dat\n\n0 // ========================================================================\n0 // ZONE 2: THE ACTORS (Preserved)\n0 // ========================================================================\n\n0 // 1. THE HOST (West Side). Needs to Face EAST (+X).\n0 // Rotation: -90 Y. Matrix: 0 0 -1 / 0 1 0 / 1 0 0\n0 // Hips (Y=-24)\n1 0 -90 -24 0 0 0 -1 0 1 0 1 0 0 parts/10679b.dat\n0 // Torso\n1 4 -90 -56 0 0 0 -1 0 1 0 1 0 0 parts/10677.dat\n0 // Head\n1 14 -90 -64 0 0 0 -1 0 1 0 1 0 0 parts/100662.dat\n\n0 // 2. THE GRANDPARENT (South Side). Needs to Face NORTH (-Z).\n0 // Rotation: 0 (Identity).\n0 // Hips\n1 0 0 -24 60 1 0 0 0 1 0 0 0 1 parts/16709p0j.dat\n0 // Torso\n1 6 0 -56 60 1 0 0 0 1 0 0 0 1 parts/16360pd1d.dat\n0 // Head\n1 14 0 -64 60 1 0 0 0 1 0 0 0 1 parts/15523.dat\n0 // Hair\n1 0 0 -112 60 1 0 0 0 1 0 0 0 1 parts/19730.dat\n\n0 // 3. THE TEENAGER (North-East). Needs to Face SOUTH-WEST (-X, +Z).\n0 // Rotation: -135 deg Y. Matrix: -0.707 0 0.707 ...\n0 // Seat: Crate\n1 72 60 0 -60 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 4345bp03.dat\n0 // Hips\n1 0 60 -24 -60 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 parts/16709.dat\n0 // Torso\n1 4 60 -38 -60 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 parts/12896.dat\n0 // Head\n1 14 60 -46 -60 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 parts/12607.dat\n0 // Hood\n1 0 60 -70 -60 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 parts/10164.dat\n\n0 // 4. THE BULLDOG (West Side). Needs to Face EAST (+X).\n0 // Rotation: -90 Y.\n1 0 -60 0 60 0 0 -1 0 1 0 1 0 0 29602.dat\n\n0 // End of Scene",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 93,
+      "count": 2
+    },
+    {
+      "lineNum": 108,
+      "count": 12
+    },
+    {
+      "lineNum": 68,
+      "count": 23
+    },
+    {
+      "lineNum": 82,
+      "count": 28
+    },
+    {
+      "lineNum": 58,
+      "count": 8
+    },
+    {
+      "lineNum": 70,
+      "count": 15
+    },
+    {
+      "lineNum": 91,
+      "count": 13
+    },
+    {
+      "lineNum": 49,
+      "count": 21
+    },
+    {
+      "lineNum": 71,
+      "count": 19
+    },
+    {
+      "lineNum": 69,
+      "count": 8
+    },
+    {
+      "lineNum": 65,
+      "count": 2
+    },
+    {
+      "lineNum": 106,
+      "count": 11
+    },
+    {
+      "lineNum": 52,
+      "count": 4
+    },
+    {
+      "lineNum": 102,
+      "count": 3
+    },
+    {
+      "lineNum": 14,
+      "count": 53
+    },
+    {
+      "lineNum": 33,
+      "count": 45
+    },
+    {
+      "lineNum": 80,
+      "count": 12
+    },
+    {
+      "lineNum": 89,
+      "count": 18
+    },
+    {
+      "lineNum": 28,
+      "count": 41
+    },
+    {
+      "lineNum": 27,
+      "count": 58
+    },
+    {
+      "lineNum": 11,
+      "count": 35
+    },
+    {
+      "lineNum": 34,
+      "count": 22
+    },
+    {
+      "lineNum": 60,
+      "count": 10
+    },
+    {
+      "lineNum": 59,
+      "count": 6
+    },
+    {
+      "lineNum": 63,
+      "count": 1
+    },
+    {
+      "lineNum": 29,
+      "count": 27
+    },
+    {
+      "lineNum": 35,
+      "count": 31
+    },
+    {
+      "lineNum": 44,
+      "count": 6
+    },
+    {
+      "lineNum": 41,
+      "count": 9
+    },
+    {
+      "lineNum": 100,
+      "count": 36
+    },
+    {
+      "lineNum": 48,
+      "count": 3
+    },
+    {
+      "lineNum": 112,
+      "count": 5
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-27T23:49:59.973Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 11,
+      "top_count": 2797,
+      "top_percentage": 100,
+      "histogram": {
+        "11": 2797
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 34,
+      "top_line": 14,
+      "top_count": 504,
+      "top_percentage": 18,
+      "histogram": {
+        "11": 153,
+        "14": 504,
+        "27": 325,
+        "28": 141,
+        "29": 308,
+        "33": 438,
+        "34": 84,
+        "35": 107,
+        "41": 46,
+        "44": 227,
+        "48": 32,
+        "49": 22,
+        "52": 58,
+        "58": 8,
+        "59": 11,
+        "60": 14,
+        "63": 1,
+        "65": 2,
+        "68": 24,
+        "69": 8,
+        "70": 15,
+        "71": 19,
+        "80": 12,
+        "82": 29,
+        "84": 1,
+        "89": 27,
+        "91": 13,
+        "93": 2,
+        "95": 9,
+        "100": 108,
+        "102": 3,
+        "106": 10,
+        "108": 15,
+        "112": 21
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 37,
+    "part_lines_count": 37,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

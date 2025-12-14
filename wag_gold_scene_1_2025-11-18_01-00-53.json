@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-18_01-00-53.png",
+  "scene": "Scene 1",
+  "date": "2025-11-18",
+  "time": "01-00-53",
+  "timestamp": "2025-11-18T06:00:53.632Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 45,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE AEL_ERA09_AR_LOCATIVE.mpd\n0 AEL ERA 09 - AR / LOCATIVE MEDIA\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n1 71 0 0 0  1 0 0  0 1 0  0 0 1  3811.dat\n\n0 // Color 9 = Light Blue (overlays, sky, maps)\n1 9 -80 24 -100  1 0 0  0 1 0  0 0 1  3003.dat\n \n1 9 0   24 -100  1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 -100  1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 -100  1 0 0  0 1 0  0 0 1  3003.dat\n\n1 9 -80 24 -60   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 -40 24 -60   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 0   24 -60   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 -60   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 -60   1 0 0  0 1 0  0 0 1  3003.dat\n\n1 9 -80 24 -20   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 -40 24 -20   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 0   24 -20   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 -20   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 -20   1 0 0  0 1 0  0 0 1  3003.dat\n\n1 9 -80 24 20    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 -40 24 20    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 0   24 20    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 20    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 20    1 0 0  0 1 0  0 0 1  3003.dat\n\n1 9 -80 24 60    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 -40 24 60    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 0   24 60    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 60    1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 60    1 0 0  0 1 0  0 0 1  3003.dat\n\n1 9 -80 24 100   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 -40 24 100   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 0   24 100   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 40  24 100   1 0 0  0 1 0  0 0 1  3003.dat\n1 9 80  24 100   1 0 0  0 1 0  0 0 1  3003.dat\n"
+}

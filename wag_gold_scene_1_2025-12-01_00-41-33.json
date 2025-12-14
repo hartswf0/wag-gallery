@@ -1,0 +1,76 @@
+{
+  "filename": "wag_gold_scene_1_2025-12-01_00-41-33.png",
+  "scene": "Scene 1",
+  "date": "2025-12-01",
+  "time": "00-41-33",
+  "timestamp": "2025-12-01T05:41:33.419Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 110,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Spiral_Staircase_Tall_Tight_180_HorseRace_v2.mpd\n0 Name: Tight 180° Spiral Staircase - Horse Race Elegant Path\n0 Author: Spiral Race Architect\n0 !LDRAW_ORG Model\n0 NOFILE\n0 BFC CERTIFY CCW\n\n0 // ============================================================\n0 // MENTO CAMERA TRACK - ELEGANT DOUBLE-HELIX ORBIT\n0 // ============================================================\n0 // Center of spiral: C = (-300, Y, 200)\n0 // Horses run on a small helix (radius 100); camera orbits on\n0 // a larger helix (radius 900) 180° out of phase.\n\n0 !MENTO SHOT \"Spiral Horse 1\" POS -1020 -98 -340  TGT -220 -248 260 LENS 45\n0 !MENTO SHOT \"Spiral Horse 2\" POS 240  -626 -520  TGT -360 -776 280 LENS 45\n0 !MENTO SHOT \"Spiral Horse 3\" POS 420  -1154 740  TGT -380 -1304 140 LENS 45\n0 !MENTO SHOT \"Spiral Horse 4\" POS -840 -1682 920  TGT -240 -1832 120 LENS 45\n\n0 // ============================================================\n0 // VOID / TRACK MAP\n0 // ============================================================\n0 // STAIR CORE:   X = -300 ± 64, Z = 200 ± 64 reserved for stairs.\n0 // HORSE HELIX:  radius 100 around C = (-300,200)\n0 //   H1: (-220,260,-248)   H2: (-360,280,-776)\n0 //   H3: (-380,140,-1304)  H4: (-240,120,-1832)\n0 // CAMERA HELIX: radius 900, 180° opposite each horse, Y ≈ horseY + 150.\n\n0 // ╔════════════════════════════════════════════════════════════╗\n0 // ║  TIGHT SPIRAL STAIRCASE - 16 SEGMENTS                      ║\n0 // ║  Using 40243c01.dat (Complete 8 Steps)                     ║\n0 // ║  Fixed X/Z: (-300, 200) | Y-Increment: 132 LDU             ║\n0 // ║  Overlap: 2.5 steps | Rotation: 180° | All Y negative      ║\n0 // ╚════════════════════════════════════════════════════════════╝\n\n0 STEP\n\n0 // Segment 1: Base (0° rotation)\n1 7 -300 -50 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 2: Rotated 180°, Y -182\n1 7 -300 -182 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 3: Rotated 0°, Y -314\n1 7 -300 -314 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 4: Rotated 180°, Y -446\n1 7 -300 -446 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 5: Rotated 0°, Y -578\n1 7 -300 -578 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 6: Rotated 180°, Y -710\n1 7 -300 -710 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 7: Rotated 0°, Y -842\n1 7 -300 -842 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 8: Rotated 180°, Y -974\n1 7 -300 -974 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 9: Rotated 0°, Y -1106\n1 7 -300 -1106 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 10: Rotated 180°, Y -1238\n1 7 -300 -1238 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 11: Rotated 0°, Y -1370\n1 7 -300 -1370 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 12: Rotated 180°, Y -1502\n1 7 -300 -1502 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 13: Rotated 0°, Y -1634\n1 7 -300 -1634 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 14: Rotated 180°, Y -1766\n1 7 -300 -1766 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 15: Rotated 0°, Y -1898\n1 7 -300 -1898 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 16: Rotated 180°, Y -2030\n1 7 -300 -2030 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // ============================================================\n0 // HORSE RACE: ANGLED HORSES + PARROT RIDERS\n0 // ============================================================\n\n0 // HORSE 1 + PARROT (quarter turn 1)\n0 // Horse runs tangentially around spiral (yaw ≈ -37°)\n1 6 -220 -248 260 0.8 0 -0.6 0 1 0 0.6 0 0.8 parts/4493c01.dat\n0 // Parrot perched above neck\n1 14 -220 -288 280 1 0 0 0 1 0 0 0 1 parts/2546p01.dat\n\n0 // HORSE 2 + PARROT (quarter turn 2)\n1 15 -360 -776 280 -0.6 0 -0.8 0 1 0 0.8 0 -0.6 parts/4493c03.dat\n1 9 -360 -816 300 1 0 0 0 1 0 0 0 1 parts/2546p02.dat\n\n0 // HORSE 3 + PARROT (quarter turn 3)\n1 16 -380 -1304 140 -0.8 0 0.6 0 1 0 -0.6 0 -0.8 parts/4493c04.dat\n1 13 -380 -1344 160 1 0 0 0 1 0 0 0 1 parts/27062p01.dat\n\n0 // HORSE 4 + PARROT (quarter turn 4)\n1 7 -240 -1832 120 0.6 0 0.8 0 1 0 -0.8 0 0.6 parts/4493c05.dat\n1 1 -240 -1872 140 1 0 0 0 1 0 0 0 1 parts/27062p02.dat\n\n0 STEP\n0 NOFILE\n",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-12-01T05:41:33.421Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 38,
+      "top_count": 4246,
+      "top_percentage": 100,
+      "histogram": {
+        "38": 4246
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 1,
+      "top_line": 38,
+      "top_count": 4246,
+      "top_percentage": 100,
+      "histogram": {
+        "38": 4246
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 24,
+    "part_lines_count": 24,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

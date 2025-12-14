@@ -1,0 +1,154 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-27_18-20-44.png",
+  "scene": "Scene 1",
+  "date": "2025-11-27",
+  "time": "18-20-44",
+  "timestamp": "2025-11-27T23:20:44.074Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 102,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Thanksgiving_Boat_Scene.mpd\n0 Name: The Feast in the Well\n0 Author: LEGOS-GPT\n0 !LDRAW_ORG Model\n0 NOFILE\n0 BFC CERTIFY CCW\n\n0 // ========================================================================\n0 // THE CONTAINER (The Boat)\n0 // ========================================================================\n0 // HULL: 18912 Boat Hull 40 x 20.\n0 // Position: 0,0,0. This is the new \"World Origin\".\n1 72 0 0 0 1 0 0 0 1 0 0 0 1 18912.dat\n\n0 // ========================================================================\n0 // LIGHTING (Port Rail)\n0 // ========================================================================\n0 // LAMP ROW: Along West edge (X=-80), Spaced on Z.\n0 // Elevation: Y=-32 (Sitting on Gunwale/Deck).\n0 // Rotation: Facing Inward (East).\n0 // Matrix: 0 0 -1 / 0 1 0 / 1 0 0 (Rotated to face center)\n0 // Lamp 1 (Forward)\n1 72 -80 -32 -60 0 0 -1 0 1 0 1 0 0 723.dat\n0 // Lamp 2 (Mid)\n1 72 -80 -32 0 0 0 -1 0 1 0 1 0 0 723.dat\n0 // Lamp 3 (Aft)\n1 72 -80 -32 60 0 0 -1 0 1 0 1 0 0 723.dat\n\n0 // ========================================================================\n0 // ZONE 1: THE FEAST (Rotated N-S)\n0 // ========================================================================\n0 // NOTE: All heights lifted to Y = -32 (Deck Level) - [Item Height]\n0 // Table Base Level = -32. Leg Top = -56. Table Top = -80.\n\n0 // TABLE: Rotated 90 deg to run North-South (Z-Axis).\n0 // Brick 1 (Center)\n1 70 0 -56 0 0 0 1 0 1 0 -1 0 0 3001.dat\n0 // Brick 2 (North)\n1 70 0 -56 -40 0 0 1 0 1 0 -1 0 0 3001.dat\n0 // Brick 3 (South)\n1 70 0 -56 40 0 0 1 0 1 0 -1 0 0 3001.dat\n\n0 // TURKEY: On Table Top (Y=-80).\n1 12 0 -80 0 1 0 0 0 1 0 0 0 1 33051.dat\n0 // DRUMSTICK\n1 12 10 -80 15 0.9 0 0.4 0 1 0 -0.4 0 0.9 33048.dat\n\n0 // MUGS (Rotated positions 90 deg)\n1 47 -15 -80 -50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 15 -80 -50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 -15 -80 50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 15 -80 50 1 0 0 0 1 0 0 0 1 3899.dat\n\n0 // ========================================================================\n0 // ZONE 2: THE ACTORS (Rotated 90 deg around Center)\n0 // ========================================================================\n\n0 // 1. THE HOST (Was West, Now North).\n0 // Old Pos: X=-65. New Pos: Z=-65.\n0 // Old Facing: East. New Facing: South (+Z).\n0 // Matrix for Facing South: -1 0 0 / 0 1 0 / 0 0 -1 (Standard 180)\n0 // Lifted to Y=-32 (Deck).\n1 0 0 -32 -65 -1 0 0 0 1 0 0 0 -1 parts/10679b.dat\n1 4 0 -64 -65 -1 0 0 0 1 0 0 0 -1 parts/10677.dat\n1 14 0 -88 -65 -1 0 0 0 1 0 0 0 -1 parts/100662.dat\n\n0 // 2. THE GRANDPARENT (Was South, Now East).\n0 // Old Pos: Z=70. New Pos: X=70.\n0 // Old Facing: North. New Facing: West (-X).\n0 // Matrix for Facing West: 0 0 1 / 0 1 0 / -1 0 0\n1 0 70 -32 0 0 0 1 0 1 0 -1 0 0 parts/16709p0j.dat\n1 6 70 -64 0 0 0 1 0 1 0 -1 0 0 parts/16360pd1d.dat\n1 14 70 -88 0 0 0 1 0 1 0 -1 0 0 parts/15523.dat\n1 0 70 -96 0 0 0 1 0 1 0 -1 0 0 parts/19730.dat\n\n0 // 3. THE TEENAGER (Was NE, Now SE).\n0 // Old: X=45, Z=-45. New: X=45, Z=45.\n0 // Facing: NW (-X, -Z).\n0 // Matrix: 0.707 0 -0.707 ...\n0 // CRATE (Lifted to Y=-32)\n1 72 45 -32 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 4345bp03.dat\n0 // BODY (Sitting on Crate Y=-56)\n1 0 45 -56 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/16709.dat\n1 4 45 -70 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/12896.dat\n1 14 45 -94 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/12607.dat\n1 0 45 -94 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/10164.dat\n\n0 // 4. THE BULLDOG (Was West, Now North - Near Host).\n0 // Pos: Z=-45. Facing South.\n1 0 0 -32 -45 -1 0 0 0 1 0 0 0 -1 29602.dat\n\n0 // ========================================================================\n0 // ZONE 3: PROPS (Environment)\n0 // ========================================================================\n0 // TREE (Moved to Aft Deck - Z=+120). Lifted to -32.\n1 2 0 -32 120 1 0 0 0 1 0 0 0 1 30131.dat\n1 2 0 -56 120 1 0 0 0 1 0 0 0 1 u9213s01.dat\n\n0 // CAT (Perched on Bow - Z=-100).\n1 0 0 -42 -100 1 0 0 0 1 0 0 0 1 13786.dat\n\n0 // End of Scene",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 45,
+      "count": 1
+    },
+    {
+      "lineNum": 43,
+      "count": 1
+    },
+    {
+      "lineNum": 51,
+      "count": 6
+    },
+    {
+      "lineNum": 96,
+      "count": 40
+    },
+    {
+      "lineNum": 50,
+      "count": 26
+    },
+    {
+      "lineNum": 84,
+      "count": 23
+    },
+    {
+      "lineNum": 72,
+      "count": 2
+    },
+    {
+      "lineNum": 62,
+      "count": 10
+    },
+    {
+      "lineNum": 70,
+      "count": 6
+    },
+    {
+      "lineNum": 89,
+      "count": 5
+    },
+    {
+      "lineNum": 22,
+      "count": 17
+    },
+    {
+      "lineNum": 12,
+      "count": 5
+    },
+    {
+      "lineNum": 95,
+      "count": 8
+    },
+    {
+      "lineNum": 80,
+      "count": 4
+    },
+    {
+      "lineNum": 99,
+      "count": 6
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-27T23:20:44.089Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 12,
+      "top_count": 1931,
+      "top_percentage": 100,
+      "histogram": {
+        "12": 1931
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 18,
+      "top_line": 12,
+      "top_count": 475,
+      "top_percentage": 24.6,
+      "histogram": {
+        "12": 475,
+        "22": 151,
+        "24": 56,
+        "26": 154,
+        "40": 3,
+        "43": 1,
+        "45": 1,
+        "50": 27,
+        "51": 6,
+        "62": 105,
+        "70": 176,
+        "72": 10,
+        "80": 42,
+        "84": 54,
+        "89": 14,
+        "95": 395,
+        "96": 66,
+        "99": 195
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 29,
+    "part_lines_count": 29,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

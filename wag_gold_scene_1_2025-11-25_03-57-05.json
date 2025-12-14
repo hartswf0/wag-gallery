@@ -1,0 +1,178 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-25_03-57-05.png",
+  "scene": "Scene 1",
+  "date": "2025-11-25",
+  "time": "03-57-05",
+  "timestamp": "2025-11-25T08:57:05.409Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 106,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": true,
+    "studProblem": true,
+    "studGhost": true
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE platos_cave_stable.mpd\n0 Name: Plato's Cave (Stabilized)\n0 Author: Grace Cognitive Architect v8.0\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 STEP\n0 // ================================================================\n0 // ZONE 3: THE CAVE CONTAINER (The Pit)\n \n0 // The Foundation: A Raised Baseplate representing the deep earth.\n1 7 0 0 0 1 0 0 0 1 0 0 0 1 parts/6092.dat\n\n0 // The Descent: A Boat Hull repurposed as the slick slope of the cave.\n1 72 -160 -24 0 0 0 1 0 1 0 -1 0 0 parts/50820.dat\n\n0 // The Cave Walls: Technic Fairings acting as jagged, synthetic rock.\n1 71 -300 -100 -100 0 0 1 0 1 0 -1 0 0 parts/47713.dat\n1 71 300 -100 -100 0 0 1 0 1 0 -1 0 0 parts/47713.dat\n1 71 -300 -100 100 0 0 1 0 1 0 -1 0 0 parts/47713.dat\n1 71 300 -100 100 0 0 1 0 1 0 -1 0 0 parts/47713.dat\n\n0 STEP\n0 // ================================================================\n0 // ZONE 2: THE PRISONERS (The Captive Audience)\n0 // ================================================================\n0 // A row of fixed Heads and Torsos, staring forward into the dark.\n1 14 -80 -10 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n1 14 -40 -10 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n1 14 0 -10 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n1 14 40 -10 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n1 14 80 -10 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n\n0 // Their Bodies (Bound)\n1 7 -80 20 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n1 7 -40 20 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n1 7 0 20 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n1 7 40 20 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n1 7 80 20 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n\n0 STEP\n0 // ================================================================\n0 // ZONE 1: THE SHADOW SCREEN (The Illusion)\n0 // ================================================================\n0 // A Wall of Windows. They look through them but see nothing.\n1 15 -60 -24 200 1 0 0 0 1 0 0 0 1 parts/4347.dat\n1 15 0 -24 200 1 0 0 0 1 0 0 0 1 parts/4347.dat\n1 15 60 -24 200 1 0 0 0 1 0 0 0 1 parts/4347.dat\n\n0 STEP\n0 // ================================================================\n0 // ZONE 2: THE MECHANISM (The Parapet)\n0 // ================================================================\n0 // The Train Track Walkway, raised behind the Prisoners.\n1 72 0 -80 -80 1 0 0 0 1 0 0 0 1 parts/6584.dat\n1 72 0 -80 -120 1 0 0 0 1 0 0 0 1 parts/285c01.dat\n\n0 // The Puppeteers (Hooded Figures) walking the track.\n1 0 -40 -104 -100 1 0 0 0 1 0 0 0 1 parts/16360.dat\n1 0 40 -104 -100 1 0 0 0 1 0 0 0 1 parts/16360.dat\n1 0 -40 -128 -100 1 0 0 0 1 0 0 0 1 parts/10164.dat\n1 0 40 -128 -100 1 0 0 0 1 0 0 0 1 parts/10164.dat\n\n0 // The Artifacts (Statues) they carry.\n1 4 -60 -130 -100 0 0 1 0 1 0 -1 0 0 parts/4229.dat\n1 4 60 -130 -100 0 0 1 0 1 0 -1 0 0 parts/4229.dat\n1 0 0 -130 -100 0 -1 0 1 0 0 0 0 1 parts/30230.dat\n\n0 STEP\n0 // ================================================================\n0 // ZONE 3: THE FIRE (The Source of False Light)\n0 // ================================================================\n0 // A Pyramid of Burning Heads.\n1 4 0 -24 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 4 20 -24 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 4 -20 -24 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 4 10 -48 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 4 -10 -48 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 4 0 -72 -200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n\n0 // The Canyon Wall backing the Fire.\n1 71 0 -100 -250 1 0 0 0 0 1 0 -1 0 parts/6024p02.dat\n\n0 STEP\n0 // ================================================================\n0 // ZONE 4: THE ASCENT & THE SUN (True Reality)\n0 // ================================================================\n0 // The Path Out (Wedge Slopes)\n1 72 100 -100 -300 0.707 -0.707 0 0.707 0.707 0 0 0 1 parts/47757.dat\n1 72 -100 -100 -300 0.707 -0.707 0 0.707 0.707 0 0 0 1 parts/47757.dat\n\n0 // The True Sun (Paddle Wheel & Flywheels)\n1 14 0 -400 -400 1 0 0 0 1 0 0 0 1 parts/4788.dat\n\n0 // The Corona (Planetary Ring)\n1 25 0 -400 -360 1 0 0 0 1 0 0 0 1 parts/15336p01.dat\n1 25 0 -400 -440 1 0 0 0 1 0 0 0 1 parts/15336p01.dat\n1 25 40 -400 -400 0 0 1 0 1 0 -1 0 0 parts/15336p01.dat\n1 25 -40 -400 -400 0 0 1 0 1 0 -1 0 0 parts/15336p01.dat\n\n0 // The Debris of the Ascent (Fixed: Replaced broken 2470s01 with 4032a)\n1 72 80 -200 -350 1 0 0 0 1 0 0 0 1 parts/4032a.dat\n1 72 -80 -200 -350 1 0 0 0 1 0 0 0 1 parts/4032a.dat\n\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 79,
+      "count": 19
+    },
+    {
+      "lineNum": 46,
+      "count": 88
+    },
+    {
+      "lineNum": 55,
+      "count": 16
+    },
+    {
+      "lineNum": 47,
+      "count": 11
+    },
+    {
+      "lineNum": 30,
+      "count": 1
+    },
+    {
+      "lineNum": 48,
+      "count": 6
+    },
+    {
+      "lineNum": 32,
+      "count": 3
+    },
+    {
+      "lineNum": 15,
+      "count": 54
+    },
+    {
+      "lineNum": 29,
+      "count": 4
+    },
+    {
+      "lineNum": 12,
+      "count": 48
+    },
+    {
+      "lineNum": 75,
+      "count": 12
+    },
+    {
+      "lineNum": 74,
+      "count": 5
+    },
+    {
+      "lineNum": 76,
+      "count": 15
+    },
+    {
+      "lineNum": 35,
+      "count": 59
+    },
+    {
+      "lineNum": 36,
+      "count": 29
+    },
+    {
+      "lineNum": 39,
+      "count": 16
+    },
+    {
+      "lineNum": 37,
+      "count": 30
+    },
+    {
+      "lineNum": 38,
+      "count": 22
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-25T08:57:05.411Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 12,
+      "top_count": 5946,
+      "top_percentage": 100,
+      "histogram": {
+        "12": 5946
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 30,
+      "top_line": 35,
+      "top_count": 854,
+      "top_percentage": 14.4,
+      "histogram": {
+        "12": 249,
+        "15": 452,
+        "18": 99,
+        "19": 102,
+        "20": 540,
+        "21": 442,
+        "28": 32,
+        "29": 5,
+        "30": 1,
+        "32": 5,
+        "35": 854,
+        "36": 187,
+        "37": 162,
+        "38": 180,
+        "39": 633,
+        "46": 667,
+        "47": 394,
+        "48": 491,
+        "55": 65,
+        "56": 3,
+        "59": 21,
+        "60": 33,
+        "74": 24,
+        "75": 98,
+        "76": 96,
+        "77": 3,
+        "78": 3,
+        "79": 21,
+        "89": 44,
+        "90": 40
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 44,
+    "part_lines_count": 44,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

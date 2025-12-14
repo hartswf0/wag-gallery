@@ -1,0 +1,97 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-27_18-25-16.png",
+  "scene": "Scene 1",
+  "date": "2025-11-27",
+  "time": "18-25-16",
+  "timestamp": "2025-11-27T23:25:16.197Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 92,
+  "locked_lines": [],
+  "theme": "light",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Thanksgiving_Capsized.mpd\n0 Name: The Feast on the Keel\n0 Author: LEGOS-GPT\n0 !LDRAW_ORG Model\n0 NOFILE\n0 BFC CERTIFY CCW\n\n0 // ========================================================================\n0 // THE PLATFORM (Inverted Hull)\n0 // ========================================================================\n0 // HULL: 18912. Rotated 180 degrees X-axis (Upside Down).\n0 // Matrix: 1 0 0 / 0 -1 0 / 0 0 -1\n0 // Position: Y=0 (Deck is at water level, Hull sticks up).\n1 72 0 0 0 1 0 0 0 -1 0 0 0 -1 18912.dat\n\n0 // ========================================================================\n0 // LIGHTING (Runway Configuration)\n0 // ========================================================================\n0 // ROW 1: WEST SIDE (Port). X=-80.\n0 // Facing Inward (East). Matrix: 0 0 -1 / 0 1 0 / 1 0 0\n1 72 -80 0 -60 0 0 -1 0 1 0 1 0 0 723.dat\n1 72 -80 0 0 0 0 -1 0 1 0 1 0 0 723.dat\n1 72 -80 0 60 0 0 -1 0 1 0 1 0 0 723.dat\n\n0 // ROW 2: EAST SIDE (Starboard). X=80.\n0 // Facing Inward (West). Matrix: 0 0 1 / 0 1 0 / -1 0 0\n1 72 80 0 -60 0 0 1 0 1 0 -1 0 0 723.dat\n1 72 80 0 0 0 0 1 0 1 0 -1 0 0 723.dat\n1 72 80 0 60 0 0 1 0 1 0 -1 0 0 723.dat\n\n0 // ========================================================================\n0 // ZONE 1: THE FEAST (Elevated to Y=-56)\n0 // ========================================================================\n0 // The scene sits on the curved bottom of the hull.\n\n0 // TABLE (North-South). Base at Y=-56.\n1 70 0 -56 0 0 0 1 0 1 0 -1 0 0 3001.dat\n1 70 0 -56 -40 0 0 1 0 1 0 -1 0 0 3001.dat\n1 70 0 -56 40 0 0 1 0 1 0 -1 0 0 3001.dat\n\n0 // TURKEY (Table Top Y=-80)\n1 12 0 -80 0 1 0 0 0 1 0 0 0 1 33051.dat\n0 // DRUMSTICK\n1 12 10 -80 15 0.9 0 0.4 0 1 0 -0.4 0 0.9 33048.dat\n\n0 // MUGS\n1 47 -15 -80 -50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 15 -80 -50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 -15 -80 50 1 0 0 0 1 0 0 0 1 3899.dat\n1 47 15 -80 50 1 0 0 0 1 0 0 0 1 3899.dat\n\n0 // ========================================================================\n0 // ZONE 2: THE ACTORS (Elevated to Y=-56)\n0 // ========================================================================\n\n0 // 1. THE HOST (North End). Z=-65. Facing South.\n0 // Base at Y=-56.\n1 0 0 -56 -65 -1 0 0 0 1 0 0 0 -1 parts/10679b.dat\n1 4 0 -88 -65 -1 0 0 0 1 0 0 0 -1 parts/10677.dat\n1 14 0 -112 -65 -1 0 0 0 1 0 0 0 -1 parts/100662.dat\n\n0 // THE CAT (On Top of Host).\n0 // Host Head Top ~ -120. Cat Base at Y=-120.\n0 // Facing South (Same as Host).\n1 0 0 -120 -65 -1 0 0 0 1 0 0 0 -1 13786.dat\n\n0 // 2. THE GRANDPARENT (East Side). X=60. Facing West.\n1 0 60 -56 0 0 0 1 0 1 0 -1 0 0 parts/16709p0j.dat\n1 6 60 -88 0 0 0 1 0 1 0 -1 0 0 parts/16360pd1d.dat\n1 14 60 -112 0 0 0 1 0 1 0 -1 0 0 parts/15523.dat\n1 0 60 -120 0 0 0 1 0 1 0 -1 0 0 parts/19730.dat\n\n0 // 3. THE TEENAGER (South-East). X=45, Z=45. Facing NW.\n0 // CRATE Base at Y=-56.\n1 72 45 -56 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 4345bp03.dat\n0 // BODY (Sitting on Crate Y=-80)\n1 0 45 -80 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/16709.dat\n1 4 45 -94 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/12896.dat\n1 14 45 -118 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/12607.dat\n1 0 45 -118 45 0.707 0 -0.707 0 1 0 0.707 0 0.707 parts/10164.dat\n\n0 // 4. THE BULLDOG (North Side - Under Host). Z=-45.\n1 0 0 -56 -45 -1 0 0 0 1 0 0 0 -1 29602.dat\n\n0 // ========================================================================\n0 // ZONE 3: DECOR\n0 // ========================================================================\n0 // TREE (South End - Aft). Z=100.\n1 2 0 -56 100 1 0 0 0 1 0 0 0 1 30131.dat\n1 2 0 -80 100 1 0 0 0 1 0 0 0 1 u9213s01.dat\n\n0 // End of Scene",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 27,
+      "count": 9
+    },
+    {
+      "lineNum": 13,
+      "count": 8
+    },
+    {
+      "lineNum": 21,
+      "count": 10
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-27T23:25:16.214Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 13,
+      "top_count": 1915,
+      "top_percentage": 100,
+      "histogram": {
+        "13": 1915
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 9,
+      "top_line": 26,
+      "top_count": 491,
+      "top_percentage": 25.6,
+      "histogram": {
+        "13": 236,
+        "20": 441,
+        "21": 75,
+        "22": 199,
+        "26": 491,
+        "27": 164,
+        "28": 193,
+        "57": 88,
+        "88": 28
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 32,
+    "part_lines_count": 32,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

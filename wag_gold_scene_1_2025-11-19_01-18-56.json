@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-19_01-18-56.png",
+  "scene": "Scene 1",
+  "date": "2025-11-19",
+  "time": "01-18-56",
+  "timestamp": "2025-11-19T06:18:56.951Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 53,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE AEL_ERA07_GAMES_PLAY.mpd\n0 AEL ERA 07 - GAMES / PLAY / INTERACTION\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n1 71 0 0 0  1 0 0  0 1 0  0 0 1  3811.dat\n\n0 // 30 game / play parts pulled from ldraw-parts-manifest.json\n0 // color 16 = use native decoration/colors\n \n0 // Row 1 (Z = -100)\n1 16 -80 24 -100  1 0 0  0 1 0  0 0 1  53118.dat        \n1 16 -40 24 -100  1 0 0  0 1 0  0 0 1  53118p01.dat     \n1 16 0   24 -100  1 0 0  0 1 0  0 0 1  65080.dat        \n1 16 40  24 -100  1 0 0  0 1 0  0 0 1  65080p01.dat     \n1 16 80  24 -100  1 0 0  0 1 0  0 0 1  65080p02.dat     \n\n0 // Row 2 (Z = -60)\n1 16 -80 24 -60   1 0 0  0 1 0  0 0 1  3068bpx9.dat     \n1 16 -40 24 -60   1 0 0  0 1 0  0 0 1  3069bpc7.dat     \n1 16 0   24 -60   1 0 0  0 1 0  0 0 1  18603c02p1t.dat  \n1 16 40  24 -60   1 0 0  0 1 0  0 0 1  18605p1t.dat     \n1 16 80  24 -60   1 0 0  0 1 0  0 0 1  6474pc0.dat      \n\n0 // Row 3 (Z = -20)\n1 16 -80 24 -20   1 0 0  0 1 0  0 0 1  18603c02p0i.dat  \n1 16 -40 24 -20   1 0 0  0 1 0  0 0 1  18605p0i.dat     \n1 16 0   24 -20   1 0 0  0 1 0  0 0 1  3069bp0n.dat     \n1 16 40  24 -20   1 0 0  0 1 0  0 0 1  3069bpw1.dat     \n1 16 80  24 -20   1 0 0  0 1 0  0 0 1  3069bpz7.dat     \n\n0 // Row 4 (Z = 20) – repeat controllers / arcade\n1 16 -80 24 20    1 0 0  0 1 0  0 0 1  53118.dat        \n1 16 -40 24 20    1 0 0  0 1 0  0 0 1  53118p01.dat     \n1 16 0   24 20    1 0 0  0 1 0  0 0 1  65067.dat        \n1 16 40  24 20    1 0 0  0 1 0  0 0 1  65068.dat        \n1 16 80  24 20    1 0 0  0 1 0  0 0 1  3068bpx9.dat     \n\n0 // Row 5 (Z = 60)\n1 16 -80 24 60    1 0 0  0 1 0  0 0 1  3069bpc7.dat     \n1 16 -40 24 60    1 0 0  0 1 0  0 0 1  18603c02p1t.dat  \n1 16 0   24 60    1 0 0  0 1 0  0 0 1  18605p1t.dat     \n1 16 40  24 60    1 0 0  0 1 0  0 0 1  6474pc0.dat      \n1 16 80  24 60    1 0 0  0 1 0  0 0 1  3069bp0n.dat     \n\n0 // Row 6 (Z = 100)\n1 16 -80 24 100   1 0 0  0 1 0  0 0 1  3069bpw1.dat     \n1 16 -40 24 100   1 0 0  0 1 0  0 0 1  3069bpz7.dat     \n1 16 0   24 100   1 0 0  0 1 0  0 0 1  65080.dat        \n1 16 40  24 100   1 0 0  0 1 0  0 0 1  65080p01.dat     \n1 16 80  24 100   1 0 0  0 1 0  0 0 1  65080p02.dat     \n"
+}

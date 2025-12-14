@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WAG GOLD // GALLERY</title>
+    <meta name="description" content="WAG GOLD Gallery - LDraw/MPD Content Viewer with Scene Timeline">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100'/><text y='70' x='50' text-anchor='middle' font-size='60' fill='%23ffd700' font-family='monospace' font-weight='bold'>W</text></svg>">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-root: #050505;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: #151515;
+            --text-primary: #dddddd;
+            --text-secondary: #888888;
+            --text-muted: #555555;
+            --accent-gold: #ffd700;
+            --accent-yellow: #ffcc00;
+            --accent-orange: #ff9500;
+            --accent-good: #00ff88;
+            --accent-rec: #ff0040;
+            --border-color: #333333;
+            --border-glow: rgba(255, 215, 0, 0.3);
+            --line-comment: #6a9955;
+            --line-command: #dcdcaa;
+            --line-part: #9cdcfe;
+            --line-step: #c586c0;
+            --line-header: #ce9178;
+            --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.1);
+            --font-mono: "Menlo", "JetBrains Mono", "Consolas", monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: var(--font-mono);
+            background: var(--bg-root);
+            color: var(--text-primary);
+            font-size: 11px;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Header - MENTO Style */
+        .header {
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            display: none;
+        }
+
+        .logo-text {
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--text-primary);
+        }
+
+        .logo-text span {
+            color: var(--accent-gold);
+        }
+
+        .controls {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 4px 8px;
+            border: 1px solid var(--border-color);
+            background: #111;
+            color: #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            height: 24px;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn:hover {
+            border-color: #666;
+            color: #fff;
+        }
+
+        .btn.active {
+            background: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
+        }
+
+        .btn.export-btn {
+            background: var(--accent-good);
+            color: #000;
+            border-color: var(--accent-good);
+        }
+
+        .btn.export-btn:hover {
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn.help-btn {
+            width: 22px;
+            height: 22px;
+            padding: 0;
+            font-weight: 700;
+            font-size: 12px;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 50%;
+            color: #777;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn.help-btn:hover {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: #000;
+        }
+
+        .scene-count {
+            background: #222;
+            color: #666;
+            padding: 1px 6px;
+            border-radius: 2px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            height: calc(100vh - 30px - 100px);
+        }
+
+        .split-view {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mpd-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+            min-width: 0;
+        }
+
+        .mpd-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mpd-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mpd-author {
+            font-size: 10px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .mpd-meta {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .mpd-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            line-height: 1.5;
+            background: var(--bg-primary);
+        }
+
+        .mpd-line {
+            display: flex;
+            padding: 1px 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+        }
+
+        .mpd-line:hover {
+            background: rgba(255, 215, 0, 0.05);
+            border-left-color: var(--accent-gold);
+        }
+
+        .line-number {
+            min-width: 32px;
+            color: var(--text-muted);
+            user-select: none;
+            text-align: right;
+            padding-right: 12px;
+            font-size: 10px;
+        }
+
+        .line-content {
+            flex: 1;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .line-content.comment {
+            color: var(--line-comment);
+        }
+
+        .line-content.header {
+            color: var(--line-header);
+        }
+
+        .line-content.step {
+            color: var(--line-step);
+            font-weight: 600;
+        }
+
+        .line-content.part {
+            color: var(--line-part);
+        }
+
+        .line-content.meta {
+            color: var(--accent-gold);
+        }
+
+        .line-content.box {
+            color: var(--accent-yellow);
+        }
+
+        .line-checkbox {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            accent-color: var(--accent-gold);
+            cursor: pointer;
+        }
+
+        /* Image Panel */
+        .image-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-secondary);
+            min-width: 0;
+        }
+
+        .image-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .image-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent-gold);
+        }
+
+        .image-date {
+            font-size: 10px;
+            color: var(--text-muted);
+            background: var(--bg-tertiary);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scene-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .image-placeholder {
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Timeline */
+        .timeline {
+            height: 100px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+        }
+
+        .timeline-nav {
+            display: flex;
+            gap: 6px;
+        }
+
+        .timeline-btn {
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .timeline-btn:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .timeline-scroll {
+            flex: 1;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            align-items: center;
+            padding: 6px 16px;
+            gap: 6px;
+        }
+
+        .timeline-item {
+            flex-shrink: 0;
+            width: 55px;
+            height: 42px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            position: relative;
+            background: var(--bg-tertiary);
+        }
+
+        .timeline-item:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .timeline-item.active {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        }
+
+        .timeline-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timeline-item .date-badge {
+            position: absolute;
+            bottom: 1px;
+            left: 1px;
+            right: 1px;
+            font-size: 6px;
+            background: rgba(0, 0, 0, 0.85);
+            color: var(--text-secondary);
+            padding: 2px;
+            text-align: center;
+        }
+
+        /* Grid View */
+        .grid-view {
+            display: none;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .grid-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .grid-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .grid-card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: var(--bg-tertiary);
+        }
+
+        .grid-card-info {
+            padding: 10px;
+        }
+
+        .grid-card-title {
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-gold);
+            margin-bottom: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .grid-card-author {
+            font-size: 9px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .grid-card-meta {
+            font-size: 9px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Grid Selection */
+        .grid-card {
+            position: relative;
+        }
+
+        .grid-card-checkbox {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 22px;
+            height: 22px;
+            accent-color: var(--accent-gold);
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.7;
+            transition: all 0.2s;
+        }
+
+        .grid-card-checkbox:checked {
+            opacity: 1;
+        }
+
+        .grid-card.selected {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .grid-card.selected .grid-card-checkbox {
+            opacity: 1;
+        }
+
+        .selection-toolbar {
+            display: none;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+            padding: 12px 16px;
+            margin: -16px -16px 16px -16px;
+            border-bottom: 1px solid var(--accent-gold);
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .selection-toolbar.active {
+            display: flex;
+        }
+
+        .selection-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .selection-count {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+
+        .selection-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 11px;
+        }
+
+        /* Slideshow Overlay */
+        .slideshow-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .slideshow-overlay.active {
+            display: flex;
+        }
+
+        .slideshow-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .slideshow-date-badge {
+            font-size: 11px;
+            color: var(--accent-gold);
+            background: var(--bg-tertiary);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .slideshow-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .slideshow-close {
+            font-size: 24px;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 4px 12px;
+        }
+
+        .slideshow-main {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Single view slideshow */
+        .slideshow-single {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow-mpd-panel {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-primary);
+            border-right: 1px solid var(--border-color);
+        }
+
+        .slideshow-mpd-header {
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .slideshow-mpd-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .slideshow-mpd-author {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .slideshow-mpd-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .slideshow-image-panel {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: var(--bg-secondary);
+        }
+
+        .slideshow-image-panel img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Grid slideshow (4-up) */
+        .slideshow-grid {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 16px;
+            gap: 12px;
+        }
+
+        .slideshow-grid.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .slideshow-grid-item {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+
+        .slideshow-grid-mpd {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .slideshow-grid-mpd-header {
+            padding: 8px 10px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .slideshow-grid-mpd-title {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slideshow-grid-mpd-author {
+            font-size: 8px;
+            color: var(--text-secondary);
+        }
+
+        .slideshow-grid-mpd-date {
+            font-size: 8px;
+            color: var(--accent-orange);
+            margin-top: 2px;
+        }
+
+        .slideshow-grid-mpd-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 8px;
+            line-height: 1.4;
+            background: var(--bg-primary);
+        }
+
+        .slideshow-grid-image {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            background: var(--bg-tertiary);
+        }
+
+        .slideshow-grid-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .slideshow-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 20px;
+            opacity: 0.7;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .slideshow-nav-btn:hover {
+            opacity: 1;
+        }
+
+        .slideshow-nav-prev {
+            left: 10px;
+        }
+
+        .slideshow-nav-next {
+            right: 10px;
+        }
+
+        /* Export Modal */
+        .export-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .export-modal.active {
+            display: flex;
+        }
+
+        .export-dialog {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .export-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .export-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .help-dialog {
+            position: relative;
+            max-width: 550px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .help-content {
+            text-align: left;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .help-section {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #333;
+        }
+
+        .help-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .help-section h3 {
+            color: var(--accent-gold);
+            font-size: 12px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .help-section p {
+            color: #aaa;
+            margin-bottom: 6px;
+        }
+
+        .help-section code {
+            display: block;
+            background: #1a1a1a;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--accent-gold);
+            margin: 8px 0;
+            overflow-x: auto;
+        }
+
+        .help-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .help-tools span {
+            color: #888;
+        }
+
+        .help-tools b {
+            color: #fff;
+        }
+
+        .help-shortcuts {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .help-shortcuts span {
+            color: #888;
+        }
+
+        .help-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 16px;
+        }
+
+        .help-links a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        .help-links a:hover {
+            text-decoration: underline;
+        }
+
+        .help-shortcuts kbd {
+            display: inline-block;
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: #fff;
+            margin-right: 4px;
+        }
+
+        .help-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 28px;
+            height: 28px;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 50%;
+            color: #888;
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .help-close:hover {
+            background: #f44;
+            border-color: #f44;
+            color: #fff;
+        }
+
+        .help-tip {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 6px;
+            padding: 12px !important;
+        }
+
+        .help-tip h3 {
+            color: #fff !important;
+        }
+
+        .help-tip a {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 600px) {
+            .help-dialog {
+                max-width: 95vw;
+                max-height: 85vh;
+                padding: 16px;
+            }
+
+            .help-content {
+                font-size: 10px;
+            }
+
+            .help-section h3 {
+                font-size: 11px;
+            }
+
+            .help-tools,
+            .help-links {
+                grid-template-columns: 1fr;
+                gap: 3px;
+            }
+
+            .help-shortcuts {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+        }
+
+        .help-credits {
+            text-align: center;
+            color: #555;
+            font-size: 10px;
+            margin-top: 12px;
+        }
+
+        .help-credits p {
+            margin: 4px 0;
+        }
+
+        .export-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .export-option:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .export-option.selected {
+            border-color: var(--accent-gold);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .export-option input[type="radio"] {
+            accent-color: var(--accent-gold);
+        }
+
+        .export-label {
+            flex: 1;
+        }
+
+        .export-label-title {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .export-label-desc {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .export-range {
+            margin: 16px 0;
+        }
+
+        .export-range label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .export-range input {
+            width: 100%;
+        }
+
+        .export-progress {
+            display: none;
+            margin-top: 16px;
+        }
+
+        .export-progress.active {
+            display: block;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .progress-text {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .export-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .export-actions button {
+            flex: 1;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--border-color);
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+        }
+
+        .loading-spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 8px;
+                height: auto;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .controls {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .scene-count {
+                border-left: none;
+                padding: 0;
+            }
+
+            .main-container {
+                height: calc(100vh - 100px - 80px);
+            }
+
+            .split-view {
+                flex-direction: column;
+            }
+
+            .mpd-panel {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                max-height: 50%;
+            }
+
+            .image-panel {
+                max-height: 50%;
+            }
+
+            .timeline {
+                height: 70px;
+            }
+
+            .timeline-item {
+                width: 45px;
+                height: 34px;
+            }
+
+            .slideshow-single {
+                flex-direction: column;
+            }
+
+            .slideshow-mpd-panel,
+            .slideshow-image-panel {
+                width: 100%;
+                height: 50%;
+            }
+
+            .slideshow-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            .slideshow-grid-item {
+                flex-direction: column;
+            }
+
+            .slideshow-grid-mpd,
+            .slideshow-grid-image {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text"><span>WAG</span> // GOLD</span>
+        </div>
+        <div class="controls">
+            <button class="btn active" id="splitBtn" onclick="setView('split')">Split</button>
+            <button class="btn" id="gridBtn" onclick="setView('grid')">Grid</button>
+            <button class="btn" id="slideshowBtn" onclick="startSlideshow('single')">Slideshow</button>
+            <button class="btn" id="gridSlideshowBtn" onclick="startSlideshow('grid')">4-Up</button>
+            <button class="btn export-btn" onclick="openExportModal()">Export</button>
+            <button class="btn help-btn" onclick="openHelpModal()">?</button>
+            <span class="scene-count" id="sceneCount">Loading...</span>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="split-view" id="splitView">
+            <div class="mpd-panel">
+                <div class="mpd-header">
+                    <div>
+                        <div class="mpd-title">
+                            <span id="mpdFilename">Select a scene</span>
+                        </div>
+                        <div class="mpd-author" id="mpdAuthor"></div>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <button class="btn" onclick="copyMpdContent()" title="Copy MPD content">Copy</button>
+                        <div class="mpd-meta" id="mpdMeta"></div>
+                    </div>
+                </div>
+                <div class="mpd-content" id="mpdContent">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-panel">
+                <div class="image-header">
+                    <div class="image-title" id="imageTitle">Rendered Scene</div>
+                    <div class="image-date" id="imageDate"></div>
+                </div>
+                <div class="image-container" id="imageContainer">
+                    <div class="image-placeholder">Select a scene from the timeline</div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-view" id="gridView">
+            <div class="selection-toolbar" id="selectionToolbar">
+                <div class="selection-info">
+                    <span class="selection-count" id="selectionCount">0 selected</span>
+                    <button class="btn btn-small" onclick="selectAll()">Select All</button>
+                    <button class="btn btn-small" onclick="selectNone()">Clear</button>
+                </div>
+                <div class="selection-actions">
+                    <button class="btn btn-small" onclick="playlistSlideshow()">Slideshow</button>
+                    <button class="btn btn-small" onclick="exportMpdFiles()">Export MPD</button>
+                    <button class="btn btn-small export-btn" onclick="exportPlaylist()">Export</button>
+                </div>
+            </div>
+            <div class="grid-container" id="gridContainer"></div>
+        </div>
+    </main>
+
+    <div class="timeline">
+        <div class="timeline-header">
+            <span class="timeline-title">Timeline</span>
+            <div class="timeline-nav">
+                <button class="timeline-btn" onclick="scrollTimeline(-200)">◀</button>
+                <button class="timeline-btn" onclick="scrollTimeline(200)">▶</button>
+            </div>
+        </div>
+        <div class="timeline-scroll" id="timelineScroll"></div>
+    </div>
+
+    <!-- Slideshow Overlay -->
+    <div class="slideshow-overlay" id="slideshowOverlay">
+        <div class="slideshow-header">
+            <div class="slideshow-date-badge" id="slideshowDateBadge"></div>
+            <div class="actions">
+                <a href="wag-castle-arch.html"
+                    style="color: #ffd700; text-decoration: none; font-size: 11px; margin-right: 15px; border: 1px solid #ffd700; padding: 4px 8px; border-radius: 4px;">🏰
+                    Castle Architect</a>
+                <button class="icon-btn" onclick="toggleViewMode()" title="Toggle View">Mode</button>
+                <span class="slideshow-close" onclick="closeSlideshow()">×</span>
+            </div>
+        </div>
+        <div class="slideshow-main">
+            <div class="slideshow-single" id="slideshowSingle">
+                <div class="slideshow-mpd-panel">
+                    <div class="slideshow-mpd-header">
+                        <div class="slideshow-mpd-title" id="slideshowTitle"></div>
+                        <div class="slideshow-mpd-author" id="slideshowAuthor"></div>
+                    </div>
+                    <div class="slideshow-mpd-content" id="slideshowMpdContent"></div>
+                </div>
+                <div class="slideshow-image-panel">
+                    <img id="slideshowImage" src="" alt="Scene">
+                </div>
+            </div>
+            <div class="slideshow-grid" id="slideshowGrid"></div>
+        </div>
+        <span class="slideshow-nav-btn slideshow-nav-prev" onclick="slideshowNav(-1)">‹</span>
+        <span class="slideshow-nav-btn slideshow-nav-next" onclick="slideshowNav(1)">›</span>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="export-modal" id="exportModal">
+        <div class="export-dialog">
+            <div class="export-title">Export Scenes</div>
+            <div class="export-subtitle">Choose a format for your scenes</div>
+
+            <div class="export-option selected" onclick="selectExportMode('json')">
+                <input type="radio" name="exportMode" value="json" checked>
+                <div class="export-label">
+                    <div class="export-label-title">JSON Data</div>
+                    <div class="export-label-desc">Machine-readable data for tools, APIs, or reimporting. Includes all
+                        metadata and MPD content.</div>
+                </div>
+            </div>
+
+            <div class="export-option" onclick="selectExportMode('html')">
+                <input type="radio" name="exportMode" value="html">
+                <div class="export-label">
+                    <div class="export-label-title">HTML Slideshow</div>
+                    <div class="export-label-desc">Self-contained presentation file. Opens in any browser, no software
+                        needed. Good for teaching.</div>
+                </div>
+            </div>
+
+            <div class="export-option" onclick="selectExportMode('png')">
+                <input type="radio" name="exportMode" value="png">
+                <div class="export-label">
+                    <div class="export-label-title">PNG Image Series</div>
+                    <div class="export-label-desc">High-resolution composed images (1920x1080). Use with FFmpeg or
+                        QuickTime to create video.</div>
+                </div>
+            </div>
+
+            <div class="export-range">
+                <label>Scenes to export: <span id="exportRangeLabel">All</span></label>
+                <input type="range" id="exportRange" min="1" max="100" value="100" oninput="updateExportRange()">
+            </div>
+
+            <div class="export-progress" id="exportProgress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Preparing...</div>
+            </div>
+
+            <div class="export-actions">
+                <button class="btn" onclick="closeExportModal()">Cancel</button>
+                <button class="btn export-btn" onclick="startExport()">Export</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="export-modal" id="helpModal">
+        <div class="export-dialog help-dialog">
+            <button class="help-close" onclick="closeHelpModal()">×</button>
+            <div class="export-title">WAG // GOLD Gallery</div>
+            <div class="export-subtitle">Part of the DCE-GYO Studio Atlas</div>
+
+            <div class="help-content">
+                <div class="help-section help-tip">
+                    <h3>💡 View in 3D</h3>
+                    <p>Copy any MPD code from this gallery, paste it into the <a
+                            href="https://hartswf0.github.io/tractor-dce-gyo/grecian-urn.html" target="_blank">Grecian
+                            Urn Viewer</a>, then hit the <b style="color:var(--accent-gold)">yellow refresh button</b>
+                        to render it as a real 3D model.</p>
+                </div>
+
+                <div class="help-section">
+                    <h3>What is LDraw?</h3>
+                    <p><b>LDraw</b> is an open standard for LEGO CAD (1995). Bricks are text, not binary:</p>
+                    <code>1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat</code>
+                    <p><b>MPD</b> bundles multiple models into one file for complex scenes.</p>
+                </div>
+
+                <div class="help-section">
+                    <h3>WAG Philosophy</h3>
+                    <p><b>"Words Assemble Geometries"</b> — The brick is a word. The scene is a sentence. The context
+                        window is a paragraph.</p>
+                </div>
+
+                <div class="help-section">
+                    <h3>Studio Tools</h3>
+                    <div class="help-tools">
+                        <span><b>Swiss</b> Launcher</span>
+                        <span><b>COURAGE</b> 3D Viewer</span>
+                        <span><b>GOLD</b> Line Editor</span>
+                        <span><b>Grace</b> Batch Editor</span>
+                        <span><b>Frank</b> Sync Bus</span>
+                        <span><b>MENTO</b> Camera</span>
+                        <span><b>TIMBER</b> Debug</span>
+                        <span><b>HOMER</b> Full Studio</span>
+                    </div>
+                </div>
+
+                <div class="help-section">
+                    <h3>Shortcuts</h3>
+                    <div class="help-shortcuts">
+                        <span><kbd>←</kbd> <kbd>→</kbd> Navigate</span>
+                        <span><kbd>Esc</kbd> Close</span>
+                        <span><kbd>G</kbd> Grid toggle</span>
+                    </div>
+                </div>
+
+                <div class="help-section">
+                    <h3>Resources</h3>
+                    <div class="help-links">
+                        <a href="https://ldraw.org" target="_blank">LDraw.org</a>
+                        <a href="https://hartswf0.github.io/tractor-dce-gyo/grecian-urn.html" target="_blank">3D
+                            Viewer</a>
+                        <a href="https://hartswf0.github.io/tractor-dce-gyo/pattern-glossary.html"
+                            target="_blank">Pattern Glossary</a>
+                        <a href="https://hartswf0.github.io/tractor-dce-gyo/project-genome-dce-gyo.html"
+                            target="_blank">Project Genome</a>
+                        <a href="https://hartswf0.github.io/tractor-dce-gyo/wag-work.html" target="_blank">WAG
+                            Workshop</a>
+                        <a href="https://github.com/hartswf0/tractor-dce-gyo" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="help-credits">
+                    <p>Watson Hartsoe · DCE-GYO · 2025</p>
+                    <p style="opacity:0.6">Honoring James Jessiman (LDraw, 1995-1997)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let scenes = [];
+        let currentIndex = 0;
+        let currentView = 'split';
+        let slideshowMode = 'single'; // 'single' or 'grid'
+        let slideshowGridStart = 0;
+        let exportMode = 'single';
+
+        // Initialize
+        async function init() {
+            await discoverScenes();
+            if (scenes.length > 0) {
+                loadScene(0);
+            }
+            renderTimeline();
+            renderGrid();
+            updateSceneCount();
+            document.getElementById('exportRange').max = scenes.length;
+        }
+
+        // Discover scenes
+        async function discoverScenes() {
+            const baseUrl = window.location.href.replace(/\/[^\/]*$/, '/');
+
+            try {
+                const response = await fetch(baseUrl);
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const links = doc.querySelectorAll('a');
+
+                const jsonFiles = [];
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.endsWith('.json') && href.includes('wag_gold_scene')) {
+                        if (!href.includes('(1)') && !href.includes('test-')) {
+                            jsonFiles.push(href);
+                        }
+                    }
+                });
+
+                jsonFiles.sort((a, b) => extractDateFromFilename(a) - extractDateFromFilename(b));
+
+                for (const file of jsonFiles) {
+                    try {
+                        const jsonResponse = await fetch(baseUrl + file);
+                        const data = await jsonResponse.json();
+
+                        // Check if corresponding PNG exists
+                        const pngPath = baseUrl + file.replace('.json', '.png');
+                        const pngCheck = await fetch(pngPath, { method: 'HEAD' });
+                        if (!pngCheck.ok) {
+                            console.warn('Skipping scene without image:', file);
+                            continue;
+                        }
+
+                        // Extract Name and Author from MPD content
+                        const metadata = extractMpdMetadata(data.mpd_content || '');
+
+                        scenes.push({
+                            filename: file,
+                            jsonPath: baseUrl + file,
+                            imagePath: pngPath,
+                            data: data,
+                            name: metadata.name,
+                            author: metadata.author,
+                            date: data.date || extractDateDisplay(file),
+                            time: data.time || ''
+                        });
+                    } catch (e) {
+                        console.warn('Failed to load:', file, e);
+                    }
+                }
+            } catch (e) {
+                console.warn('Directory listing not available');
+            }
+        }
+
+        // Extract Name and Author from MPD content
+        // Skips the boilerplate "untitled.mpd" header to find the real name
+        function extractMpdMetadata(content) {
+            const lines = content.split('\n');
+            let name = 'Untitled';
+            let author = '';
+            let foundRealHeader = false;
+
+            // Boilerplate patterns to skip
+            const boilerplateNames = ['untitled', 'write your description here', ''];
+
+            for (const line of lines) {
+                const trimmed = line.trim();
+
+                // Look for "0 Name:" entries
+                const nameMatch = trimmed.match(/^0\s+Name:\s*(.+)/i);
+                if (nameMatch) {
+                    const extractedName = nameMatch[1].trim();
+                    // Skip boilerplate names, keep the real one
+                    if (extractedName && !boilerplateNames.includes(extractedName.toLowerCase())) {
+                        name = extractedName;
+                        foundRealHeader = true;
+                    }
+                }
+
+                // Look for "0 Author:" (skip empty ones)
+                const authorMatch = trimmed.match(/^0\s+Author:\s*(.+)/i);
+                if (authorMatch && authorMatch[1].trim()) {
+                    author = authorMatch[1].trim();
+                }
+
+                // Stop after we've found a real header and hit STEP or part lines
+                if (foundRealHeader && (trimmed.startsWith('0 STEP') || trimmed.startsWith('1 '))) {
+                    break;
+                }
+            }
+
+            return { name, author };
+        }
+
+
+        function extractDateFromFilename(filename) {
+            const match = filename.match(/(\d{4}-\d{2}-\d{2})_(\d{2}-\d{2}-\d{2})/);
+            if (match) {
+                return new Date(match[1] + 'T' + match[2].replace(/-/g, ':'));
+            }
+            return new Date(0);
+        }
+
+        function extractDateDisplay(filename) {
+            const match = filename.match(/(\d{4}-\d{2}-\d{2})_(\d{2}-\d{2}-\d{2})/);
+            if (match) {
+                return `${match[1]} ${match[2].replace(/-/g, ':')}`;
+            }
+            return '';
+        }
+
+        // Load scene
+        function loadScene(index) {
+            if (index < 0 || index >= scenes.length) return;
+
+            currentIndex = index;
+            const scene = scenes[index];
+            const mpdContent = scene.data.mpd_content || 'No MPD content';
+
+            renderMpdContent(mpdContent, 'mpdContent');
+
+            document.getElementById('mpdFilename').textContent = scene.name;
+            document.getElementById('mpdAuthor').textContent = scene.author ? `by ${scene.author}` : '';
+            document.getElementById('mpdMeta').textContent = `${scene.data.line_count || 0} lines`;
+
+            document.getElementById('imageContainer').innerHTML = `
+                <img class="scene-image" src="${scene.imagePath}" alt="${scene.name}" 
+                     onerror="this.parentNode.innerHTML='<div class=\\'image-placeholder\\'>Image not found</div>'">
+            `;
+
+            document.getElementById('imageTitle').textContent = scene.name;
+            document.getElementById('imageDate').textContent = scene.date;
+
+            // Update timeline
+            document.querySelectorAll('.timeline-item').forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+
+            updateSceneCount();
+        }
+
+        // Render MPD content with syntax highlighting
+        // Strips the boilerplate "untitled.mpd" header before display
+        function renderMpdContent(content, containerId) {
+            const container = document.getElementById(containerId);
+            const strippedContent = stripBoilerplate(content);
+            const lines = strippedContent.split('\n');
+
+            let html = '';
+            lines.forEach((line, i) => {
+                const lineClass = getLineClass(line);
+                const escapedLine = escapeHtml(line);
+                html += `
+                    <div class="mpd-line">
+                        <input type="checkbox" class="line-checkbox" title="Toggle line">
+                        <span class="line-number">${i + 1}</span>
+                        <span class="line-content ${lineClass}">${escapedLine}</span>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Strip boilerplate header (untitled.mpd section) from MPD content
+        function stripBoilerplate(content) {
+            const lines = content.split('\n');
+            let startIndex = 0;
+            let foundRealContent = false;
+
+            // Patterns that indicate boilerplate
+            const boilerplatePatterns = [
+                /^0\s*FILE\s+untitled/i,
+                /^0\s*Name:\s*(untitled|New Model|)$/i,
+                /^0\s*Author:\s*$/,
+                /^0\s*WRITE YOUR DESCRIPTION/i,
+                /^0\s*BFC CERTIFY/i,
+                /^0\s*!CATEGORY\s*$/i,
+                /^0\s*$/,
+                /^\s*$/
+            ];
+
+            // Patterns that indicate real content has started
+            const realContentPatterns = [
+                /^0\s*Name:\s*.{5,}/,  // Name with actual content (5+ chars)
+                /^0\s*!LDRAW_ORG/i,
+                /^0\s*!LICENCE/i
+            ];
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+
+                // Check if we've hit real content
+                for (const pattern of realContentPatterns) {
+                    if (pattern.test(line) && !line.match(/Name:\s*(untitled|New Model|)$/i)) {
+                        foundRealContent = true;
+                        startIndex = i;
+                        break;
+                    }
+                }
+
+                if (foundRealContent) break;
+
+                // Check if this is still boilerplate
+                const isBoilerplate = boilerplatePatterns.some(p => p.test(line));
+                if (!isBoilerplate && line.length > 0) {
+                    // Non-boilerplate, non-empty line found
+                    startIndex = i;
+                    break;
+                }
+            }
+
+            return lines.slice(startIndex).join('\n');
+        }
+
+        // Copy MPD content to clipboard
+        function copyMpdContent() {
+            const scene = scenes[currentIndex];
+            if (!scene) return;
+
+            const content = stripBoilerplate(scene.data.mpd_content || '');
+            navigator.clipboard.writeText(content).then(() => {
+                // Show brief confirmation
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => btn.textContent = originalText, 1500);
+            }).catch(err => {
+                console.error('Copy failed:', err);
+                alert('Copy failed - try selecting and copying manually');
+            });
+        }
+
+        function getLineClass(line) {
+            const trimmed = line.trim();
+            if (trimmed.startsWith('0 //')) return 'comment';
+            if (trimmed.startsWith('0 STEP')) return 'step';
+            if (trimmed.match(/^0\s*(FILE|Name:|Author:|!LDRAW)/)) return 'meta';
+            if (trimmed.match(/^0\s*[╔╚╗╝═║┏┗┓┛━┃]/)) return 'box';
+            if (trimmed.match(/^0\s*[✓→•]/)) return 'header';
+            if (trimmed.startsWith('0 ')) return 'comment';
+            if (trimmed.startsWith('1 ')) return 'part';
+            return '';
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Timeline
+        function renderTimeline() {
+            const container = document.getElementById('timelineScroll');
+            let html = '';
+            scenes.forEach((scene, i) => {
+                html += `
+                    <div class="timeline-item ${i === 0 ? 'active' : ''}" 
+                         onclick="loadScene(${i})" title="${scene.name}">
+                        <img src="${scene.imagePath}" alt="${scene.name}" onerror="this.style.display='none'">
+                        <div class="date-badge">${scene.date.slice(5) || ''}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html || '<span style="color:var(--text-muted)">No scenes</span>';
+        }
+
+        // Grid view with selection checkboxes
+        function renderGrid() {
+            const container = document.getElementById('gridContainer');
+            let html = '';
+            scenes.forEach((scene, i) => {
+                const isSelected = selectedScenes.has(i);
+                html += `
+                    <div class="grid-card ${isSelected ? 'selected' : ''}" data-index="${i}">
+                        <input type="checkbox" class="grid-card-checkbox" 
+                               ${isSelected ? 'checked' : ''}
+                               onclick="event.stopPropagation(); toggleSelection(${i})"
+                               title="Add to playlist">
+                        <img class="grid-card-image" src="${scene.imagePath}" alt="${scene.name}"
+                             onclick="setView('split'); loadScene(${i});">
+                        <div class="grid-card-info" onclick="setView('split'); loadScene(${i});">
+                            <div class="grid-card-title">${scene.name}</div>
+                            <div class="grid-card-author">${scene.author || ''}</div>
+                            <div class="grid-card-meta">
+                                <span>${scene.date}</span>
+                                <span>${scene.data.line_count || 0} lines</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+            updateSelectionUI();
+        }
+
+        // Selection state
+        let selectedScenes = new Set();
+
+        function toggleSelection(index) {
+            if (selectedScenes.has(index)) {
+                selectedScenes.delete(index);
+            } else {
+                selectedScenes.add(index);
+            }
+            updateSelectionUI();
+
+            // Update card visual
+            const card = document.querySelector(`.grid-card[data-index="${index}"]`);
+            if (card) {
+                card.classList.toggle('selected', selectedScenes.has(index));
+            }
+        }
+
+        function selectAll() {
+            scenes.forEach((_, i) => selectedScenes.add(i));
+            renderGrid();
+        }
+
+        function selectNone() {
+            selectedScenes.clear();
+            renderGrid();
+        }
+
+        function updateSelectionUI() {
+            const count = selectedScenes.size;
+            const toolbar = document.getElementById('selectionToolbar');
+            const countEl = document.getElementById('selectionCount');
+
+            toolbar.classList.toggle('active', count > 0);
+            countEl.textContent = `${count} selected`;
+        }
+
+        function getSelectedScenes() {
+            return Array.from(selectedScenes).sort((a, b) => a - b).map(i => scenes[i]);
+        }
+
+        function playlistSlideshow() {
+            if (selectedScenes.size === 0) {
+                alert('Select some scenes first!');
+                return;
+            }
+            // Start slideshow with only selected scenes
+            playlistMode = true;
+            playlistScenes = getSelectedScenes();
+            playlistIndex = 0;
+            document.getElementById('slideshowOverlay').classList.add('active');
+            updatePlaylistSlideshow();
+        }
+
+        let playlistMode = false;
+        let playlistScenes = [];
+        let playlistIndex = 0;
+
+        function updatePlaylistSlideshow() {
+            if (!playlistMode || playlistScenes.length === 0) return;
+
+            const scene = playlistScenes[playlistIndex];
+            document.getElementById('slideshowDateBadge').textContent =
+                `Playlist: ${playlistIndex + 1}/${playlistScenes.length} | ${scene.date}`;
+            document.getElementById('slideshowTitle').textContent = scene.name;
+            document.getElementById('slideshowAuthor').textContent = scene.author ? `by ${scene.author}` : '';
+            document.getElementById('slideshowImage').src = scene.imagePath;
+
+            const content = scene.data.mpd_content || '';
+            renderMpdContent(content, 'slideshowMpdContent');
+        }
+
+        // Export MPD files from selected scenes
+        function exportMpdFiles() {
+            if (selectedScenes.size === 0) {
+                alert('Select some scenes first from the grid view!');
+                return;
+            }
+
+            const selectedIndices = Array.from(selectedScenes).sort((a, b) => a - b);
+            const selectedSceneData = selectedIndices.map(i => scenes[i]).filter(s => s && s.data);
+
+            if (selectedSceneData.length === 0) {
+                alert('No scene data available.');
+                return;
+            }
+
+            // Create a combined MPD file with all selected scenes
+            let combinedMpd = '0 FILE WAG_GOLD_Export.mpd\n';
+            combinedMpd += '0 Name: WAG GOLD Gallery Export\n';
+            combinedMpd += '0 Author: WAG GOLD Gallery\n';
+            combinedMpd += `0 !LDRAW_ORG Model\n`;
+            combinedMpd += `0 // Exported ${selectedSceneData.length} scenes on ${new Date().toLocaleDateString()}\n\n`;
+
+            selectedSceneData.forEach((scene, index) => {
+                const metadata = extractMpdMetadata(scene.data.mpd_content || '');
+                const cleanContent = stripBoilerplate(scene.data.mpd_content || '');
+                const safeName = (metadata.name || scene.mpd.replace('.mpd', '')).replace(/[^a-zA-Z0-9_\-]/g, '_');
+
+                combinedMpd += `0 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+                combinedMpd += `0 // Scene ${index + 1}: ${metadata.name || scene.mpd}\n`;
+                if (metadata.author) {
+                    combinedMpd += `0 // Author: ${metadata.author}\n`;
+                }
+                if (scene.date) {
+                    combinedMpd += `0 // Date: ${scene.date}\n`;
+                }
+                combinedMpd += `0 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+                combinedMpd += cleanContent;
+                combinedMpd += '\n\n';
+            });
+
+            // Create and download the file
+            const blob = new Blob([combinedMpd], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `WAG_GOLD_Export_${selectedSceneData.length}_scenes.mpd`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // Show confirmation
+            alert(`Exported ${selectedSceneData.length} scenes to MPD file!`);
+        }
+
+        function exportPlaylist() {
+            if (selectedScenes.size === 0) {
+                alert('Select some scenes first!');
+                return;
+            }
+            // Open export modal with playlist mode
+            playlistExportMode = true;
+            openExportModal();
+        }
+
+        let playlistExportMode = false;
+
+        // View controls
+        function setView(view) {
+            currentView = view;
+            document.getElementById('splitView').style.display = view === 'split' ? 'flex' : 'none';
+            document.getElementById('gridView').style.display = view === 'grid' ? 'block' : 'none';
+            document.getElementById('splitBtn').classList.toggle('active', view === 'split');
+            document.getElementById('gridBtn').classList.toggle('active', view === 'grid');
+        }
+
+        function scrollTimeline(amount) {
+            document.getElementById('timelineScroll').scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        function updateSceneCount() {
+            document.getElementById('sceneCount').textContent =
+                `${scenes.length} scenes | ${currentIndex + 1}/${scenes.length}`;
+        }
+
+        // ==================== SLIDESHOW ====================
+        function startSlideshow(mode = 'single') {
+            if (scenes.length === 0) return;
+            slideshowMode = mode;
+            slideshowGridStart = Math.floor(currentIndex / 4) * 4;
+            document.getElementById('slideshowOverlay').classList.add('active');
+            updateSlideshow();
+        }
+
+        function closeSlideshow() {
+            document.getElementById('slideshowOverlay').classList.remove('active');
+            playlistMode = false;
+        }
+
+        function toggleSlideshowMode() {
+            slideshowMode = slideshowMode === 'single' ? 'grid' : 'single';
+            updateSlideshow();
+        }
+
+        function updateSlideshow() {
+            const singleView = document.getElementById('slideshowSingle');
+            const gridView = document.getElementById('slideshowGrid');
+
+            if (slideshowMode === 'single') {
+                singleView.style.display = 'flex';
+                gridView.classList.remove('active');
+                updateSlideshowSingle();
+            } else {
+                singleView.style.display = 'none';
+                gridView.classList.add('active');
+                updateSlideshowGrid();
+            }
+        }
+
+        function updateSlideshowSingle() {
+            const scene = scenes[currentIndex];
+            document.getElementById('slideshowDateBadge').textContent = scene.date;
+            document.getElementById('slideshowTitle').textContent = scene.name;
+            document.getElementById('slideshowAuthor').textContent = scene.author ? `by ${scene.author}` : '';
+            document.getElementById('slideshowImage').src = scene.imagePath;
+
+            const content = scene.data.mpd_content || '';
+            renderMpdContent(content, 'slideshowMpdContent');
+        }
+
+        function updateSlideshowGrid() {
+            const container = document.getElementById('slideshowGrid');
+            let html = '';
+
+            for (let i = 0; i < 4; i++) {
+                const idx = slideshowGridStart + i;
+                if (idx < scenes.length) {
+                    const scene = scenes[idx];
+                    const mpdLines = (scene.data.mpd_content || '').split('\n');
+                    const mpdHtml = mpdLines.map((line, n) => {
+                        const lineClass = getLineClass(line);
+                        return `<div class="mpd-line"><span class="line-number" style="min-width:20px;font-size:7px">${n + 1}</span><span class="line-content ${lineClass}">${escapeHtml(line)}</span></div>`;
+                    }).join('');
+
+                    html += `
+                        <div class="slideshow-grid-item">
+                            <div class="slideshow-grid-mpd">
+                                <div class="slideshow-grid-mpd-header">
+                                    <div class="slideshow-grid-mpd-title">${scene.name}</div>
+                                    <div class="slideshow-grid-mpd-author">${scene.author || ''}</div>
+                                    <div class="slideshow-grid-mpd-date">${scene.date}</div>
+                                </div>
+                                <div class="slideshow-grid-mpd-content">${mpdHtml}</div>
+                            </div>
+                            <div class="slideshow-grid-image">
+                                <img src="${scene.imagePath}" alt="${scene.name}">
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    html += '<div class="slideshow-grid-item" style="opacity:0.3"><div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text-muted)">No more scenes</div></div>';
+                }
+            }
+
+            container.innerHTML = html;
+            document.getElementById('slideshowDateBadge').textContent =
+                `Scenes ${slideshowGridStart + 1}-${Math.min(slideshowGridStart + 4, scenes.length)} of ${scenes.length}`;
+        }
+
+        function slideshowNav(dir) {
+            if (playlistMode) {
+                // Playlist navigation
+                playlistIndex = (playlistIndex + dir + playlistScenes.length) % playlistScenes.length;
+                updatePlaylistSlideshow();
+            } else if (slideshowMode === 'single') {
+                currentIndex = (currentIndex + dir + scenes.length) % scenes.length;
+                updateSlideshow();
+            } else {
+                slideshowGridStart = Math.max(0, Math.min(scenes.length - 4, slideshowGridStart + dir * 4));
+                updateSlideshow();
+            }
+        }
+
+        // ==================== EXPORT ====================
+        function openExportModal() {
+            document.getElementById('exportModal').classList.add('active');
+
+            // If in playlist export mode, use selected scenes count
+            const sceneCount = playlistExportMode ? selectedScenes.size : scenes.length;
+            document.getElementById('exportRange').max = sceneCount;
+            document.getElementById('exportRange').value = sceneCount;
+
+            // Update modal title if playlist mode
+            const titleEl = document.querySelector('.export-title');
+            if (playlistExportMode) {
+                titleEl.textContent = `🎬 Export Playlist (${sceneCount} selected)`;
+            } else {
+                titleEl.textContent = '🎬 Export Video';
+            }
+
+            updateExportRange();
+        }
+
+        function closeExportModal() {
+            document.getElementById('exportModal').classList.remove('active');
+            document.getElementById('exportProgress').classList.remove('active');
+            playlistExportMode = false;
+        }
+
+        function openHelpModal() {
+            document.getElementById('helpModal').classList.add('active');
+        }
+
+        function closeHelpModal() {
+            document.getElementById('helpModal').classList.remove('active');
+        }
+
+        function selectExportMode(mode) {
+            exportMode = mode;
+            document.querySelectorAll('.export-option').forEach(el => {
+                el.classList.toggle('selected', el.querySelector('input').value === mode);
+                el.querySelector('input').checked = el.querySelector('input').value === mode;
+            });
+        }
+
+        function updateExportRange() {
+            const val = document.getElementById('exportRange').value;
+            document.getElementById('exportRangeLabel').textContent =
+                val == scenes.length ? 'All' : `First ${val}`;
+        }
+
+        function updateExportSpeed() {
+            const val = document.getElementById('exportSpeed').value;
+            document.getElementById('exportSpeedLabel').textContent = `${val}s`;
+        }
+
+        async function startExport() {
+            const numScenes = parseInt(document.getElementById('exportRange').value);
+
+            // Get scenes to export (playlist or all)
+            const exportScenes = playlistExportMode ? getSelectedScenes().slice(0, numScenes) : scenes.slice(0, numScenes);
+
+            if (exportScenes.length === 0) {
+                alert('No scenes to export!');
+                return;
+            }
+
+            document.getElementById('exportProgress').classList.add('active');
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
+
+            // Create canvas for export
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 1080;
+            const ctx = canvas.getContext('2d');
+
+            if (exportMode === 'json') {
+                exportJson(exportScenes, progressFill, progressText);
+            } else if (exportMode === 'html') {
+                await exportHtmlSlideshow(exportScenes, progressFill, progressText);
+            } else if (exportMode === 'png') {
+                await exportPngImages(ctx, canvas, exportScenes, progressFill, progressText);
+            }
+        }
+
+        // Export as JSON data
+        function exportJson(exportScenes, progressFill, progressText) {
+            progressText.textContent = 'Preparing JSON...';
+            progressFill.style.width = '50%';
+
+            const exportData = {
+                exported: new Date().toISOString(),
+                version: '1.0',
+                sceneCount: exportScenes.length,
+                scenes: exportScenes.map((scene, i) => ({
+                    index: i + 1,
+                    filename: scene.filename,
+                    name: scene.name,
+                    author: scene.author,
+                    date: scene.date,
+                    lineCount: scene.data.line_count || 0,
+                    mpdContent: stripBoilerplate(scene.data.mpd_content || ''),
+                    imagePath: scene.imagePath.split('/').pop()
+                }))
+            };
+
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `wag-gold-export-${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            progressFill.style.width = '100%';
+            progressText.textContent = 'JSON exported!';
+            setTimeout(() => {
+                document.getElementById('exportProgress').classList.remove('active');
+                closeExportModal();
+                playlistExportMode = false;
+            }, 1000);
+        }
+
+        // Export as self-contained HTML slideshow
+        async function exportHtmlSlideshow(exportScenes, progressFill, progressText) {
+            progressText.textContent = 'Building slideshow...';
+
+            // Convert images to base64 for embedding
+            const scenesWithImages = [];
+            for (let i = 0; i < exportScenes.length; i++) {
+                const scene = exportScenes[i];
+                progressText.textContent = `Loading image ${i + 1} of ${exportScenes.length}...`;
+                progressFill.style.width = ((i + 1) / exportScenes.length * 50) + '%';
+
+                let imageBase64 = '';
+                try {
+                    const response = await fetch(scene.imagePath);
+                    const blob = await response.blob();
+                    imageBase64 = await new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => resolve(reader.result);
+                        reader.readAsDataURL(blob);
+                    });
+                } catch (e) {
+                    console.warn('Failed to load image:', scene.imagePath);
+                }
+
+                scenesWithImages.push({
+                    ...scene,
+                    imageBase64,
+                    mpdContent: stripBoilerplate(scene.data.mpd_content || '')
+                });
+            }
+
+            progressText.textContent = 'Generating HTML...';
+            progressFill.style.width = '75%';
+
+            const html = generateSlideshowHtml(scenesWithImages);
+
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `wag-gold-slideshow-${new Date().toISOString().slice(0, 10)}.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            progressFill.style.width = '100%';
+            progressText.textContent = 'Slideshow exported!';
+            setTimeout(() => {
+                document.getElementById('exportProgress').classList.remove('active');
+                closeExportModal();
+                playlistExportMode = false;
+            }, 1000);
+        }
+
+        function generateSlideshowHtml(scenes) {
+            const scenesJson = JSON.stringify(scenes.map(s => ({
+                name: s.name,
+                author: s.author,
+                date: s.date,
+                mpdContent: s.mpdContent,
+                imageBase64: s.imageBase64
+            })));
+
+            // Build script as separate string to avoid parser issues
+            const scriptContent = `
+        const scenes = ${scenesJson};
+        let current = 0;
+        
+        function render() {
+            const s = scenes[current];
+            document.getElementById('sceneName').textContent = s.name || 'Scene ' + (current + 1);
+            document.getElementById('sceneAuthor').textContent = s.author ? 'by ' + s.author : '';
+            document.getElementById('sceneDate').textContent = s.date || '';
+            document.getElementById('sceneImage').src = s.imageBase64 || '';
+            document.getElementById('counter').textContent = (current + 1) + ' / ' + scenes.length;
+            
+            const lines = (s.mpdContent || '').split('\\n').map(function(line) {
+                const t = line.trim();
+                let cls = '';
+                if (t.indexOf('0 STEP') === 0) cls = 'line-step';
+                else if (t.indexOf('0 FILE') === 0 || t.indexOf('0 Name:') === 0 || t.indexOf('0 Author:') === 0) cls = 'line-meta';
+                else if (t.indexOf('0 ') === 0) cls = 'line-comment';
+                else if (t.indexOf('1 ') === 0) cls = 'line-part';
+                return '<div class="' + cls + '">' + escapeHtml(line) + '</div>';
+            }).join('');
+            document.getElementById('mpdContent').innerHTML = lines;
+        }
+        
+        function escapeHtml(t) {
+            return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+        
+        function prev() { current = (current - 1 + scenes.length) % scenes.length; render(); }
+        function next() { current = (current + 1) % scenes.length; render(); }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
+        });
+        
+        render();
+            `;
+
+            return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAG GOLD Slideshow</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #f0f0f0; height: 100vh; display: flex; flex-direction: column; }
+        .header { padding: 12px 20px; background: #111; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
+        .title { color: #ffd700; font-weight: 600; }
+        .nav { display: flex; gap: 8px; }
+        .nav button { padding: 8px 16px; background: #222; border: 1px solid #444; color: #fff; cursor: pointer; border-radius: 4px; }
+        .nav button:hover { border-color: #ffd700; }
+        .main { flex: 1; display: flex; overflow: hidden; }
+        .mpd-panel { width: 50%; background: #111; border-right: 1px solid #333; display: flex; flex-direction: column; }
+        .mpd-header { padding: 12px 16px; background: #1a1a1a; border-bottom: 1px solid #333; }
+        .mpd-title { color: #ffd700; font-weight: 600; margin-bottom: 4px; }
+        .mpd-meta { color: #888; font-size: 12px; }
+        .mpd-content { flex: 1; overflow-y: auto; padding: 12px; font-family: monospace; font-size: 11px; line-height: 1.5; white-space: pre-wrap; }
+        .image-panel { width: 50%; display: flex; align-items: center; justify-content: center; padding: 20px; background: #0e0e0e; }
+        .image-panel img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+        .counter { color: #888; font-size: 12px; }
+        .line-meta { color: #ffd700; }
+        .line-step { color: #c586c0; }
+        .line-comment { color: #6a9955; }
+        .line-part { color: #9cdcfe; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="title">WAG GOLD Slideshow</span>
+        <div class="nav">
+            <button onclick="prev()">Previous</button>
+            <span class="counter" id="counter">1 / 1</span>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mpd-panel">
+            <div class="mpd-header">
+                <div class="mpd-title" id="sceneName"></div>
+                <div class="mpd-meta"><span id="sceneAuthor"></span> <span id="sceneDate"></span></div>
+            </div>
+            <div class="mpd-content" id="mpdContent"></div>
+        </div>
+        <div class="image-panel">
+            <img id="sceneImage" src="" alt="Scene">
+        </div>
+    </div>
+    <script>${scriptContent}<` + `/script>
+</body>
+</html>`;
+        }
+
+        async function exportPngImages(ctx, canvas, exportScenes, progressFill, progressText) {
+            const numScenes = exportScenes.length;
+            for (let i = 0; i < numScenes; i++) {
+                const scene = exportScenes[i];
+                progressText.textContent = `Exporting scene ${i + 1} of ${numScenes}...`;
+                progressFill.style.width = ((i + 1) / numScenes * 100) + '%';
+                const img = await loadImage(scene.imagePath);
+                ctx.fillStyle = '#0a0a0a';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(0, 0, canvas.width, 50);
+                ctx.fillStyle = '#ffd700';
+                ctx.font = 'bold 20px Inter, sans-serif';
+                ctx.fillText(`${scene.date}  |  ${scene.name}`, 20, 32);
+                ctx.fillStyle = '#888888';
+                ctx.font = '16px Inter, sans-serif';
+                ctx.fillText(scene.author ? `by ${scene.author}` : '', canvas.width - 300, 32);
+                ctx.fillStyle = '#111111';
+                ctx.fillRect(0, 50, canvas.width / 2 - 2, canvas.height - 50);
+                const strippedContent = stripBoilerplate(scene.data.mpd_content || '');
+                const lines = strippedContent.split('\n');
+                ctx.font = '12px JetBrains Mono, monospace';
+                for (let l = 0; l < 50 && l < lines.length; l++) {
+                    const line = lines[l];
+                    ctx.fillStyle = '#555555';
+                    ctx.fillText(String(l + 1).padStart(4), 10, 80 + l * 18);
+                    ctx.fillStyle = getLineColor(line);
+                    ctx.fillText(line.substring(0, 80), 60, 80 + l * 18);
+                }
+                ctx.fillStyle = '#2a2a2a';
+                ctx.fillRect(canvas.width / 2 - 2, 50, 4, canvas.height);
+                const imgX = canvas.width / 2 + 20;
+                const imgY = 70;
+                const imgW = canvas.width / 2 - 40;
+                const imgH = canvas.height - 100;
+                if (img) {
+                    const scale = Math.min(imgW / img.width, imgH / img.height);
+                    const dw = img.width * scale;
+                    const dh = img.height * scale;
+                    ctx.drawImage(img, imgX + (imgW - dw) / 2, imgY + (imgH - dh) / 2, dw, dh);
+                } else {
+                    ctx.fillStyle = '#333';
+                    ctx.fillRect(imgX, imgY, imgW, imgH);
+                    ctx.fillStyle = '#f66';
+                    ctx.font = '20px Inter, sans-serif';
+                    ctx.fillText('Image not available', imgX + imgW / 2 - 100, imgY + imgH / 2);
+                }
+                const dataUrl = canvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = `wag_scene_${String(i + 1).padStart(3, '0')}_${scene.filename.replace('.json', '').replace(/[^a-zA-Z0-9_-]/g, '_')}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                await new Promise(r => setTimeout(r, 300));
+            }
+            progressText.textContent = `Exported ${numScenes} PNG images!`;
+            setTimeout(() => {
+                document.getElementById('exportProgress').classList.remove('active');
+                closeExportModal();
+                playlistExportMode = false;
+            }, 1500);
+        }
+
+        function getLineColor(line) {
+            const t = (line || '').trim();
+            if (t.startsWith('0 //')) return '#6a9955';
+            if (t.startsWith('0 STEP')) return '#c586c0';
+            if (t.match(/^0\s*(FILE|Name:|Author:|!LDRAW)/)) return '#ffd700';
+            if (t.match(/^0\s*[╔╚╗╝═║┏┗┓┛━┃]/)) return '#ffcc00';
+            if (t.startsWith('0 ')) return '#6a9955';
+            if (t.startsWith('1 ')) return '#9cdcfe';
+            return '#f0f0f0';
+        }
+
+        function loadImage(src) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = () => resolve(img);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('slideshowOverlay').classList.contains('active')) {
+                if (e.key === 'Escape') closeSlideshow();
+                if (e.key === 'ArrowLeft') slideshowNav(-1);
+                if (e.key === 'ArrowRight') slideshowNav(1);
+                if (e.key === 'g') toggleSlideshowMode();
+            } else if (!document.getElementById('exportModal').classList.contains('active')) {
+                if (e.key === 'ArrowLeft') loadScene(currentIndex - 1);
+                if (e.key === 'ArrowRight') loadScene(currentIndex + 1);
+            }
+        });
+
+        init();
+    </script>
+</body>
+
+</html>

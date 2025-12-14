@@ -1,0 +1,102 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-25_01-45-41.png",
+  "scene": "Scene 1",
+  "date": "2025-11-25",
+  "time": "01-45-41",
+  "timestamp": "2025-11-25T06:45:41.681Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 69,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE operative_shield.mpd\n0 Name: The Living Shield (Rotational Assembly)\n0 Author: Grace Assembler\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 //\n0 LEGOS OPERATIVE NOTES:\n0 System: Technic Turntable Core\n0 Layer 1 (Center): Static Divine Will (Sun/Eagle)\n \n0 Layer 3 (Rim): The Oceanus Boundary\n0 //\n0 STEP 01: AXIS MUNDI (The Mechanism)\n0 // We start with a 4x4 baseplate and a Turntable Base\n1 7   0 0 0    1 0 0   0 1 0   0 0 1   3031.dat\n1 7   0 -8 0   1 0 0   0 1 0   0 0 1   3680.dat\n0 STEP\n0 //\n0 STEP 02: THE HUMAN PLANE (Rotating Platform)\n0 // Turntable Top - This piece rotates relative to the base\n1 7   0 -8 0   1 0 0   0 1 0   0 0 1   3679.dat\n0 //\n0 // We attach a 2x4 plate to the turntable to hold our \"Cities\"\n1 7   0 -16 0  1 0 0   0 1 0   0 0 1   3020.dat\n0 STEP\n0 //\n0 STEP 03: THE TWIN CITIES (Mounted on the Human Plane)\n0 //\n0 // CITY OF PEACE (Left Side)\n0 // Symbolized by the Green/Gold Rohan Shield (Agriculture/Harvest)\n0 // Mounted on a \"Headlight Brick\" (4070) to face outward\n1 2   -20 -26 0    0 0 1   0 1 0   -1 0 0   4070.dat\n1 14  -24 -26 0    0 0 1   0 1 0   -1 0 0   75902p01.dat\n0 //\n0 // CITY OF WAR (Right Side)\n0 // Symbolized by the Lion Shield (Predation/Conflict)\n0 // Mounted on a \"Headlight Brick\" facing outward opposite Peace\n1 8   20 -26 0     0 0 -1  0 1 0   1 0 0    4070.dat\n1 14  24 -26 0     0 0 -1  0 1 0   1 0 0    3846p4o.dat\n0 STEP\n0 //\n0 STEP 04: THE COSMIC CENTER (Static & Elevated)\n0 // The Cosmos must sit ABOVE the rotating cities, fixed to the center stud.\n0 // We use a 1x1 Round Brick (open stud) to pass through, or simply stack on center.\n0 //\n0 // The Sun/Eagle Shield (Zeus)\n1 14  0 -40 0      1 0 0   0 1 0   0 0 1    75902p03.dat\n0 STEP\n0 //\n0 STEP 05: OCEANUS (The Boundary)\n0 // These are placed on the ground layer (Baseplate), not the turntable.\n0 // They enclose the mechanism.\n0 //\n0 // North (Blue Tile)\n1 1   0 0 -30      1 0 0   0 1 0   0 0 1    3068b.dat\n0 // South (Blue Tile)\n1 1   0 0 30       1 0 0   0 1 0   0 0 1    3068b.dat\n0 // East (Blue Tile)\n1 1   30 0 0       0 0 1   0 1 0   -1 0 0   3068b.dat\n0 // West (Blue Tile)\n1 1   -30 0 0      0 0 1   0 1 0   -1 0 0   3068b.dat\n0 STEP\n0 //\n0 NOTE: OPERATIVE FUNCTION\n0 // The center (Eagle) remains still.\n0 // The middle layer (Lion/Rohan) can be spun by hand.\n0 // The outer blue tiles remain still, containing the chaos.\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 57,
+      "count": 8
+    },
+    {
+      "lineNum": 61,
+      "count": 5
+    },
+    {
+      "lineNum": 59,
+      "count": 6
+    },
+    {
+      "lineNum": 16,
+      "count": 1
+    },
+    {
+      "lineNum": 55,
+      "count": 8
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-25T06:45:41.688Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 15,
+      "top_count": 139,
+      "top_percentage": 100,
+      "histogram": {
+        "15": 139
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 6,
+      "top_line": 61,
+      "top_count": 51,
+      "top_percentage": 36.7,
+      "histogram": {
+        "15": 17,
+        "16": 1,
+        "55": 14,
+        "57": 18,
+        "59": 38,
+        "61": 51
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 13,
+    "part_lines_count": 13,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-25_01-35-17.png",
+  "scene": "Scene 1",
+  "date": "2025-11-25",
+  "time": "01-35-17",
+  "timestamp": "2025-11-25T06:35:17.997Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 64,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE shield_microcosm.mpd\n0 Name: Shield of Achilles - Operative Microcosm\n0 Author: Grace Assembler\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 //\n0 LEGOS FRAMEWORK:\n0 Description: A deconstructed display of the Shield's concentric layers.\n0 Scale: 1 LDraw Unit = 0.4mm\n \n0 STEP 01: MUSEUM PLINTH (Primitives)\n0 // A simple black stand to hold the arrangement\n1 0   0 0 0   3 0 0   0 1 0   0 0 3   3005.dat\n1 0   0 -8 0   8 0 0   0 1 0   0 0 8   3031.dat\n0 STEP\n0 //\n0 STEP 02: THE CENTRAL BOSS (The Cosmos)\n0 // Entity: e_sun / e_hephaestus\n0 // Part: 75902p03.dat - Gold Eagle Pattern\n0 // Placed at the absolute center, raised slightly\n1 14  0 -28 0   1 0 0   0 1 0   0 0 1   75902p03.dat\n0 STEP\n0 //\n0 STEP 03: THE INNER RING (Civic & Martial)\n0 // Positioned North/South of the center\n0 //\n0 // NORTH: e_heavens / e_pleiades\n0 // Part: 10532.dat - Star Pattern\n1 15  0 -28 -40   1 0 0   0 1 0   0 0 1   10532.dat\n0 //\n0 // SOUTH: e_fate / e_strife (The City at War)\n0 // Part: 59231p4h.dat - Skull on Dark Red\n0 // Rotated 180 degrees to face outward\n1 4   0 -28 40    -1 0 0  0 1 0   0 0 -1  59231p4h.dat\n0 STEP\n0 //\n0 STEP 04: THE OUTER RING (Agricultural & Pastoral)\n0 // Positioned East/West of the center\n0 //\n0 // EAST: e_lions / e_bull (Predation)\n0 // Part: 3846p4o.dat - Lion Pattern\n0 // Rotated 90 degrees\n1 14  40 -28 0    0 0 -1  0 1 0   1 0 0   3846p4o.dat\n0 //\n0 // WEST: e_vineyard / e_ploughmen (Agriculture)\n0 // Part: 75902p01.dat - Green/Gold Rohan Pattern\n0 // Rotated -90 degrees\n1 2   -40 -28 0   0 0 1   0 1 0   -1 0 0  75902p01.dat\n0 STEP\n0 //\n0 STEP 05: THE BOUNDARY (Oceanus)\n0 // Placed at the 45-degree angles to suggest the encircling water\n0 // Part: 3846p4z.dat - Blue Background (Water)\n0 // Northeast\n1 1   28 -28 -28   0.707 0 -0.707   0 1 0   0.707 0 0.707   3846p4z.dat\n0 // Northwest\n1 1   -28 -28 -28  0.707 0 0.707    0 1 0   -0.707 0 0.707  3846p4z.dat\n0 // Southeast\n1 1   28 -28 28    -0.707 0 -0.707  0 1 0   0.707 0 -0.707  3846p4z.dat\n0 // Southwest\n1 1   -28 -28 28   -0.707 0 0.707   0 1 0   -0.707 0 -0.707 3846p4z.dat\n0 STEP\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 61,
+      "count": 8
+    },
+    {
+      "lineNum": 59,
+      "count": 8
+    },
+    {
+      "lineNum": 55,
+      "count": 11
+    },
+    {
+      "lineNum": 57,
+      "count": 11
+    },
+    {
+      "lineNum": 43,
+      "count": 9
+    },
+    {
+      "lineNum": 13,
+      "count": 63
+    },
+    {
+      "lineNum": 48,
+      "count": 7
+    },
+    {
+      "lineNum": 34,
+      "count": 6
+    },
+    {
+      "lineNum": 29,
+      "count": 8
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-25T06:35:17.998Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 13,
+      "top_count": 572,
+      "top_percentage": 100,
+      "histogram": {
+        "13": 572
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 9,
+      "top_line": 13,
+      "top_count": 92,
+      "top_percentage": 16.1,
+      "histogram": {
+        "13": 92,
+        "29": 64,
+        "34": 40,
+        "43": 58,
+        "48": 54,
+        "55": 82,
+        "57": 80,
+        "59": 52,
+        "61": 50
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 11,
+    "part_lines_count": 11,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

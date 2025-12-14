@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_4_2025-11-18_01-42-38.png",
+  "scene": "Scene 4",
+  "date": "2025-11-18",
+  "time": "01-42-38",
+  "timestamp": "2025-11-18T06:42:38.025Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 11,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE untitled.mpd\n0 Name: untitled\n0 Author: \n0 \n0 WRITE YOUR DESCRIPTION HERE\n0 \n0 BFC CERTIFY CCW\n0 \n1 5 0 0 0  1 0 0  0 1 0  0 0 1  2359p03.dat\n0 \n"
+}

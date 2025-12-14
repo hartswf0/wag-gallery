@@ -1,0 +1,132 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-28_22-11-35.png",
+  "scene": "Scene 1",
+  "date": "2025-11-28",
+  "time": "22-11-35",
+  "timestamp": "2025-11-28T03:11:35.837Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 63,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": true,
+    "studProblem": true,
+    "studGhost": true
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Dragon_Switch_Shrine.mpd\n0 Name: Dragon Switch Shrine – Integrated Vignette\n0 Author: LEGOS COGNITIVE ARCHITECT v8.0\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // Integrated vignette using parts from:\n0 // - Other_23.mpd\n0 // - Other_452.mpd\n \n\n0 STEP\n0 // Ground: 16 x 16 driveway baseplate\n1 7 0 0 0 1 0 0 0 1 0 0 0 1 parts/51595p02.dat\n\n0 // Central dais: 6 x 6 octagon plate as shrine platform\n1 14 0 16 0 1 0 0 0 1 0 0 0 1 parts/67929.dat\n\n0 // Shrine ring: tile 2 x  2 with ring at the center of the octagon\n1 1 0 24 0 1 0 0 0 1 0 0 0 1 parts/6805.dat\n\n0 // Power core: spiked shell hovering above the ring\n1 4 0 40 0 1 0 0 0 1 0 0 0 1 parts/67931p01.dat\n\n0 // Powered hub: control block behind the shrine\n1 2 0 24 40 1 0 0 0 1 0 0 0 1 parts/67718p01.dat\n\n0 // Helm: steering wheel above the hub\n1 0 0 40 52 1 0 0 0 1 0 0 0 1 parts/67811.dat\n\n0 // Pilot canopy: large conical windscreen in front of the hub\n1 15 0 32 -16 1 0 0 0 1 0 0 0 1 parts/67759.dat\n\n0 // Pilot: Minion head under the canopy, facing forward\n1 14 0 24 -16 1 0 0 0 1 0 0 0 1 parts/67902p01.dat\n\n0 // Side altars: curved slopes flanking the shrine\n1 5 -32 16 0 1 0 0 0 1 0 0 0 1 parts/11477.dat\n1 5  32 16 0 1 0 0 0 1 0 0 0 1 parts/11477d0d.dat\n\n0 // Relic: Staff Nokama resting on the right altar\n1 6 40 20 0 1 0 0 0 1 0 0 0 1 parts/51641.dat\n\n0 // Seasonal marker: pumpkin near the front-left of the driveway\n1 4 -40 0 -40 1 0 0 0 1 0 0 0 1 parts/51270.dat\n\n0 // Branching rails: Duplo point tracks indicating choice of path\n1 3 -80 0 -80 1 0 0 0 1 0 0 0 1 parts/51560-f2.dat\n1 3  80 0 -80 1 0 0 0 1 0 0 0 1 parts/51560-f1.dat\n\n0 // Guardian: Hungarian Horntail head perched to the left of the shrine\n1 12 -80 32 40 1 0 0 0 1 0 0 0 1 parts/51344p01.dat\n\n0 // Guardian wing: dragon wing rising behind the head\n1 12 -96 40 72 1 0 0 0 1 0 0 0 1 parts/51342.dat\n\n0 // Supporting spirit: pig head to the right as a light-hearted counterweight\n1 13 72 24 32 1 0 0 0 1 0 0 0 1 parts/67887p01.dat\n\n0 STEP\n0 NOFILE\n",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 45,
+      "count": 57
+    },
+    {
+      "lineNum": 14,
+      "count": 62
+    },
+    {
+      "lineNum": 48,
+      "count": 40
+    },
+    {
+      "lineNum": 49,
+      "count": 48
+    },
+    {
+      "lineNum": 39,
+      "count": 17
+    },
+    {
+      "lineNum": 38,
+      "count": 13
+    },
+    {
+      "lineNum": 42,
+      "count": 7
+    },
+    {
+      "lineNum": 26,
+      "count": 1
+    },
+    {
+      "lineNum": 58,
+      "count": 4
+    },
+    {
+      "lineNum": 35,
+      "count": 1
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-28T03:11:35.838Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 14,
+      "top_count": 2081,
+      "top_percentage": 100,
+      "histogram": {
+        "14": 2081
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 16,
+      "top_line": 49,
+      "top_count": 513,
+      "top_percentage": 24.7,
+      "histogram": {
+        "14": 114,
+        "17": 5,
+        "23": 9,
+        "26": 74,
+        "29": 66,
+        "32": 22,
+        "35": 8,
+        "38": 47,
+        "39": 24,
+        "42": 52,
+        "45": 155,
+        "48": 487,
+        "49": 513,
+        "52": 125,
+        "55": 149,
+        "58": 231
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 17,
+    "part_lines_count": 17,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

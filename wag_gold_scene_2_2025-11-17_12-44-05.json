@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_2_2025-11-17_12-44-05.png",
+  "scene": "Scene 2",
+  "date": "2025-11-17",
+  "time": "12-44-05",
+  "timestamp": "2025-11-17T17:44:05.939Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 41,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": true,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE wag-frank-scene.mpd\n0 Name: WAG FRANK SCENE\n0 Author: WAG FRANK\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 // Auto-composed from -ator elements via wag-frank 9x9 grid\n0 // WAG_FRANK_META {\"version\":\"1.0\",\"note\":\"Joined scene exported from wag-frank; elements are grouped by FRANK_CELL comments below. Each FRANK_CELL line contains JSON describing the logical element (cell, kind, source, name).\"}\n\n0 STEP\n \n1 16 -640 0 -640 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"A5\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Road 7-Stud Curve with Lagoon Pattern\"}\n1 16 0 0 -640 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"A9\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Road 7-Stud Curve with Lagoon Pattern\"}\n1 16 640 0 -640 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"E1\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Canyon with Island with Blue and Yellow Stream Pattern\"}\n1 16 -640 0 0 1 0 0 0 1 0 0 0 1 parts/6024p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"E5\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Raised with Ramp and Pit with White and Light Grey Craters Pattern\"}\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 parts/2552p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"E9\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Road 7-Stud Curve with Lagoon Pattern\"}\n1 16 640 0 0 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"I1\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Road 7-Stud Curve with Lagoon Pattern\"}\n1 16 -640 0 640 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n\n0 STEP\n0 // FRANK_CELL {\"cell\":\"I5\",\"kind\":\"scene-mpd\",\"source\":\"sceneerator\",\"name\":\"Baseplate 32 x 32 Road 7-Stud Curve with Lagoon Pattern\"}\n1 16 0 0 640 1 0 0 0 1 0 0 0 1 parts/2359p02.dat\n"
+}

@@ -1,0 +1,318 @@
+{
+  "filename": "wag_gold_scene_1_2025-12-12_03-31-27.png",
+  "scene": "Scene 1",
+  "date": "2025-12-12",
+  "time": "03-31-27",
+  "timestamp": "2025-12-12T08:31:27.940Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 337,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": true,
+    "studProblem": true,
+    "studGhost": true
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Searchers_Rider_Grounded_SpinFix.mpd\n0 Name: Perimeter Garden (SpinFix + Camera Orbit)\n0 Author: Grace Balanced Architect (scene continuation)\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // ============================================================\n0 // MENTO LIGHTING MANIFEST (Perimeter Garden Palette)\n0 // ============================================================\n \n0 // LIGHT 1: WARM SUN KEY (broad exterior)\n0 !MENTO LIGHT \"Warm Sun\" TYPE SUN POS 900 -1400 700 TGT 0 -80 0 COLOR #FFF1D6 INTENSITY 1.7 SHADOWS TRUE\n\n0 // LIGHT 2: COOL SKY FILL (softens shadows)\n0 !MENTO LIGHT \"Cool Sky\" TYPE SUN POS -700 -1200 -900 TGT 0 -80 0 COLOR #CFE6FF INTENSITY 0.55 SHADOWS FALSE\n\n0 // LIGHT 3: GARDEN CORE GLOW (subtle green bounce)\n0 !MENTO LIGHT \"Garden Glow\" TYPE AREA POS 0 -140 0 TGT 0 -140 0 COLOR #B9FFB9 INTENSITY 0.9 DECAY 360\n\n0 // LIGHT 4: WINDOW/SCREEN BLUE POP (accent on the glass/screens)\n0 !MENTO LIGHT \"Screen Pop\" TYPE AREA POS 0 -110 -210 TGT 0 -110 -180 COLOR #7FCBFF INTENSITY 0.8 DECAY 260\n\n0 // LIGHT 5: MAGENTA CORNER ACCENT (adds color contrast)\n0 !MENTO LIGHT \"Magenta Corner\" TYPE POINT POS 320 -200 320 COLOR #FF5BDA INTENSITY 0.55 DECAY 420\n\n0 // LIGHT 6: AMBER PATH PRACTICALS (warm perimeter dots)\n0 !MENTO LIGHT \"Amber Practicals\" TYPE POINT POS -320 -90 -320 COLOR #FFB36B INTENSITY 0.45 DECAY 520\n\n0 // ============================================================\n0 // MENTO CAMERA TRACK (Orbit → Character Check-ins → Overhead)\n0 // ============================================================\n\n0 // --- ORBIT AROUND THE PERIMETER (wide, slow) ---\n0 !MENTO SHOT \"Orbit 01 (NW)\" POS -760 -260 -760 TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 02 (N)\"  POS 0 -260 -880   TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 03 (NE)\" POS 760 -260 -760  TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 04 (E)\"  POS 880 -260 0     TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 05 (SE)\" POS 760 -260 760   TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 06 (S)\"  POS 0 -260 880     TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 07 (SW)\" POS -760 -260 760  TGT 0 -110 0 LENS 35\n0 !MENTO SHOT \"Orbit 08 (W)\"  POS -880 -260 0    TGT 0 -110 0 LENS 35\n\n0 // --- CHECK IN WITH EACH CHARACTER (closer, slower) ---\n0 // Banana (NW on North wall)\n0 !MENTO SHOT \"Check-in Banana\" POS -80 -160 -420 TGT -80 -110 -180 LENS 55\n0 // Shark (NE on North wall)\n0 !MENTO SHOT \"Check-in Shark\"  POS 80 -160 -420  TGT 80 -110 -180  LENS 55\n0 // Tom Nook (NW on East wall)\n0 !MENTO SHOT \"Check-in Tom\"    POS 420 -160 -80  TGT 180 -110 -80  LENS 55\n0 // Batgirl (SW on East wall)\n0 !MENTO SHOT \"Check-in Bat\"    POS 420 -160 80   TGT 180 -110 80   LENS 55\n0 // Horns (NW on South wall)\n0 !MENTO SHOT \"Check-in Horns\"  POS -80 -160 420  TGT -80 -110 180  LENS 55\n0 // Chief (NE on South wall)\n0 !MENTO SHOT \"Check-in Chief\"  POS 80 -160 420   TGT 80 -110 180   LENS 55\n0 // Yeti (NW on West wall)\n0 !MENTO SHOT \"Check-in Yeti\"   POS -420 -160 -80 TGT -180 -110 -80 LENS 55\n0 // Rocket (SW on West wall)\n0 !MENTO SHOT \"Check-in Rocket\" POS -420 -160 80  TGT -180 -110 80  LENS 55\n\n0 // --- FINAL OVERHEAD (garden reveal) ---\n0 !MENTO SHOT \"Final Overhead Garden\" POS 0 -980 0 TGT 0 -120 0 LENS 40\n\n0 // ============================================================\n0 // ZONE 0: GROUND (REPLACED)\n0 // ============================================================\n\n0 STEP\n0 // Baseplate 32 x 32 with Paradisa Island Pattern (requested)\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 parts/3811p04.dat\n\n0 // ============================================================\n0 // ZONE 1: GARDEN CORE (green floor + stones + monument)\n0 // ============================================================\n\n0 STEP\n0 // 16x16 garden floor (4x 8x8 plates)\n1 2 -80 -4 -80 1 0 0 0 1 0 0 0 1 41539.dat\n1 2  80 -4 -80 1 0 0 0 1 0 0 0 1 41539.dat\n1 2 -80 -4  80 1 0 0 0 1 0 0 0 1 41539.dat\n1 2  80 -4  80 1 0 0 0 1 0 0 0 1 41539.dat\n\n0 // Stepping stones (dark bluish gray)\n1 72 -60 -4 -60 1 0 0 0 1 0 0 0 1 3021.dat\n1 72  60 -4 -60 1 0 0 0 1 0 0 0 1 3021.dat\n1 72 -60 -4  60 1 0 0 0 1 0 0 0 1 3021.dat\n1 72  60 -4  60 1 0 0 0 1 0 0 0 1 3021.dat\n1 72   0 -4   0 1 0 0 0 1 0 0 0 1 3021.dat\n\n0 // Monument (tan stepped stack)\n1 19 -20 -12 -20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19  20 -12 -20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 -20 -12  20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19  20 -12  20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19   0 -36   0 1 0 0 0 1 0 0 0 1 3003.dat\n1 19   0 -60   0 1 0 0 0 1 0 0 0 1 3005.dat\n1 57   0 -76   0 1 0 0 0 1 0 0 0 1 4740.dat\n\n0 // Small garden “lights” (physical color dots)\n1 14 -120 -4   0 1 0 0 0 1 0 0 0 1 4073.dat\n1  1  120 -4   0 1 0 0 0 1 0 0 0 1 4073.dat\n1 13    0 -4 120 1 0 0 0 1 0 0 0 1 4073.dat\n1 10    0 -4 -120 1 0 0 0 1 0 0 0 1 4073.dat\n\n0 // ============================================================\n0 // ZONE 2: TRANSPARENT WALLS + BROWN POSTS (bigger + clean)\n0 // ============================================================\n\n0 STEP\n0 // Wall height: 4 bricks (centers at -12, -36, -60, -84)\n0 // Wall footprint: approx 18x18 studs (outer edges around +/-180)\n\n0 // --- Layer 1 (y=-12) ---\n0 // North wall (z=-180)\n1 47 -100 -12 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -12 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -12 -180 1 0 0 0 1 0 0 0 1 3004.dat\n0 // South wall (z=180)\n1 47 -100 -12 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -12 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -12 180 1 0 0 0 1 0 0 0 1 3004.dat\n0 // West wall (x=-180) rotate bricks to run along Z\n1 47 -180 -12 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -12   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -12  160 0 0 1 0 1 0 -1 0 0 3004.dat\n0 // East wall (x=180)\n1 47 180 -12 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -12   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -12  160 0 0 1 0 1 0 -1 0 0 3004.dat\n\n0 // --- Layer 2 (y=-36) ---\n1 47 -100 -36 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -36 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -36 -180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -100 -36 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -36 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -36 180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -180 -36 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -36   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -36  160 0 0 1 0 1 0 -1 0 0 3004.dat\n1 47 180 -36 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -36   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -36  160 0 0 1 0 1 0 -1 0 0 3004.dat\n\n0 // --- Layer 3 (y=-60) ---\n1 47 -100 -60 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -60 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -60 -180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -100 -60 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -60 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -60 180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -180 -60 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -60   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -60  160 0 0 1 0 1 0 -1 0 0 3004.dat\n1 47 180 -60 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -60   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -60  160 0 0 1 0 1 0 -1 0 0 3004.dat\n\n0 // --- Layer 4 (y=-84) ---\n1 47 -100 -84 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -84 -180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -84 -180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -100 -84 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47   60 -84 180 1 0 0 0 1 0 0 0 1 3008.dat\n1 47  160 -84 180 1 0 0 0 1 0 0 0 1 3004.dat\n1 47 -180 -84 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -84   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 -180 -84  160 0 0 1 0 1 0 -1 0 0 3004.dat\n1 47 180 -84 -100 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -84   60 0 0 1 0 1 0 -1 0 0 3008.dat\n1 47 180 -84  160 0 0 1 0 1 0 -1 0 0 3004.dat\n\n0 // Brown posts (corners + midpoints) — 5 bricks tall\n0 // Corners\n1 70 -180 -12 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -36 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -60 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -84 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -108 -180 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 180 -12 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -36 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -60 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -84 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -108 -180 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 -180 -12 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -36 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -60 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -84 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -108 180 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 180 -12 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -36 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -60 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -84 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -108 180 1 0 0 0 1 0 0 0 1 3005.dat\n\n0 // Midpoints (N/S/E/W)\n1 70 0 -12 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -36 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -60 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -84 -180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -108 -180 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 0 -12 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -36 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -60 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -84 180 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 0 -108 180 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 -180 -12 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -36 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -60 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -84 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 -180 -108 0 1 0 0 0 1 0 0 0 1 3005.dat\n\n1 70 180 -12 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -36 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -60 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -84 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 70 180 -108 0 1 0 0 0 1 0 0 0 1 3005.dat\n\n0 // ============================================================\n0 // ZONE 3: WALL \"WINDOW\" SCREENS (graph tiles)\n0 // ============================================================\n\n0 STEP\n0 // Two per side (mount at mid-height; oriented to face outward)\n0 // North (faces -Z)\n1 16 -60 -60 -179 1 0 0 0 1 0 0 0 1 parts/s/15210pc0s01.dat\n1 16  60 -60 -179 1 0 0 0 1 0 0 0 1 parts/s/15210pc0s01.dat\n0 // South (faces +Z) — flip 180 around Y\n1 16 -60 -60 179 -1 0 0 0 1 0 0 0 -1 parts/s/15210pc0s01.dat\n1 16  60 -60 179 -1 0 0 0 1 0 0 0 -1 parts/s/15210pc0s01.dat\n0 // East (faces +X)\n1 16 179 -60 -60 0 0 -1 0 1 0 1 0 0 parts/s/15210pc0s01.dat\n1 16 179 -60  60 0 0 -1 0 1 0 1 0 0 parts/s/15210pc0s01.dat\n0 // West (faces -X)\n1 16 -179 -60 -60 0 0 1 0 1 0 -1 0 0 parts/s/15210pc0s01.dat\n1 16 -179 -60  60 0 0 1 0 1 0 -1 0 0 parts/s/15210pc0s01.dat\n\n0 // ============================================================\n0 // ZONE 4: OUTSIDE WAYFINDING SHIELDS (SPIN FIX APPLIED)\n0 // ============================================================\n\n0 STEP\n0 // Mounted just outside the glass; oriented so EACH outside character faces the shield.\n\n0 NORTH (banana + shark) — already correct\n1 16 -80 -88 -210 1 0 0 0 1 0 0 0 1 parts/3846p40.dat\n1 16  80 -88 -210 1 0 0 0 1 0 0 0 1 parts/3846p4e.dat\n\n0 EAST (Tom + Bat) — flipped to face +X (toward characters at +X)\n1 16 210 -88 -80 0 0 -1 0 1 0 1 0 0 parts/3846p4m.dat\n1 16 210 -88  80 0 0 -1 0 1 0 1 0 0 parts/s/3846p4ms01.dat\n\n0 SOUTH (horns + chief) — chief correct; horns flipped to face +Z (toward characters at +Z)\n1 16 -80 -88 210 1 0 0 0 1 0 0 0 1 parts/s/3846p49s01.dat\n1 16  80 -88 210 -1 0 0 0 1 0 0 0 -1 parts/3846p40.dat\n\n0 WEST (yeti + rocket) — flipped to face -X (toward characters at -X)\n1 16 -210 -88 -80 0 0 1 0 1 0 -1 0 0 parts/3846p4e.dat\n1 16 -210 -88  80 0 0 1 0 1 0 -1 0 0 parts/3846p4m.dat\n\n0 // Extra perimeter “practical” dots near shields (varied colors)\n1 14 -80 -4 -230 1 0 0 0 1 0 0 0 1 4073.dat\n1  1  80 -4 -230 1 0 0 0 1 0 0 0 1 4073.dat\n1 13 230 -4  80 1 0 0 0 1 0 0 0 1 4073.dat\n1 10 230 -4 -80 1 0 0 0 1 0 0 0 1 4073.dat\n1 14 -80 -4 230 1 0 0 0 1 0 0 0 1 4073.dat\n1  1  80 -4 230 1 0 0 0 1 0 0 0 1 4073.dat\n1 13 -230 -4 80 1 0 0 0 1 0 0 0 1 4073.dat\n1 10 -230 -4 -80 1 0 0 0 1 0 0 0 1 4073.dat\n\n0 // ============================================================\n0 // ZONE 5: CHARACTERS OUTSIDE (STAND-INS; paste your real figs here)\n0 // ============================================================\n\n0 STEP\n0 // NOTE: These are simple placeholders so the camera “check-ins” have targets.\n0 // Replace each cluster with your actual character assemblies at the same POS + rotation.\n\n0 // BANANA (North-left) — facing inward (+Z)\n1 14 -80 -12 -280 -1 0 0 0 1 0 0 0 -1 3003.dat\n1 14 -80 -36 -280 -1 0 0 0 1 0 0 0 -1 3003.dat\n1 14 -80 -46 -280 -1 0 0 0 1 0 0 0 -1 4032.dat\n\n0 // SHARK (North-right) — facing inward (+Z)\n1 1 80 -12 -280 -1 0 0 0 1 0 0 0 -1 3003.dat\n1 1 80 -36 -280 -1 0 0 0 1 0 0 0 -1 3003.dat\n1 1 80 -46 -280 -1 0 0 0 1 0 0 0 -1 4032.dat\n\n0 // TOM NOOK (East-top) — facing inward (-X)\n1 28 280 -12 -80 0 0 -1 0 1 0 1 0 0 3003.dat\n1 28 280 -36 -80 0 0 -1 0 1 0 1 0 0 3003.dat\n1 28 280 -46 -80 0 0 -1 0 1 0 1 0 0 4032.dat\n\n0 // BATGIRL (East-bottom) — facing inward (-X)\n1 0 280 -12 80 0 0 -1 0 1 0 1 0 0 3003.dat\n1 0 280 -36 80 0 0 -1 0 1 0 1 0 0 3003.dat\n1 0 280 -46 80 0 0 -1 0 1 0 1 0 0 4032.dat\n\n0 // HORNS (South-left) — facing inward (-Z)\n1 4 -80 -12 280 1 0 0 0 1 0 0 0 1 3003.dat\n1 4 -80 -36 280 1 0 0 0 1 0 0 0 1 3003.dat\n1 4 -80 -46 280 1 0 0 0 1 0 0 0 1 4032.dat\n\n0 // CHIEF (South-right) — facing inward (-Z)\n1 19 80 -12 280 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 80 -36 280 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 80 -46 280 1 0 0 0 1 0 0 0 1 4032.dat\n\n0 // YETI (West-top) — facing inward (+X)\n1 15 -280 -12 -80 0 0 1 0 1 0 -1 0 0 3003.dat\n1 15 -280 -36 -80 0 0 1 0 1 0 -1 0 0 3003.dat\n1 15 -280 -46 -80 0 0 1 0 1 0 -1 0 0 4032.dat\n\n0 // ROCKET (West-bottom) — facing inward (+X)\n1 25 -280 -12 80 0 0 1 0 1 0 -1 0 0 3003.dat\n1 25 -280 -36 80 0 0 1 0 1 0 -1 0 0 3003.dat\n1 25 -280 -46 80 0 0 1 0 1 0 -1 0 0 4032.dat\n\n0 // ============================================================\n0 // ZONE 6: TREES / PERIMETER SET DRESSING (bigger scene feel)\n0 // ============================================================\n\n0 STEP\n0 // Four palms around the “island” perimeter\n1 16 -280 0 -280 1 0 0 0 1 0 0 0 1 u9078s02.dat\n1 16  280 0 -280 1 0 0 0 1 0 0 0 1 u9078s02.dat\n1 16 -280 0  280 1 0 0 0 1 0 0 0 1 u9078s02.dat\n1 16  280 0  280 1 0 0 0 1 0 0 0 1 u9078s02.dat\n\n0 NOFILE\n",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 285,
+      "count": 5
+    },
+    {
+      "lineNum": 290,
+      "count": 5
+    },
+    {
+      "lineNum": 200,
+      "count": 7
+    },
+    {
+      "lineNum": 117,
+      "count": 7
+    },
+    {
+      "lineNum": 181,
+      "count": 4
+    },
+    {
+      "lineNum": 175,
+      "count": 5
+    },
+    {
+      "lineNum": 123,
+      "count": 10
+    },
+    {
+      "lineNum": 127,
+      "count": 10
+    },
+    {
+      "lineNum": 295,
+      "count": 5
+    },
+    {
+      "lineNum": 315,
+      "count": 5
+    },
+    {
+      "lineNum": 115,
+      "count": 10
+    },
+    {
+      "lineNum": 116,
+      "count": 7
+    },
+    {
+      "lineNum": 212,
+      "count": 7
+    },
+    {
+      "lineNum": 91,
+      "count": 7
+    },
+    {
+      "lineNum": 92,
+      "count": 6
+    },
+    {
+      "lineNum": 218,
+      "count": 7
+    },
+    {
+      "lineNum": 124,
+      "count": 4
+    },
+    {
+      "lineNum": 93,
+      "count": 3
+    },
+    {
+      "lineNum": 94,
+      "count": 2
+    },
+    {
+      "lineNum": 128,
+      "count": 4
+    },
+    {
+      "lineNum": 129,
+      "count": 3
+    },
+    {
+      "lineNum": 125,
+      "count": 3
+    },
+    {
+      "lineNum": 320,
+      "count": 5
+    },
+    {
+      "lineNum": 300,
+      "count": 5
+    },
+    {
+      "lineNum": 206,
+      "count": 6
+    },
+    {
+      "lineNum": 187,
+      "count": 4
+    },
+    {
+      "lineNum": 119,
+      "count": 5
+    },
+    {
+      "lineNum": 120,
+      "count": 4
+    },
+    {
+      "lineNum": 121,
+      "count": 4
+    },
+    {
+      "lineNum": 310,
+      "count": 5
+    },
+    {
+      "lineNum": 305,
+      "count": 5
+    },
+    {
+      "lineNum": 193,
+      "count": 4
+    },
+    {
+      "lineNum": 88,
+      "count": 3
+    },
+    {
+      "lineNum": 330,
+      "count": 1
+    },
+    {
+      "lineNum": 331,
+      "count": 1
+    },
+    {
+      "lineNum": 268,
+      "count": 2
+    },
+    {
+      "lineNum": 267,
+      "count": 2
+    },
+    {
+      "lineNum": 103,
+      "count": 12
+    },
+    {
+      "lineNum": 78,
+      "count": 16
+    },
+    {
+      "lineNum": 79,
+      "count": 15
+    },
+    {
+      "lineNum": 270,
+      "count": 2
+    },
+    {
+      "lineNum": 274,
+      "count": 2
+    },
+    {
+      "lineNum": 84,
+      "count": 10
+    },
+    {
+      "lineNum": 85,
+      "count": 10
+    },
+    {
+      "lineNum": 101,
+      "count": 7
+    },
+    {
+      "lineNum": 100,
+      "count": 7
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-12-12T08:31:27.944Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 70,
+      "top_count": 3210,
+      "top_percentage": 100,
+      "histogram": {
+        "70": 3210
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 58,
+      "top_line": 320,
+      "top_count": 107,
+      "top_percentage": 3.3,
+      "histogram": {
+        "70": 37,
+        "78": 50,
+        "79": 43,
+        "80": 27,
+        "81": 26,
+        "84": 29,
+        "85": 31,
+        "86": 23,
+        "87": 23,
+        "88": 3,
+        "91": 24,
+        "92": 19,
+        "93": 21,
+        "94": 18,
+        "100": 40,
+        "101": 36,
+        "102": 29,
+        "103": 44,
+        "115": 66,
+        "116": 62,
+        "117": 54,
+        "119": 66,
+        "120": 63,
+        "121": 58,
+        "123": 67,
+        "124": 61,
+        "125": 53,
+        "127": 72,
+        "128": 63,
+        "129": 51,
+        "175": 88,
+        "181": 61,
+        "187": 78,
+        "193": 65,
+        "200": 70,
+        "206": 85,
+        "212": 78,
+        "218": 81,
+        "267": 30,
+        "268": 39,
+        "269": 46,
+        "270": 29,
+        "271": 47,
+        "272": 45,
+        "273": 49,
+        "274": 41,
+        "285": 86,
+        "290": 85,
+        "295": 84,
+        "300": 104,
+        "305": 101,
+        "310": 100,
+        "315": 85,
+        "320": 107,
+        "330": 50,
+        "331": 47,
+        "332": 92,
+        "333": 78
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 161,
+    "part_lines_count": 161,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-19_20-22-29.png",
+  "scene": "Scene 1",
+  "date": "2025-11-19",
+  "time": "20-22-29",
+  "timestamp": "2025-11-19T01:22:29.284Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 20,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE wag_courage_test_cubes.mpd\n0 Name: WAG-Courage Test 1 – Cube Overlap Calibration\n0 Author: DCE-GYO Undaunted Pipeline\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 SIMPLE CUBE TEST – three 2 x 2 bricks acting as unit cubes\n0  - A and B only touch faces (no overlap)\n0  - B and C are slightly interpenetrating for overlap detection\n \n0 BRICK A – origin cube at (0, 0, 0)\n1 1 0 0 0  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 BRICK B – shifted one full stud in X (touching A but not overlapping)\n1 1 20 0 0  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 BRICK C – shifted by 30 LDU in X (overlaps B by 2 LDU)\n1 1 50 0 0  1 0 0  0 1 0  0 0 1  3003.dat\n"
+}

@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_3_2025-11-13_09-19-48.png",
+  "scene": "Scene 3",
+  "date": "2025-11-13",
+  "time": "09-19-48",
+  "timestamp": "2025-11-13T14:19:48.327Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 64,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE untitled.mpd\n0 Name: untitled\n0 Author: \n0 \n0 WRITE YOUR DESCRIPTION HERE\n0 \n0 BFC CERTIFY CCW\n0 \n0 !CATEGORY \n0 \n \n0 Name: Mars Rover Probe 01 - Core Chassis\n0 Author: LDraw Parts Foraging Series\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 //\n0 // PROBE 01: CHASSIS FOUNDATION\n0 // Testing real, verified parts from LDraw Official Library\n0 // Target: 40-50 pieces, solar panel + wheel frame\n0 //\n\n0 STEP\n\n0 // ═══ SOLAR PANEL BASE (flat, Technic frame) ═══\n0 // Using CONFIRMED parts: Plate 4×12 + Technic frame\n1   71    0   -8    0    1  0  0    0  1  0    0  0  1    parts/3029.dat\n1   71    0  -16    0    1  0  0    0  1  0    0  0  1    parts/3029.dat\n1   71    0  -24    0    1  0  0    0  1  0    0  0  1    parts/3029.dat\n\n0 // ═══ WHEEL FRAME (4 wheels, real 24mm tires) ═══\n0 // Wheels confirmed: parts/3641.dat (tire) + parts/4624.dat (rim)\n1  15  -100    0 -120    0  0 -1    0  1  0    1  0  0    parts/4624.dat\n1   0  -100    0 -120    0  0 -1    0  1  0    1  0  0    parts/3641.dat\n\n1  15   100    0 -120    0  0  1    0  1  0   -1  0  0    parts/4624.dat\n1   0   100    0 -120    0  0  1    0  1  0   -1  0  0    parts/3641.dat\n\n1  15  -100    0  120    0  0 -1    0  1  0    1  0  0    parts/4624.dat\n1   0  -100    0  120    0  0 -1    0  1  0    1  0  0    parts/3641.dat\n\n1  15   100    0  120    0  0  1    0  1  0   -1  0  0    parts/4624.dat\n1   0   100    0  120    0  0  1    0  1  0   -1  0  0    parts/3641.dat\n\n0 // ═══ AXLES (confirmed: Technic Axle 8) ═══\n1   0     0    0 -120    1  0  0    0  1  0    0  0  1    parts/3707.dat\n1   0     0    0  120    1  0  0    0  1  0    0  0  1    parts/3707.dat\n\n0 // ═══ SUSPENSION MAST (Technic Liftarm vertical) ═══\n1   0    -80  -32    0    1  0  0    0  1  0    0  0  1    parts/32316.dat\n1   0     80  -32    0    1  0  0    0  1  0    0  0  1    parts/32316.dat\n\n0 // ═══ CAMERA ARM (bendable: use Technic beam as boom) ═══\n1   0     0  -48    0    0  0  1    0  1  0   -1  0  0    parts/3703.dat\n\n0 // ═══ SAMPLE SCOOP (bucket: Parts/part/4345.dat) ═══\n1  15    -60  -40   80    1  0  0    0  1  0    0  0  1    parts/4345.dat\n\n0 // ═══ ANTENNA (simple: use bar or rod) ═══\n1   0     40  -56    0    1  0  0    0  1  0    0  0  1    parts/3957.dat\n\n0 STEP\n0 NOFILE\n "
+}

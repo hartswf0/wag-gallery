@@ -1,0 +1,119 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-25_18-40-02.png",
+  "scene": "Scene 1",
+  "date": "2025-11-25",
+  "time": "18-40-02",
+  "timestamp": "2025-11-25T23:40:02.143Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 155,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Searchers_Rider_Grounded_SpinFix.mpd\n0 Name: Searchers Rider Grounded (Bodies Facing TV)\n0 Author: Grace Balanced Architect\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // ============================================================\n0 // MENTO LIGHTING MANIFEST (The Searchers Contrast)\n0 // ============================================================\n \n0 // LIGHT 1: THE DESERT SUN (Exterior Key)\n0 // High intensity, slightly warm, casting long shadows through the door.\n0 // Positioned high and behind the Horse.\n0 !MENTO LIGHT \"Desert Sun\" TYPE SUN POS 400 -1000 400 TGT 0 0 0 COLOR #FFF8E7 INTENSITY 1.8 SHADOWS TRUE\n\n0 // LIGHT 2: THE TV GLOW (Interior Key)\n0 // Cool blue, emanating from the TV Frame location, illuminating the family's faces.\n0 !MENTO LIGHT \"TV Glow\" TYPE AREA POS 0 -40 250 TGT 0 -40 0 COLOR #AADDFF INTENSITY 2.5 DECAY 200\n\n0 // LIGHT 3: CAVE FILL (Interior Ambience)\n0 // Very low purple/dark fill to keep the interior shadows from being pure black.\n0 !MENTO LIGHT \"Cave Fill\" TYPE POINT POS 0 -100 0 COLOR #110022 INTENSITY 0.3\n\n0 // ============================================================\n0 // MENTO CAMERA TRACK (The Shot List)\n0 // ============================================================\n\n0 // SHOT 1: THE RIDER (Establishing)\n0 // Low angle, behind Homer's right shoulder, looking past him into the house.\n0 !MENTO SHOT \"The Rider\" POS 280 -80 180 TGT 0 -40 20 LENS 50\n\n0 // SHOT 2: THE AUDIENCE (Reverse Angle)\n0 // The POV of the TV. We see the family staring back at us, bathed in blue light.\n0 !MENTO SHOT \"The Audience\" POS 0 -40 200 TGT 0 -40 20 LENS 35\n\n0 // SHOT 3: THE THRESHOLD (The Classic Ford Shot)\n0 // Wide shot from deep outside, framing the lit interior through the dark door.\n0 !MENTO SHOT \"The Threshold\" POS 100 -60 400 TGT 0 -40 0 LENS 85\n\n0 // SHOT 4: THE DISCONNECT (Overhead)\n0 // Top-down view showing the wall separating the Rider from the Family.\n0 !MENTO SHOT \"The Disconnect\" POS 100 -400 100 TGT 50 0 100 LENS 40\n\n0 // ============================================================\n0 // ZONE 1: THE GROUND & STRUCTURE\n0 // ============================================================\n\n0 // THE RUG\n1 16 0 8 0 1 0 0 0 1 0 0 0 1 2359p02.dat\n\n0 // THE COUCH BACK (Rotated -90 deg)\n1 13 0 -40 20 0 0 -1 0 1 0 1 0 0 22972.dat\n\n0 // THE SIDE WALL\n1 13 120 -40 -40 0 0 1 -1 0 0 0 0 0 22972.dat\n\n0 // PORTAL 1: THE TV FRAME\n1 26 220 -152 -130 0.707 0 -0.707 0 1 0 0.707 0 0.707 2332.dat\n\n0 // PORTAL 2: THE MAIN DOOR\n1 0 0 -144 230 1 0 0 0 1 0 0 0 1 2332.dat\n\n0 // ============================================================\n0 // ZONE 2: THE COUCH (Seating)\n0 // ============================================================\n1 484 0 -8 40 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 30 -8 40 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 -30 -8 40 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 0 -32 20 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 30 -32 20 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 -30 -32 20 1 0 0 0 1 0 0 0 1 3001.dat\n1 484 50 -24 30 0 0 1 0 1 0 -1 0 0 3003.dat\n1 484 -50 -24 30 0 0 1 0 1 0 -1 0 0 3003.dat\n\n0 // ============================================================\n0 // ZONE 3: THE CAST (Fully Spun to Face TV)\n0 // ============================================================\n0 // All rotation matrices set to -1 0 0 0 1 0 0 0 -1 (Facing Back/+Z)\n\n0 // --- MARGE (Robot Chef) ---\n0 // Hips\n1 16 -20 -38 50 -1 0 0 0 1 0 0 0 -1 parts/10679bp01.dat\n0 // Torso (Flipped)\n1 16 -20 -60 40 -1 0 0 0 1 0 0 0 -1 parts/76382p89.dat\n0 // Head\n1 16 -20 -64 40 -1 0 0 0 1 0 0 0 -1 parts/15522p01.dat\n0 // Hair\n1 16 -20 -84 40 -1 0 0 0 1 0 0 0 -1 parts/24073.dat\n0 // Right Arm (Now on \\\"Left\\\" side X-wise because of rotation)\n1 14 -29 -52 40 -1 0 0 0 1 0 0 0 -1 3818.dat\n0 // Left Arm\n1 14 -11 -52 40 -1 0 0 0 1 0 0 0 -1 3819.dat\n0 // Hands\n1 14 -29 -40 50 -1 0 0 0 0 -1 0 -1 0 3820.dat\n1 14 -11 -40 50 -1 0 0 0 0 -1 0 -1 0 3820.dat\n\n0 // --- BART (Chainmail Knight) ---\n0 // Leaning posture, Body matched to Head\n0 // Hips\n1 16 -50 -56 30 -0.9 0 0.4 0 1 0 -0.4 0 -0.9 parts/16709p0e.dat\n0 // Torso (Matched to Hips)\n1 16 -50 -78 30 -0.9 0 0.4 0 1 0 -0.4 0 -0.9 parts/76382p0006.dat\n0 // Head\n1 16 -50 -82 30 -0.9 0 0.4 0 1 0 -0.4 0 -0.9 parts/15523p01.dat\n0 // Right Arm\n1 14 -59 -70 34 -0.9 0 0.4 0 1 0 -0.4 0 -0.9 3818.dat\n0 // Left Arm\n1 14 -41 -70 26 -0.9 0 0.4 0 1 0 -0.4 0 -0.9 3819.dat\n0 // Hands\n1 14 -59 -60 44 -0.9 0 0.4 0 0 -1 0 -1 0 3820.dat\n1 14 -41 -60 36 -0.9 0 0.4 0 0 -1 0 -1 0 3820.dat\n\n0 // --- LISA (Hawaiian Tourist) ---\n0 // Hips\n1 16 20 -28 40 -1 0 0 0 1 0 0 0 -1 parts/73200bp42.dat\n0 // Torso (Flipped)\n1 16 20 -50 40 -1 0 0 0 1 0 0 0 -1 parts/16360p5i.dat\n0 // Head\n1 16 20 -54 40 -1 0 0 0 1 0 0 0 -1 parts/15524p01.dat\n0 // Right Arm\n1 14 11 -42 40 -1 0 0 0 1 0 0 0 -1 3818.dat\n0 // Left Arm\n1 14 29 -42 40 -1 0 0 0 1 0 0 0 -1 3819.dat\n0 // Hands\n1 14 11 -30 50 -1 0 0 0 0 -1 0 -1 0 3820.dat\n1 14 29 -30 50 -1 0 0 0 0 -1 0 -1 0 3820.dat\n\n0 // --- MAGGIE (The Homer Clone) ---\n0 // Body (Flipped to face TV)\n1 16 50 -38 50 -1 0 0 0 1 0 0 0 -1 parts/3815bpde.dat\n0 // Head\n1 16 50 -64 40 -1 0 0 0 1 0 0 0 -1 parts/15525p02.dat\n0 // Accessory\n1 16 50 -84 38 -1 0 0 0 1 0 0 0 -1 parts/30114c01.dat\n\n0 // ============================================================\n0 // ZONE 4: EXTERIOR (Grounded)\n0 // ============================================================\n\n0 // THE HORSE\n1 6 200 -56 100 -1 0 0 0 1 0 0 0 -1 4493c00.dat\n\n0 // HOMER (The Rider)\n1 16 200 -116 100 -1 0 0 0 1 0 0 0 -1 parts/3815bpde.dat\n1 16 190 -104 100 -1 0 0 0 1 0 0 0 -1 parts/3817cpbc.dat\n1 16 210 -104 100 -1 0 0 0 1 0 0 0 -1 parts/3816cpbc.dat\n1 16 200 -148 100 -1 0 0 0 1 0 0 0 -1 parts/76382p6w.dat\n1 16 200 -152 100 1 0 0 0 1 0 0 0 1 parts/15527p02.dat\n1 16 200 -172 100 1 0 0 0 1 0 0 0 1 parts/30114c01.dat\n\n0 // THE TREE\n1 16 140 0 220 1 0 0 0 1 0 0 0 1 u9078s02.dat\n\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 49,
+      "count": 10
+    },
+    {
+      "lineNum": 55,
+      "count": 2
+    },
+    {
+      "lineNum": 72,
+      "count": 2
+    },
+    {
+      "lineNum": 70,
+      "count": 1
+    },
+    {
+      "lineNum": 71,
+      "count": 1
+    },
+    {
+      "lineNum": 73,
+      "count": 1
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-25T23:40:02.146Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 49,
+      "top_count": 2214,
+      "top_percentage": 100,
+      "histogram": {
+        "49": 2214
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 19,
+      "top_line": 49,
+      "top_count": 619,
+      "top_percentage": 28,
+      "histogram": {
+        "49": 619,
+        "55": 567,
+        "58": 111,
+        "61": 79,
+        "66": 1,
+        "67": 4,
+        "68": 6,
+        "70": 2,
+        "71": 6,
+        "72": 41,
+        "73": 135,
+        "82": 2,
+        "94": 1,
+        "106": 1,
+        "110": 87,
+        "126": 1,
+        "130": 10,
+        "141": 301,
+        "152": 240
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 46,
+    "part_lines_count": 46,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_2_2025-11-12_16-07-10.png",
+  "scene": "Scene 2",
+  "date": "2025-11-12",
+  "time": "16-07-10",
+  "timestamp": "2025-11-12T21:07:10.620Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 18,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE untitled.mpd\n0 Name: untitled\n\n0 \n0 WRITE YOUR DESCRIPTION HERE\n0 \n0 BFC CERTIFY CCW\n0 \n0 !CATEGORY \n0 \n \n0 Name: Minimal Rocket\n1  86     0    0    0    1  0  0    0  1  0    0  0  1    3958.dat\n1   1     0    0    0    1  0  0    0  1  0    0  0  1    3005.dat\n1   1     0  -24    0    1  0  0    0  1  0    0  0  1    3005.dat\n1   1     0  -48    0    1  0  0    0  1  0    0  0  1    3005.dat\n1  15     0 -72    0    1  0  0    0  1  0    0  0  1    3003.dat\n0 NOFILE"
+}

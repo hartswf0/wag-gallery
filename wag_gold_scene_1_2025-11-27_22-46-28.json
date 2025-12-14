@@ -1,0 +1,184 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-27_22-46-28.png",
+  "scene": "Scene 1",
+  "date": "2025-11-27",
+  "time": "22-46-28",
+  "timestamp": "2025-11-27T03:46:28.104Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 139,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": true,
+    "studProblem": true,
+    "studGhost": true
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE L_Arrivee_Master.mpd\n0 Name: L'Arrivee (The Arrival)\n0 Author: Grace Balanced Architect\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // =================================================================\n0 // SCENE: L'Arrivee d'un train en gare de La Ciotat (1895)\n0 // CONCEPT: A study in scale and panic. The Duplo engine vs System crowd.\n \n0 // =================================================================\n\n0 STEP\n0 // 1. THE IRON HORSE (The Threat)\n0 // Placement: X=-160 (Left Field), Y=0 (Ground), Z=Centered\n1 16 -160 0 0 1 0 0 0 1 0 0 0 1 The_Locomotive.ldr\n\n0 STEP\n0 // 2. THE STATION ARCHITECTURE (The Frame)\n0 // Placement: X=100 (Right Field), Y=0 (Ground)\n1 16 100 0 0 1 0 0 0 1 0 0 0 1 The_Station.ldr\n\n0 STEP\n0 // 3. THE PANIC (The Reaction)\n0 // Placement: Scattered on Platform\n1 16 100 0 0 1 0 0 0 1 0 0 0 1 The_Crowd.ldr\n\n0 NOFILE\n0 FILE The_Locomotive.ldr\n0 Name: The Duplo Engine\n0 Author: Grace\n0 !LDRAW_ORG Model\n0 BFC CERTIFY CCW\n\n0 // -- THE TRACKS --\n0 // Train Track Ramps (85977) providing the vector\n1 7 0 0 -400 1 0 0 0 1 0 0 0 1 parts/85977.dat\n1 7 0 0 0 1 0 0 0 1 0 0 0 1 parts/85977.dat\n1 7 0 0 400 1 0 0 0 1 0 0 0 1 parts/85977.dat\n\n0 // -- THE CHASSIS (Duplo Scale) --\n0 // Duplo Car Bases (14639) - Massive scale implies weight\n0 // Color 0 (Black) for the heavy iron look\n1 0 0 -50 -300 1 0 0 0 1 0 0 0 1 parts/14639p01.dat\n1 0 0 -50 0 1 0 0 0 1 0 0 0 1 parts/14639p01.dat\n1 0 0 -50 300 1 0 0 0 1 0 0 0 1 parts/14639p01.dat\n\n0 // -- THE FACE (Cowcatcher) --\n0 // Facet Brick (14413) mounted on front\n1 72 0 -60 -450 0 0 -1 0 1 0 1 0 0 parts/14413.dat\n\n0 // -- THE PNEUMATICS --\n0 // Piping details along the side\n1 71 -60 -70 0 0 0 1 1 0 0 0 1 0 parts/14653-f1.dat\n1 71 60 -70 0 0 0 1 1 0 0 0 1 0 parts/14653-f1.dat\n\n0 // -- THE STEAM --\n0 // Palm Leaves (2518) rotated to explode outwards from wheels\n0 // White (15) for steam\n1 15 50 0 -200 0 0 1 0.7 0.7 0 -0.7 0.7 0 parts/2518.dat\n1 15 -50 0 -200 0 0 -1 -0.7 0.7 0 0.7 0.7 0 parts/2518.dat\n1 15 50 0 200 0 0 1 0.7 0.7 0 -0.7 0.7 0 parts/2518.dat\n1 15 -50 0 200 0 0 -1 -0.7 0.7 0 0.7 0.7 0 parts/2518.dat\n\n0 NOFILE\n0 FILE The_Station.ldr\n0 Name: La Ciotat Platform\n0 Author: Grace\n0 !LDRAW_ORG Model\n0 BFC CERTIFY CCW\n\n0 // -- THE PLATFORM FLOOR --\n0 // Train Bases (303c01) laid flat. Texture = Tiled Floor.\n0 // Tan (19)\n1 19 100 0 0 1 0 0 0 1 0 0 0 1 parts/303c01.dat\n1 19 100 0 300 1 0 0 0 1 0 0 0 1 parts/303c01.dat\n1 19 100 0 -300 1 0 0 0 1 0 0 0 1 parts/303c01.dat\n\n0 // -- THE GASLIGHTS --\n0 // Lampposts (2039) establishing the Z-axis depth\n1 0 80 0 -250 1 0 0 0 1 0 0 0 1 parts/2039.dat\n1 0 80 0 0 1 0 0 0 1 0 0 0 1 parts/2039.dat\n1 0 80 0 250 1 0 0 0 1 0 0 0 1 parts/2039.dat\n\n0 // -- THE SKY VAULT (Roof) --\n0 // Inverted Boat Hull (18913) - Floating suspension\n0 // Trans-Dark Blue (43) for \"Iron and Glass\" feel\n1 43 150 -400 0 -1 0 0 0 -1 0 0 0 1 parts/18913.dat\n0 // Secondary Ribs (28535)\n1 72 300 -350 -300 -1 0 0 0 -1 0 0 0 1 parts/28535.dat\n1 72 300 -350 300 -1 0 0 0 -1 0 0 0 1 parts/28535.dat\n\n0 // -- THE WALL --\n0 // Technic Panels (64393)\n1 72 250 -50 0 0 0 1 1 0 0 0 1 0 parts/64393.dat\n\n0 NOFILE\n0 FILE The_Crowd.ldr\n0 Name: The Terrified Audience\n0 Author: Grace\n0 !LDRAW_ORG Model\n0 BFC CERTIFY CCW\n\n0 // -- FIGURE 1: THE FALL (Front Row) --\n0 // Tipping backwards (Rotated on X)\n0 // Hips\n1 4 40 -10 0 1 0 0 0 0.866 0.5 0 -0.5 0.866 parts/10679b.dat\n0 // Torso\n1 4 40 -40 10 1 0 0 0 0.866 0.5 0 -0.5 0.866 parts/10677.dat\n0 // Head (Screaming)\n1 14 40 -60 20 1 0 0 0 0.866 0.5 0 -0.5 0.866 parts/100662.dat\n\n0 // -- FIGURE 2: THE SHIELD (Middle Row) --\n0 // Arms up, Static legs\n0 // Hips\n1 1 80 0 -100 1 0 0 0 1 0 0 0 1 parts/16709.dat\n0 // Torso\n1 1 80 -32 -100 1 0 0 0 1 0 0 0 1 parts/12896.dat\n0 // Head\n1 14 80 -56 -100 1 0 0 0 1 0 0 0 1 parts/12607.dat\n0 // Arms (Abstracted with spacing or simple bricks if parts unavailable,\n0 // but using Torso implies arms attached. We rely on imagination here).\n\n0 // -- FIGURE 3: THE FLEE (Back Row) --\n0 // Turned away (Rotated Y 180)\n0 // Hips\n1 320 120 0 100 -1 0 0 0 1 0 0 0 -1 parts/19859.dat\n0 // Torso\n1 320 120 -32 100 -1 0 0 0 1 0 0 0 -1 parts/16360.dat\n0 // Head\n1 3 120 -56 100 -1 0 0 0 1 0 0 0 -1 parts/13195p01.dat\n\n0 // -- THE LUGGAGE OBSTACLES --\n0 // Crates scattered\n1 14 60 0 -50 0.9 0 0.4 0 1 0 -0.4 0 0.9 parts/4345ap03.dat\n1 72 90 0 150 0.7 0 -0.7 0 1 0 0.7 0 0.7 parts/956.dat\n\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 131,
+      "count": 4
+    },
+    {
+      "lineNum": 44,
+      "count": 23
+    },
+    {
+      "lineNum": 129,
+      "count": 7
+    },
+    {
+      "lineNum": 45,
+      "count": 15
+    },
+    {
+      "lineNum": 46,
+      "count": 17
+    },
+    {
+      "lineNum": 16,
+      "count": 24
+    },
+    {
+      "lineNum": 21,
+      "count": 27
+    },
+    {
+      "lineNum": 61,
+      "count": 16
+    },
+    {
+      "lineNum": 63,
+      "count": 15
+    },
+    {
+      "lineNum": 54,
+      "count": 16
+    },
+    {
+      "lineNum": 81,
+      "count": 6
+    },
+    {
+      "lineNum": 77,
+      "count": 15
+    },
+    {
+      "lineNum": 82,
+      "count": 7
+    },
+    {
+      "lineNum": 83,
+      "count": 6
+    },
+    {
+      "lineNum": 76,
+      "count": 13
+    },
+    {
+      "lineNum": 38,
+      "count": 18
+    },
+    {
+      "lineNum": 37,
+      "count": 16
+    },
+    {
+      "lineNum": 127,
+      "count": 6
+    },
+    {
+      "lineNum": 39,
+      "count": 15
+    },
+    {
+      "lineNum": 135,
+      "count": 1
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-27T03:46:28.106Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 16,
+      "top_count": 5158,
+      "top_percentage": 100,
+      "histogram": {
+        "16": 5158
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 28,
+      "top_line": 16,
+      "top_count": 729,
+      "top_percentage": 14.1,
+      "histogram": {
+        "16": 729,
+        "21": 146,
+        "37": 358,
+        "38": 83,
+        "39": 539,
+        "44": 105,
+        "45": 15,
+        "46": 171,
+        "50": 183,
+        "54": 94,
+        "55": 4,
+        "60": 1,
+        "61": 408,
+        "62": 7,
+        "63": 365,
+        "76": 552,
+        "77": 547,
+        "81": 38,
+        "82": 22,
+        "83": 44,
+        "95": 435,
+        "107": 15,
+        "116": 68,
+        "127": 184,
+        "129": 14,
+        "131": 12,
+        "135": 12,
+        "136": 7
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 37,
+    "part_lines_count": 37,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

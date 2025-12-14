@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-19_21-19-03.png",
+  "scene": "Scene 1",
+  "date": "2025-11-19",
+  "time": "21-19-03",
+  "timestamp": "2025-11-19T02:19:03.705Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 60,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE wag_courage_calibration_compass_perfected.mpd\n0 Name: WAG-Courage Calibration – Fully Snapped Assembly\n0 Author: Courage Corrector v1.0\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 BASEPLATE – Anchored at origin, no change\n1 1 0 0 0  1 0 0  0 1 0  0 0 1  3811.dat\n\n \n0 Bottom brick: antistud_0_0 → baseplate.stud_2_8 (40,0,160)\n1 1 30 24 150  1 0 0  0 1 0  0 0 1  3001.dat\n\n0 Middle brick: antistud_0_0 → bottom_brick.stud_0_0 (30,24,150)\n1 1 20 48 140  1 0 0  0 1 0  0 0 1  3001.dat\n\n0 Top brick: antistud_0_0 → middle_brick.stud_0_0 (20,48,140)\n1 1 10 72 130  1 0 0  0 1 0  0 0 1  3001.dat\n\n0 MINIFIG LEGS – Feet at y=-24, hip_studs at y=-12 (no floor penetration)\n0 Left leg: hip_stud → hips.leg_socket_left (30,-20,20)\n1 0 30 -12 20  1 0 0  0 1 0  0 0 1  3816.dat\n\n0 Right leg: hip_stud → hips.leg_socket_right (50,-20,20)\n1 0 50 -12 20  1 0 0  0 1 0  0 0 1  3817.dat\n\n0 MINIFIG HIPS – torso_stud at y=-8 engages torso antistud\n1 1 40 -20 20  1 0 0  0 1 0  0 0 1  3815.dat\n\n0 MINIFIG TORSO – hip_antistud at y=-20 engages hips.torso_stud\n1 1 40 -20 20  1 0 0  0 1 0  0 0 1  973c01.dat\n\n0 MINIFIG HEAD – neck_antistud at y=-36 engages torso.neck_stud\n1 14 40 -36 20  1 0 0  0 1 0  0 0 1  3626bp01.dat\n\n0 MINIFIG RIGHT ARM + HAND – Rotated, wrist_stud → hand.wrist_antistud\n1 1 55 -55 20  0.985 0.174 0 -0.174 0.985 0  0 0 1  3819.dat\n1 14 57 -46 20  0.985 0.174 0 -0.174 0.985 0  0 0 1  3820.dat\n\n0 CARROT – stem_stud clipped into hand.clip_center (non-standard but valid)\n1 25 60 -42 20  1 0 0  0 1 0  0 0 1  33172c01.dat\n\n0 COMPASS BRICKS – All studs at y=0, sitting ON baseplate (not intersecting)\n0 X+ (Red): stud_0_0 → baseplate.stud_2_0 (40,0,0)\n1 4 30 -12 150  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 X- (Red): stud_0_0 → baseplate.stud_2_15 (40,0,300)\n1 4 -30 -12 150  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 Z+ (Blue): stud_0_0 → baseplate.stud_8_2 (160,0,40)\n1 1 150 -12 30  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 Z- (Blue): stud_0_0 → baseplate.stud_8_13 (160,0,260)\n1 1 150 -12 -30  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 Y Test (Yellow): stud_0_0 → baseplate.stud_8_8 (160,0,160)\n1 2 150 -12 150  1 0 0  0 1 0  0 0 1  3003.dat\n\n0 NOFILE"
+}

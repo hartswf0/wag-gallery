@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_3_2025-11-17_05-43-18.png",
+  "scene": "Scene 3",
+  "date": "2025-11-17",
+  "time": "05-43-18",
+  "timestamp": "2025-11-17T10:43:18.469Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 56,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": true,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE single_ship.mpd\n0 Name: Consolidated Cargo Ship\n0 Author: Engineer via Vehiculator\n0 !LDRAW_ORG Model\n0 BFC CERTIFY CCW\n\n0 // MAIN HULL - Boat Hull Floating 25 x 10 with White Deck\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 2372c01.dat\n\n0 STEP\n \n1 16 0 16 0 1 0 0 0 1 0 0 0 1 26021.dat\n\n0 STEP\n0 // MAIN BRIDGE - Windscreen 6 x 6 Octagonal Canopy\n1 16 0 56 0 1 0 0 0 1 0 0 0 1 2418bp60.dat\n\n0 STEP\n0 // SECONDARY CABIN - Windscreen 3 x 4 with POLICE Sticker\n1 16 60 56 0 1 0 0 0 1 0 0 0 1 4866d01.dat\n\n0 STEP\n0 // HELIPAD/CARGO AREA - Duplo Car Base\n1 16 -100 32 0 1 0 0 0 1 0 0 0 1 14639p05.dat\n\n0 STEP\n0 // PORT ENGINE POD - Jet Engine with 12 Fins\n1 16 -40 16 110 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 STEP\n0 // STARBOARD ENGINE POD - Jet Engine with 12 Fins\n1 16 40 16 110 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 STEP\n0 // CENTER PROPULSION UNIT - Brick 2 x 3 (as engine housing)\n1 16 0 8 130 1 0 0 0 1 0 0 0 1 3001.dat\n\n0 STEP\n0 // CRANE ARM - Animal Eagle Wing Right\n1 16 0 80 -60 1 0 0 0 1 0 0 0 1 11777.dat\n\n0 STEP\n0 // LIFE RING PORT - Tyre for Train Wheel\n1 16 -120 24 0 1 0 0 0 1 0 0 0 1 458.dat\n\n0 STEP\n0 // LIFE RING STARBOARD - Tyre for Train Wheel\n1 16 120 24 0 1 0 0 0 1 0 0 0 1 458.dat\n\n0 STEP\n0 // BRIDGE DETAIL - Windscreen with Red Crosshair\n1 16 0 24 -100 1 0 0 0 1 0 0 0 1 6070d50.dat\n\n0 STEP\n0 // AUXILIARY ENGINE - Plane Jet Engine with Plate 2 x 2\n1 16 0 40 110 1 0 0 0 1 0 0 0 1 4868b.dat"
+}

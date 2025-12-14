@@ -1,0 +1,271 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-26_19-35-15.png",
+  "scene": "Scene 1",
+  "date": "2025-11-26",
+  "time": "19-35-15",
+  "timestamp": "2025-11-26T00:35:15.809Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 186,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": false,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE forest_skirmish.mpd\n0 Name: Moonlit Forest Skirmish (Ewoks vs Robots) — Expanded Forest + Ground Fix\n0 Author: LEGOS Cognitive Architect v8.0 (Compiled)\n0 !LDRAW_ORG Model\n0 !LICENSE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 //\n0 // NOTE: In this scene's convention, MORE NEGATIVE Y = HIGHER.\n0 // Plane moved to a larger-negative Y to put it in the sky.\n0 //\n\n0 // - minifig_family.mpd (selected: 17,18,22,23 vs 19,20,24,25)\n0 // - production_scene.mpd (trees/bushes/crates/panels/door)\n0 // - vehicle_fleet.mpd (Vehicle 1 train, Vehicle 9 plane)\n0 //\n\n0 STEP\n0 // ===== EXPANDED GROUND (2x2 BASEPLATE FIELD) =====\n0 // (455.dat baseplate 16 x 24 with rounded corners; tiled to enlarge stage)\n1 16 -300 0 -80 1 0 0 0 1 0 0 0 1 455.dat\n1 16 180 0 -80 1 0 0 0 1 0 0 0 1 455.dat\n1 16 640 0 -80 1 0 0 0 1 0 0 0 1 455.dat\n1 16 640 0 -400 1 0 0 0 1 0 0 0 1 455.dat\n1 16 180 0 -400 1 0 0 0 1 0 0 0 1 455.dat\n1 16 -280 0 -400 1 0 0 0 1 0 0 0 1 455.dat\n1 16 -260 0 240 1 0 0 0 1 0 0 0 1 455.dat\n1 16 220 0 240 1 0 0 0 1 0 0 0 1 455.dat\n1 16 600 0 240 1 0 0 0 1 0 0 0 1 455.dat\n\n0 // Stage crease (fallen log / track-as-divider)\n1 16 0 0 -10  1 0 0  0 1 0  0 0 1  2865as10.dat\n\n0 STEP\n0 // ===== FOREST VOLUME (MORE TREES + UNDERBRUSH) =====\n0 // Cardinal canopy (north)\n1 16 0 0 280 1 0 0 0 1 0 0 0 1 2518c01.dat\n0 // Additional canopy rhythm\n1 16 -220 0 260 1 0 0 0 1 0 0 0 1 2518c01.dat\n1 16 220 0 260 1 0 0 0 1 0 0 0 1 2518c01.dat\n\n0 // Rim stumps (4 corners)\n1 16 -380 0 -420 1 0 0 0 1 0 0 0 1 30131.dat\n1 16 340 0 -420 1 0 0 0 1 0 0 0 1 30131.dat\n1 16 -360 0 200 1 0 0 0 1 0 0 0 1 30131.dat\n1 16 360 0 200 1 0 0 0 1 0 0 0 1 30131.dat\n\n0 // Trunk rails (east/west depth)\n1 16 -460 0  40  1 0 0  0 1 0  0 0 1  3778s01.dat\n1 16  460 0  40  1 0 0  0 1 0  0 0 1  3778s01.dat\n1 16 -460 0 -200  1 0 0  0 1 0  0 0 1  3778s01.dat\n1 16  460 0 -200  1 0 0  0 1 0  0 0 1  3778s01.dat\n\n0 // Midground pyramids (breakers)\n1 16 -240 0 220 1 0 0 0 1 0 0 0 1 3471s01.dat\n1 16 160 0 -240 1 0 0 0 1 0 0 0 1 3471s01.dat\n1 16 -200 0 -460  1 0 0  0 1 0  0 0 1  3471s01.dat\n1 16  200 0 -460  1 0 0  0 1 0  0 0 1  3471s01.dat\n\n0 // Underbrush ring (keep center clear)\n1 16 -260 0  120  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16 -320 0   20  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16 -300 0  -80  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16 -220 0 -160  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16  220 0 -160  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16  300 0  -80  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16  320 0   40  1 0 0  0 1 0  0 0 1  6065s01.dat\n1 16  260 0  140  1 0 0  0 1 0  0 0 1  6065s01.dat\n\n0 STEP\n0 // ===== EWOK “STUMP THRONE” (WEST) =====\n1 16 -260 0  10  1 0 0  0 1 0  0 0 1  30131.dat\n1 16 -240 0 -140  1 0 0  0 1 0  0 0 1  30131.dat\n1 16 -220 0  180  1 0 0  0 1 0  0 0 1  30131.dat\n\n0 STEP\n0 // ===== ROBOT COVER (HARD GEOMETRY) =====\n1 16  180 0   60  1 0 0  0 1 0  0 0 1  4237.dat\n1 16  240 0  -60  1 0 0  0 1 0  0 0 1  956.dat\n1 16  300 0  120  1 0 0  0 1 0  0 0 1  61780.dat\n1 16  220 0    0  1 0 0  0 1 0  0 0 1  35700.dat\n\n0 STEP\n0 // ===== SET-RIM (SOUNDSTAGE HORIZON / THRESHOLD) =====\n1 16 -140 -504 -240 1 0 0 0 1 0 0 0 1 64681d02.dat\n1 16 140 -504 -240 1 0 0 0 1 0 0 0 1 64681d03.dat\n1 16 0 -648 -139 1 0 0 0 1 0 0 0 1 4181c01.dat\n\n0 STEP\n0 // ===== INTRUSION VECTOR (TRAIN) =====\n1 16 660 -80 40 1 0 0 0 1 0 0 0 1 736c02.dat\n1 16 660 -40 0 1 0 0 0 1 0 0 0 1 4866d01.dat\n1 16 660 -100 40 1 0 0 0 1 0 0 0 1 32085.dat\n1 16 660 -60 100 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 STEP\n0 // ===== AERIAL EYE (PLANE OVERHEAD) =====\n0 // FIX: move to MORE NEGATIVE Y to raise it (your convention)\n1 16   0 -520 -200  1 0 0  0 1 0  0 0 1  93541.dat\n1 16 0 -592 -240 1 0 0 0 1 0 0 0 1 46103.dat\n1 16   0 -500 -200  1 0 0  0 1 0  0 0 1  11778.dat\n1 16   0 -510 -280  1 0 0  0 1 0  0 0 1  3001.dat\n1 16   0 -470 -120  1 0 0  0 1 0  0 0 1  3001.dat\n1 16   0 -500 -140  1 0 0  0 1 0  0 0 1  4868b.dat\n\n0 STEP\n0 // =================================================================\n0 // EWOK WARBAND (WEST) :: from minifig_family members 17,18,22,23\n0 // =================================================================\n\n0 // [E17] Captain (near stump)\n1 5 -260 -64 0  1 0 0  0 1 0  0 0 1  parts/15524.dat\n1 5 -260 -84 0  1 0 0  0 1 0  0 0 1  parts/20695p01.dat\n1 5 -260 -60 0  1 0 0  0 1 0  0 0 1  parts/16360pdeb.dat\n1 5 -260 -28 0  1 0 0  0 1 0  0 0 1  parts/19859.dat\n1 5 -280 -16 0  1 0 0  0 1 0  0 0 1  parts/20460bp0g.dat\n1 5 -260 -16 0  1 0 0  0 1 0  0 0 1  parts/20461bp0g.dat\n\n0 // [E18] Hunter (rear-left)\n1 7 -320 -64 80  1 0 0  0 1 0  0 0 1  parts/15524p01.dat\n1 7 -320 -84 80  1 0 0  0 1 0  0 0 1  parts/24073.dat\n1 7 -320 -60 80  1 0 0  0 1 0  0 0 1  parts/16360pdg6.dat\n1 7 -320 -28 80  1 0 0  0 1 0  0 0 1  parts/19859p01.dat\n1 7 -340 -16 80  1 0 0  0 1 0  0 0 1  parts/20460bp0h.dat\n1 7 -320 -16 80  1 0 0  0 1 0  0 0 1  parts/20461bp0h.dat\n\n0 // [E22] Younger warrior (southwest)\n1 2 -300 -64 -140  1 0 0  0 1 0  0 0 1  parts/15525p02.dat\n1 2 -300 -84 -140  1 0 0  0 1 0  0 0 1  parts/24088.dat\n1 2 -300 -60 -140  1 0 0  0 1 0  0 0 1  parts/17.dat\n1 2 -315.552 -51 -140  1 0 0  0 1 0  0 0 1  parts/16000pxi.dat\n1 2 -284.44800000000001 -51 -140  1 0 0  0 1 0  0 0 1  parts/16000pxi.dat\n1 2 -300 -28 -140  1 0 0  0 1 0  0 0 1  parts/19859p05.dat\n1 2 -320 -16 -140  1 0 0  0 1 0  0 0 1  parts/20460bpde1.dat\n1 2 -300 -16 -140  1 0 0  0 1 0  0 0 1  parts/20461bpde1.dat\n\n0 // [E23] Trap operator (deep cover)\n1 1 -200 -64 -220  1 0 0  0 1 0  0 0 1  parts/15527.dat\n1 1 -200 -84 -220  1 0 0  0 1 0  0 0 1  parts/24636.dat\n1 1 -200 -60 -220  1 0 0  0 1 0  0 0 1  parts/19734.dat\n1 1 -215.552 -51 -220  1 0 0  0 1 0  0 0 1  parts/16001p00.dat\n1 1 -184.448 -51 -220  1 0 0  0 1 0  0 0 1  parts/16001p00.dat\n1 1 -200 -28 -220  1 0 0  0 1 0  0 0 1  parts/19859p06.dat\n1 1 -220 -16 -220  1 0 0  0 1 0  0 0 1  parts/20460bpde6.dat\n1 1 -200 -16 -220  1 0 0  0 1 0  0 0 1  parts/20461bpde6.dat\n\n0 STEP\n0 // =================================================================\n0 // ROBOT PHALANX (EAST) :: from minifig_family members 19,20,24,25\n0 // =================================================================\n\n0 // [R20] Captain (spearhead)\n1 10 200 -64 0  1 0 0  0 1 0  0 0 1  parts/15525.dat\n1 10 200 -84 0  1 0 0  0 1 0  0 0 1  parts/24076p01.dat\n1 10 200 -60 0  1 0 0  0 1 0  0 0 1  parts/16360pxh.dat\n1 10 200 -28 0  1 0 0  0 1 0  0 0 1  parts/19859p03.dat\n1 10 180 -16 0  1 0 0  0 1 0  0 0 1  parts/20460bpd87.dat\n1 10 200 -16 0  1 0 0  0 1 0  0 0 1  parts/20461bpd87.dat\n\n0 // [R19] Lieutenant (north)\n1 9 240 -64 80  1 0 0  0 1 0  0 0 1  parts/15524p02.dat\n1 9 240 -84 80  1 0 0  0 1 0  0 0 1  parts/24076.dat\n1 9 240 -60 80  1 0 0  0 1 0  0 0 1  parts/16360pdg8.dat\n1 9 240 -28 80  1 0 0  0 1 0  0 0 1  parts/19859p02.dat\n1 9 220 -16 80  1 0 0  0 1 0  0 0 1  parts/20460bpckc.dat\n1 9 240 -16 80  1 0 0  0 1 0  0 0 1  parts/20461bpckc.dat\n\n0 // [R24] Drone (south flank)\n1 14 260 -64 -80  1 0 0  0 1 0  0 0 1  parts/15527p02.dat\n1 14 260 -84 -80  1 0 0  0 1 0  0 0 1  parts/25264.dat\n1 14 260 -60 -80  1 0 0  0 1 0  0 0 1  parts/24078.dat\n1 14 244.44800000000001 -51 -80  1 0 0  0 1 0  0 0 1  parts/16001p01.dat\n1 14 275.552 -51 -80  1 0 0  0 1 0  0 0 1  parts/16001p01.dat\n1 14 260 -28 -80  1 0 0  0 1 0  0 0 1  parts/19859p07.dat\n1 14 240 -16 -80  1 0 0  0 1 0  0 0 1  parts/20460bpde7.dat\n1 14 260 -16 -80  1 0 0  0 1 0  0 0 1  parts/20461bpde7.dat\n\n0 // [R25] Drone (rear guard)\n1 6 320 -64 140  1 0 0  0 1 0  0 0 1  parts/15529.dat\n1 6 320 -84 140  1 0 0  0 1 0  0 0 1  parts/25971.dat\n1 6 320 -60 140  1 0 0  0 1 0  0 0 1  parts/24319.dat\n1 6 304.448 -51 140  1 0 0  0 1 0  0 0 1  parts/16001p02.dat\n1 6 335.552 -51 140  1 0 0  0 1 0  0 0 1  parts/16001p02.dat\n1 6 320 -28 140  1 0 0  0 1 0  0 0 1  parts/19859p08.dat\n1 6 300 -16 140  1 0 0  0 1 0  0 0 1  parts/20460bpdg3.dat\n1 6 320 -16 140  1 0 0  0 1 0  0 0 1  parts/20461bpdg3.dat\n",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 19,
+      "count": 24
+    },
+    {
+      "lineNum": 173,
+      "count": 21
+    },
+    {
+      "lineNum": 172,
+      "count": 3
+    },
+    {
+      "lineNum": 114,
+      "count": 9
+    },
+    {
+      "lineNum": 113,
+      "count": 8
+    },
+    {
+      "lineNum": 154,
+      "count": 8
+    },
+    {
+      "lineNum": 155,
+      "count": 11
+    },
+    {
+      "lineNum": 132,
+      "count": 4
+    },
+    {
+      "lineNum": 121,
+      "count": 6
+    },
+    {
+      "lineNum": 162,
+      "count": 9
+    },
+    {
+      "lineNum": 72,
+      "count": 13
+    },
+    {
+      "lineNum": 59,
+      "count": 13
+    },
+    {
+      "lineNum": 53,
+      "count": 7
+    },
+    {
+      "lineNum": 131,
+      "count": 1
+    },
+    {
+      "lineNum": 115,
+      "count": 9
+    },
+    {
+      "lineNum": 156,
+      "count": 10
+    },
+    {
+      "lineNum": 174,
+      "count": 4
+    },
+    {
+      "lineNum": 123,
+      "count": 3
+    },
+    {
+      "lineNum": 164,
+      "count": 16
+    },
+    {
+      "lineNum": 37,
+      "count": 3
+    },
+    {
+      "lineNum": 64,
+      "count": 7
+    },
+    {
+      "lineNum": 70,
+      "count": 1
+    },
+    {
+      "lineNum": 79,
+      "count": 4
+    },
+    {
+      "lineNum": 65,
+      "count": 1
+    },
+    {
+      "lineNum": 163,
+      "count": 2
+    },
+    {
+      "lineNum": 78,
+      "count": 1
+    },
+    {
+      "lineNum": 26,
+      "count": 3
+    },
+    {
+      "lineNum": 38,
+      "count": 1
+    },
+    {
+      "lineNum": 63,
+      "count": 1
+    },
+    {
+      "lineNum": 20,
+      "count": 8
+    },
+    {
+      "lineNum": 77,
+      "count": 2
+    },
+    {
+      "lineNum": 142,
+      "count": 9
+    },
+    {
+      "lineNum": 30,
+      "count": 1
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-26T00:35:15.818Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 19,
+      "top_count": 11298,
+      "top_percentage": 100,
+      "histogram": {
+        "19": 11298
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 63,
+      "top_line": 27,
+      "top_count": 862,
+      "top_percentage": 7.6,
+      "histogram": {
+        "19": 168,
+        "20": 65,
+        "21": 606,
+        "22": 141,
+        "23": 110,
+        "24": 77,
+        "25": 164,
+        "26": 252,
+        "27": 862,
+        "30": 418,
+        "35": 794,
+        "37": 556,
+        "38": 665,
+        "41": 45,
+        "42": 70,
+        "43": 518,
+        "44": 346,
+        "47": 332,
+        "48": 332,
+        "49": 141,
+        "50": 219,
+        "53": 66,
+        "54": 676,
+        "55": 52,
+        "59": 196,
+        "60": 72,
+        "62": 263,
+        "63": 148,
+        "64": 213,
+        "65": 89,
+        "66": 70,
+        "70": 195,
+        "71": 77,
+        "72": 262,
+        "76": 169,
+        "77": 112,
+        "78": 56,
+        "79": 114,
+        "90": 326,
+        "92": 319,
+        "113": 8,
+        "114": 16,
+        "115": 30,
+        "121": 6,
+        "122": 34,
+        "123": 23,
+        "131": 1,
+        "132": 96,
+        "133": 14,
+        "140": 45,
+        "142": 226,
+        "143": 193,
+        "154": 8,
+        "155": 49,
+        "156": 15,
+        "162": 9,
+        "163": 19,
+        "164": 74,
+        "172": 3,
+        "173": 29,
+        "174": 11,
+        "183": 7,
+        "184": 26
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 109,
+    "part_lines_count": 109,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

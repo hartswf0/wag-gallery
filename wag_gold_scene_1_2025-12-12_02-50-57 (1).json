@@ -1,0 +1,897 @@
+{
+  "filename": "wag_gold_scene_1_2025-12-12_02-50-57.png",
+  "scene": "Scene 1",
+  "date": "2025-12-12",
+  "time": "02-50-57",
+  "timestamp": "2025-12-12T07:50:57.494Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 376,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE cybernetic_ecology_stanza3_forest_plus_terminals_heraldry.mpd\n0 Name: CYBERNETIC ECOLOGY (Stanza 3) — Forest + Terminals + Heraldry (Minifigs Spread, Paths Joined)\n0 Author: Brautigan-LEGO-Operative-Ekphrasis (LE-BUILD-BUILD) + LEGOS-GPT (edit)\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0\n0 NOTE:\n0 - Single 0 FILE header; single 0 NOFILE footer.\n0 - Only type 0 and type 1 lines.\n \n0 - Negative Y is UP; Y=16 ground plane (baseplate origin), build-level placements follow prior file.\n0\n0 STEP\n0 STEP 01: FLOOR (Ground plane)\n1 7 0 16 0 1 0 0 0 1 0 0 0 1 3857.dat\n\n0 STEP\n0 STEP 02: CENTRAL HUB TOWER (tan) + beacon\n1 19 -20 0 -20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 20 0 -20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 -20 0 20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 20 0 20 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 0 -24 0 1 0 0 0 1 0 0 0 1 3003.dat\n1 19 0 -48 0 1 0 0 0 1 0 0 0 1 3004.dat\n1 19 0 -72 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 19 0 -96 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 57 0 -120 0 1 0 0 0 1 0 0 0 1 4073.dat\n\n0 STEP\n0 STEP 03: COMPUTER-FLOWERS (radial plinths + blossoms)\n0 N\n1 7 0 0 -110 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 0 -24 -110 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 0 -32 -110 1 0 0 0 1 0 0 0 1 4073.dat\n0 NE\n1 7 78 0 -78 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 78 -24 -78 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 78 -32 -78 1 0 0 0 1 0 0 0 1 4073.dat\n0 E\n1 7 110 0 0 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 110 -24 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 110 -32 0 1 0 0 0 1 0 0 0 1 4073.dat\n0 SE\n1 7 78 0 78 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 78 -24 78 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 78 -32 78 1 0 0 0 1 0 0 0 1 4073.dat\n0 S\n1 7 0 0 110 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 0 -24 110 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 0 -32 110 1 0 0 0 1 0 0 0 1 4073.dat\n0 SW\n1 7 -78 0 78 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 -78 -24 78 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 -78 -32 78 1 0 0 0 1 0 0 0 1 4073.dat\n0 W\n1 7 -110 0 0 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 -110 -24 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 -110 -32 0 1 0 0 0 1 0 0 0 1 4073.dat\n0 NW\n1 7 -78 0 -78 1 0 0 0 1 0 0 0 1 3003.dat\n1 2 -78 -24 -78 1 0 0 0 1 0 0 0 1 3024.dat\n1 1 -78 -32 -78 1 0 0 0 1 0 0 0 1 4073.dat\n\n0 STEP\n0 STEP 04: MINIFIG POPULATION (SPREAD OUT — 8 perimeter stations, inside wall)\n0 Radius ~160 (wall is at ~180). Each fig faces inward.\n\n0 A: SHARK (N station at z=-160, faces +Z to center)\n1 16 0 -84 -160 1 0 0 0 1 0 0 0 1 3626bpsp.dat\n1 16 0 -84 -160 1 0 0 0 1 0 0 0 1 24076p01.dat\n1 16 0 -60 -160 1 0 0 0 1 0 0 0 1 76382p09.dat\n1 16 0 -28 -160 1 0 0 0 1 0 0 0 1 73200bp0n.dat\n\n0 B: BANANA (E station at x=160, faces -X to center)\n1 16 160 -84 0 0 0 1 0 1 0 -1 0 0 3626cp20.dat\n1 16 160 -84 0 0 0 1 0 1 0 -1 0 0 25977p01.dat\n1 16 160 -60 0 0 0 1 0 1 0 -1 0 0 76382p8e.dat\n1 16 160 -28 0 0 0 1 0 1 0 -1 0 0 16709p03.dat\n\n0 C: YETI+PIG (S station at z=160, faces -Z to center)\n1 16 0 -64 160 -1 0 0 0 1 0 0 0 -1 13809p03.dat\n1 16 0 -84 160 -1 0 0 0 1 0 0 0 -1 17351.dat\n1 16 0 -60 160 -1 0 0 0 1 0 0 0 -1 76382p1e.dat\n1 16 0 -28 160 -1 0 0 0 1 0 0 0 -1 3815bpm0.dat\n1 16 0 -16 160 -1 0 0 0 1 0 0 0 -1 3817cp0e.dat\n1 16 0 -16 160 -1 0 0 0 1 0 0 0 -1 3816cp0e.dat\n\n0 D: ROCKET+MERMAID (W station at x=-160, faces +X to center)\n1 16 -160 -84 0 0 0 -1 0 1 0 1 0 0 3626bpsl.dat\n1 16 -160 -84 0 0 0 -1 0 1 0 1 0 0 29580p01.dat\n1 16 -160 -60 0 0 0 -1 0 1 0 1 0 0 76382p1k.dat\n1 16 -160 -28 0 0 0 -1 0 1 0 1 0 0 35779.dat\n1 16 -160 -16 20 0 0 -1 0 1 0 1 0 0 2532.dat\n1 16 -160 -16 0 0 0 -1 0 1 0 1 0 0 2532.dat\n\n0 E: TOM NOOK (NE station at x=120 z=-120, faces inward; rotate -45°)\n1 16 120 -64 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 105196p01.dat\n1 16 120 -84 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 11303c01.dat\n1 16 120 -60 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 76382p8x.dat\n1 16 120 -28 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 3815bpq0.dat\n1 16 120 -16 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 20460bp0c.dat\n1 16 120 -16 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 20461bp0c.dat\n\n0 F: BATGIRL+MOUSTACHE (NW station at x=-120 z=-120, faces inward; rotate +45°)\n1 16 -120 -84 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 3626bpc21.dat\n1 16 -120 -84 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 15553.dat\n1 16 -120 -60 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 76382p7p.dat\n1 16 -120 -28 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 3815bpq1.dat\n1 16 -120 -16 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 3817cp4f.dat\n1 16 -120 -16 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 3816cp4f.dat\n\n0 G: HORNS+PRISON (SW station at x=-120 z=120, faces inward; rotate -135°)\n1 16 -120 -84 120 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 3626bpw5.dat\n1 16 -120 -84 120 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 24636.dat\n1 16 -120 -60 120 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 76382p1013.dat\n1 16 -120 -28 120 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 21019bpde6.dat\n\n0 H: MUMMY+WARBONNET+BIRD WINGS (SE station at x=120 z=120, faces inward; rotate +135°)\n1 16 120 -84 120 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 3626bpa2.dat\n1 16 120 -84 120 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 30138p01.dat\n1 16 120 -60 120 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 11938pde4.dat\n1 16 131 -51 131 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 16000pdg6.dat\n1 16 109 -51 109 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 16000pdg6.dat\n1 16 120 -28 120 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 21019bpx5.dat\n\n0 STEP\n0 STEP 05: PERIMETER PILLARS (brown posts, 8 pillars x 6 bricks tall)\n0 N\n1 6 0 0 -150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -24 -150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -48 -150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -72 -150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -96 -150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -120 -150 1 0 0 0 1 0 0 0 1 3005.dat\n0 NE\n1 6 106 0 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -24 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -48 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -72 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -96 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -120 -106 1 0 0 0 1 0 0 0 1 3005.dat\n0 E\n1 6 150 0 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 150 -24 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 150 -48 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 150 -72 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 150 -96 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 150 -120 0 1 0 0 0 1 0 0 0 1 3005.dat\n0 SE\n1 6 106 0 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -24 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -48 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -72 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -96 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 106 -120 106 1 0 0 0 1 0 0 0 1 3005.dat\n0 S\n1 6 0 0 150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -24 150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -48 150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -72 150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -96 150 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 0 -120 150 1 0 0 0 1 0 0 0 1 3005.dat\n0 SW\n1 6 -106 0 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -24 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -48 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -72 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -96 106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -120 106 1 0 0 0 1 0 0 0 1 3005.dat\n0 W\n1 6 -150 0 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -150 -24 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -150 -48 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -150 -72 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -150 -96 0 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -150 -120 0 1 0 0 0 1 0 0 0 1 3005.dat\n0 NW\n1 6 -106 0 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -24 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -48 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -72 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -96 -106 1 0 0 0 1 0 0 0 1 3005.dat\n1 6 -106 -120 -106 1 0 0 0 1 0 0 0 1 3005.dat\n\n0 STEP\n0 STEP 06: TRANSPARENT BOUNDARY WALL (8 segments x 5 bricks tall, trans-clear)\n0 N\n1 47 0 0 -180 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 0 -24 -180 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 0 -48 -180 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 0 -72 -180 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 0 -96 -180 1 0 0 0 1 0 0 0 1 3010.dat\n0 NE\n1 47 127 0 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 127 -24 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 127 -48 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 127 -72 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 127 -96 -127 1 0 0 0 1 0 0 0 1 3010.dat\n0 E\n1 47 180 0 0 0 0 -1 0 1 0 1 0 0 3010.dat\n1 47 180 -24 0 0 0 -1 0 1 0 1 0 0 3010.dat\n1 47 180 -48 0 0 0 -1 0 1 0 1 0 0 3010.dat\n1 47 180 -72 0 0 0 -1 0 1 0 1 0 0 3010.dat\n1 47 180 -96 0 0 0 -1 0 1 0 1 0 0 3010.dat\n0 SE\n1 47 127 0 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 127 -24 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 127 -48 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 127 -72 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 127 -96 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n0 S\n1 47 0 0 180 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 0 -24 180 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 0 -48 180 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 0 -72 180 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 0 -96 180 -1 0 0 0 1 0 0 0 -1 3010.dat\n0 SW\n1 47 -127 0 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 -127 -24 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 -127 -48 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 -127 -72 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n1 47 -127 -96 127 -1 0 0 0 1 0 0 0 -1 3010.dat\n0 W\n1 47 -180 0 0 0 0 1 0 1 0 -1 0 0 3010.dat\n1 47 -180 -24 0 0 0 1 0 1 0 -1 0 0 3010.dat\n1 47 -180 -48 0 0 0 1 0 1 0 -1 0 0 3010.dat\n1 47 -180 -72 0 0 0 1 0 1 0 -1 0 0 3010.dat\n1 47 -180 -96 0 0 0 1 0 1 0 -1 0 0 3010.dat\n0 NW\n1 47 -127 0 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 -127 -24 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 -127 -48 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 -127 -72 -127 1 0 0 0 1 0 0 0 1 3010.dat\n1 47 -127 -96 -127 1 0 0 0 1 0 0 0 1 3010.dat\n\n0 STEP\n0 STEP 07: CONNECTOR PATHS (makes the scene read joined)\n0 Simple “spokes” from hub to stations using 1x1 plates (3024) on prior file plane.\n0 East spoke\n1 7 20 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 40 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 60 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 80 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 100 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 120 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 140 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n0 West spoke\n1 7 -20 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -40 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -60 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -80 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -100 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -120 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 -140 0 0 1 0 0 0 1 0 0 0 1 3024.dat\n0 North spoke\n1 7 0 0 -20 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -40 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -60 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -80 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -100 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -120 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 -140 1 0 0 0 1 0 0 0 1 3024.dat\n0 South spoke\n1 7 0 0 20 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 40 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 60 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 80 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 100 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 120 1 0 0 0 1 0 0 0 1 3024.dat\n1 7 0 0 140 1 0 0 0 1 0 0 0 1 3024.dat\n\n0 STEP\n0 STEP 08: FOREST (Palm Trunk Groves — 2536a/2536b; keeps spokes readable)\n0 N grove (kept off x=0 spoke)\n1 6 -60 0 -120 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 60 0 -120 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -90 0 -150 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 90 0 -150 1 0 0 0 1 0 0 0 1 2536a.dat\n0 NE grove\n1 6 70 0 -90 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 95 0 -115 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 55 0 -125 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 120 0 -95 1 0 0 0 1 0 0 0 1 2536a.dat\n0 E grove (kept off z=0 spoke)\n1 6 120 0 60 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 150 0 90 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 140 0 -60 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 110 0 -90 1 0 0 0 1 0 0 0 1 2536a.dat\n0 SE grove\n1 6 80 0 90 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 110 0 120 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 60 0 130 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 130 0 70 1 0 0 0 1 0 0 0 1 2536b.dat\n0 S grove (kept off x=0 spoke)\n1 6 -60 0 120 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 60 0 120 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -90 0 150 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 90 0 150 1 0 0 0 1 0 0 0 1 2536b.dat\n0 SW grove\n1 6 -80 0 90 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -110 0 120 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -60 0 130 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -130 0 70 1 0 0 0 1 0 0 0 1 2536a.dat\n0 W grove (kept off z=0 spoke)\n1 6 -120 0 60 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -150 0 90 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -140 0 -60 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -110 0 -90 1 0 0 0 1 0 0 0 1 2536b.dat\n0 NW grove\n1 6 -70 0 -90 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -95 0 -115 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -55 0 -125 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -120 0 -95 1 0 0 0 1 0 0 0 1 2536b.dat\n0 Inner “ring” accents (kept clear of the 8 plinths)\n1 6 40 0 40 1 0 0 0 1 0 0 0 1 2536a.dat\n1 6 -40 0 40 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 40 0 -40 1 0 0 0 1 0 0 0 1 2536b.dat\n1 6 -40 0 -40 1 0 0 0 1 0 0 0 1 2536a.dat\n\n0 STEP\n0 STEP 09: PERIMETER TERMINALS + SCREENS + SHIELDS (adds “station” readability)\n0 Each station gets a Duplo TV-slope terminal + a floating blue UI panel.\n0 The wall/pillars get heraldic “signage” (tri shields) as wayfinding.\n\n0 Terminals — N / E / S / W\n1 16 20 0 -140 1 0 0 0 1 0 0 0 1 parts/6474pc0.dat\n1 16 20 -40 -140 1 0 0 0 1 0 0 0 1 parts/s/15210pc0s01.dat\n\n1 16 140 0 20 0 0 1 0 1 0 -1 0 0 parts/6474pc0.dat\n1 16 140 -40 20 0 0 1 0 1 0 -1 0 0 parts/s/15210pc0s01.dat\n\n1 16 -20 0 140 -1 0 0 0 1 0 0 0 -1 parts/6474pc0.dat\n1 16 -20 -40 140 -1 0 0 0 1 0 0 0 -1 parts/s/15210pc0s01.dat\n\n1 16 -140 0 -20 0 0 -1 0 1 0 1 0 0 parts/6474pc0.dat\n1 16 -140 -40 -20 0 0 -1 0 1 0 1 0 0 parts/s/15210pc0s01.dat\n\n0 Terminals — NE / NW / SW / SE (match minifig inward rotations)\n1 16 105 0 -105 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 parts/6474pc0.dat\n1 16 105 -40 -105 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 parts/s/15210pc0s01.dat\n\n1 16 -105 0 -105 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 parts/6474pc0.dat\n1 16 -105 -40 -105 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 parts/s/15210pc0s01.dat\n\n1 16 -105 0 105 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 parts/6474pc0.dat\n1 16 -105 -40 105 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 parts/s/15210pc0s01.dat\n\n1 16 105 0 105 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 parts/6474pc0.dat\n1 16 105 -40 105 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 parts/s/15210pc0s01.dat\n\n0 “Astromech background” panels as central data-monoliths (small, non-blocking)\n1 16 55 0 0 1 0 0 0 1 0 0 0 1 parts/s/30361dps6s01.dat\n1 16 -55 0 0 1 0 0 0 1 0 0 0 1 parts/s/30361dps6s01.dat\n1 16 0 0 55 1 0 0 0 1 0 0 0 1 parts/s/30361dps6s01.dat\n1 16 0 0 -55 1 0 0 0 1 0 0 0 1 parts/s/30361dps6s01.dat\n\n0 Heraldic wayfinding shields mounted just inside the wall (one per compass point)\n0 N (deer)\n1 16 0 -72 -170 1 0 0 0 1 0 0 0 1 parts/3846p40.dat\n0 NE (lion)\n1 16 120 -72 -120 0.70711 0 -0.70711 0 1 0 0.70711 0 0.70711 parts/3846p4e.dat\n0 E (gold lion)\n1 16 170 -72 0 0 0 1 0 1 0 -1 0 0 parts/3846p4m.dat\n0 SE (broken half motif)\n1 16 120 -72 120 -0.70711 0 0.70711 0 1 0 -0.70711 0 -0.70711 parts/s/3846p4ms01.dat\n0 S (deer repeat)\n1 16 0 -72 170 -1 0 0 0 1 0 0 0 -1 parts/3846p40.dat\n0 SW (falcon half)\n1 16 -120 -72 120 -0.70711 0 -0.70711 0 1 0 0.70711 0 -0.70711 parts/s/3846p49s01.dat\n0 W (lion)\n1 16 -170 -72 0 0 0 -1 0 1 0 1 0 0 parts/3846p4e.dat\n0 NW (gold lion)\n1 16 -120 -72 -120 0.70711 0 0.70711 0 1 0 -0.70711 0 0.70711 parts/3846p4m.dat\n\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 191,
+      "count": 5
+    },
+    {
+      "lineNum": 233,
+      "count": 5
+    },
+    {
+      "lineNum": 197,
+      "count": 5
+    },
+    {
+      "lineNum": 327,
+      "count": 8
+    },
+    {
+      "lineNum": 54,
+      "count": 9
+    },
+    {
+      "lineNum": 38,
+      "count": 10
+    },
+    {
+      "lineNum": 42,
+      "count": 9
+    },
+    {
+      "lineNum": 58,
+      "count": 9
+    },
+    {
+      "lineNum": 215,
+      "count": 5
+    },
+    {
+      "lineNum": 209,
+      "count": 10
+    },
+    {
+      "lineNum": 221,
+      "count": 10
+    },
+    {
+      "lineNum": 132,
+      "count": 8
+    },
+    {
+      "lineNum": 181,
+      "count": 10
+    },
+    {
+      "lineNum": 139,
+      "count": 8
+    },
+    {
+      "lineNum": 361,
+      "count": 3
+    },
+    {
+      "lineNum": 373,
+      "count": 3
+    },
+    {
+      "lineNum": 146,
+      "count": 12
+    },
+    {
+      "lineNum": 174,
+      "count": 12
+    },
+    {
+      "lineNum": 160,
+      "count": 8
+    },
+    {
+      "lineNum": 153,
+      "count": 11
+    },
+    {
+      "lineNum": 167,
+      "count": 11
+    },
+    {
+      "lineNum": 62,
+      "count": 4
+    },
+    {
+      "lineNum": 359,
+      "count": 3
+    },
+    {
+      "lineNum": 71,
+      "count": 3
+    },
+    {
+      "lineNum": 367,
+      "count": 3
+    },
+    {
+      "lineNum": 81,
+      "count": 3
+    },
+    {
+      "lineNum": 365,
+      "count": 4
+    },
+    {
+      "lineNum": 369,
+      "count": 4
+    },
+    {
+      "lineNum": 91,
+      "count": 9
+    },
+    {
+      "lineNum": 333,
+      "count": 5
+    },
+    {
+      "lineNum": 77,
+      "count": 8
+    },
+    {
+      "lineNum": 50,
+      "count": 13
+    },
+    {
+      "lineNum": 34,
+      "count": 13
+    },
+    {
+      "lineNum": 152,
+      "count": 8
+    },
+    {
+      "lineNum": 166,
+      "count": 8
+    },
+    {
+      "lineNum": 99,
+      "count": 2
+    },
+    {
+      "lineNum": 180,
+      "count": 6
+    },
+    {
+      "lineNum": 138,
+      "count": 6
+    },
+    {
+      "lineNum": 107,
+      "count": 2
+    },
+    {
+      "lineNum": 145,
+      "count": 5
+    },
+    {
+      "lineNum": 173,
+      "count": 6
+    },
+    {
+      "lineNum": 93,
+      "count": 15
+    },
+    {
+      "lineNum": 196,
+      "count": 4
+    },
+    {
+      "lineNum": 190,
+      "count": 3
+    },
+    {
+      "lineNum": 122,
+      "count": 4
+    },
+    {
+      "lineNum": 214,
+      "count": 3
+    },
+    {
+      "lineNum": 220,
+      "count": 4
+    },
+    {
+      "lineNum": 232,
+      "count": 4
+    },
+    {
+      "lineNum": 343,
+      "count": 5
+    },
+    {
+      "lineNum": 349,
+      "count": 5
+    },
+    {
+      "lineNum": 346,
+      "count": 5
+    },
+    {
+      "lineNum": 336,
+      "count": 5
+    },
+    {
+      "lineNum": 108,
+      "count": 5
+    },
+    {
+      "lineNum": 340,
+      "count": 4
+    },
+    {
+      "lineNum": 78,
+      "count": 8
+    },
+    {
+      "lineNum": 46,
+      "count": 3
+    },
+    {
+      "lineNum": 172,
+      "count": 4
+    },
+    {
+      "lineNum": 92,
+      "count": 3
+    },
+    {
+      "lineNum": 137,
+      "count": 8
+    },
+    {
+      "lineNum": 179,
+      "count": 6
+    },
+    {
+      "lineNum": 189,
+      "count": 10
+    },
+    {
+      "lineNum": 277,
+      "count": 7
+    },
+    {
+      "lineNum": 213,
+      "count": 8
+    },
+    {
+      "lineNum": 278,
+      "count": 6
+    },
+    {
+      "lineNum": 266,
+      "count": 6
+    },
+    {
+      "lineNum": 275,
+      "count": 3
+    },
+    {
+      "lineNum": 306,
+      "count": 11
+    },
+    {
+      "lineNum": 298,
+      "count": 5
+    },
+    {
+      "lineNum": 257,
+      "count": 8
+    },
+    {
+      "lineNum": 241,
+      "count": 5
+    },
+    {
+      "lineNum": 250,
+      "count": 4
+    },
+    {
+      "lineNum": 249,
+      "count": 5
+    },
+    {
+      "lineNum": 267,
+      "count": 7
+    },
+    {
+      "lineNum": 242,
+      "count": 4
+    },
+    {
+      "lineNum": 130,
+      "count": 8
+    },
+    {
+      "lineNum": 144,
+      "count": 6
+    },
+    {
+      "lineNum": 41,
+      "count": 11
+    },
+    {
+      "lineNum": 57,
+      "count": 12
+    },
+    {
+      "lineNum": 116,
+      "count": 4
+    },
+    {
+      "lineNum": 158,
+      "count": 5
+    },
+    {
+      "lineNum": 312,
+      "count": 5
+    },
+    {
+      "lineNum": 49,
+      "count": 12
+    },
+    {
+      "lineNum": 84,
+      "count": 3
+    },
+    {
+      "lineNum": 45,
+      "count": 13
+    },
+    {
+      "lineNum": 53,
+      "count": 14
+    },
+    {
+      "lineNum": 72,
+      "count": 3
+    },
+    {
+      "lineNum": 100,
+      "count": 2
+    },
+    {
+      "lineNum": 165,
+      "count": 6
+    },
+    {
+      "lineNum": 151,
+      "count": 6
+    },
+    {
+      "lineNum": 281,
+      "count": 2
+    },
+    {
+      "lineNum": 311,
+      "count": 3
+    },
+    {
+      "lineNum": 219,
+      "count": 14
+    },
+    {
+      "lineNum": 207,
+      "count": 16
+    },
+    {
+      "lineNum": 124,
+      "count": 3
+    },
+    {
+      "lineNum": 33,
+      "count": 9
+    },
+    {
+      "lineNum": 231,
+      "count": 17
+    },
+    {
+      "lineNum": 195,
+      "count": 18
+    },
+    {
+      "lineNum": 61,
+      "count": 11
+    },
+    {
+      "lineNum": 225,
+      "count": 18
+    },
+    {
+      "lineNum": 37,
+      "count": 11
+    },
+    {
+      "lineNum": 201,
+      "count": 22
+    },
+    {
+      "lineNum": 318,
+      "count": 5
+    },
+    {
+      "lineNum": 317,
+      "count": 5
+    },
+    {
+      "lineNum": 330,
+      "count": 2
+    },
+    {
+      "lineNum": 23,
+      "count": 2
+    },
+    {
+      "lineNum": 21,
+      "count": 2
+    },
+    {
+      "lineNum": 22,
+      "count": 3
+    },
+    {
+      "lineNum": 19,
+      "count": 2
+    },
+    {
+      "lineNum": 20,
+      "count": 2
+    },
+    {
+      "lineNum": 316,
+      "count": 5
+    },
+    {
+      "lineNum": 265,
+      "count": 2
+    },
+    {
+      "lineNum": 315,
+      "count": 4
+    },
+    {
+      "lineNum": 297,
+      "count": 5
+    },
+    {
+      "lineNum": 243,
+      "count": 4
+    },
+    {
+      "lineNum": 353,
+      "count": 1
+    },
+    {
+      "lineNum": 296,
+      "count": 5
+    },
+    {
+      "lineNum": 251,
+      "count": 3
+    },
+    {
+      "lineNum": 85,
+      "count": 2
+    },
+    {
+      "lineNum": 300,
+      "count": 2
+    },
+    {
+      "lineNum": 305,
+      "count": 4
+    },
+    {
+      "lineNum": 286,
+      "count": 11
+    },
+    {
+      "lineNum": 303,
+      "count": 4
+    },
+    {
+      "lineNum": 285,
+      "count": 4
+    },
+    {
+      "lineNum": 293,
+      "count": 4
+    },
+    {
+      "lineNum": 295,
+      "count": 4
+    },
+    {
+      "lineNum": 329,
+      "count": 3
+    },
+    {
+      "lineNum": 264,
+      "count": 1
+    },
+    {
+      "lineNum": 332,
+      "count": 3
+    },
+    {
+      "lineNum": 292,
+      "count": 4
+    },
+    {
+      "lineNum": 302,
+      "count": 3
+    },
+    {
+      "lineNum": 290,
+      "count": 1
+    },
+    {
+      "lineNum": 94,
+      "count": 2
+    },
+    {
+      "lineNum": 244,
+      "count": 2
+    },
+    {
+      "lineNum": 246,
+      "count": 2
+    },
+    {
+      "lineNum": 248,
+      "count": 1
+    },
+    {
+      "lineNum": 240,
+      "count": 1
+    },
+    {
+      "lineNum": 352,
+      "count": 1
+    },
+    {
+      "lineNum": 253,
+      "count": 1
+    },
+    {
+      "lineNum": 313,
+      "count": 3
+    },
+    {
+      "lineNum": 288,
+      "count": 2
+    },
+    {
+      "lineNum": 261,
+      "count": 3
+    },
+    {
+      "lineNum": 283,
+      "count": 4
+    },
+    {
+      "lineNum": 276,
+      "count": 3
+    },
+    {
+      "lineNum": 326,
+      "count": 4
+    },
+    {
+      "lineNum": 282,
+      "count": 3
+    },
+    {
+      "lineNum": 287,
+      "count": 10
+    },
+    {
+      "lineNum": 335,
+      "count": 2
+    },
+    {
+      "lineNum": 308,
+      "count": 1
+    },
+    {
+      "lineNum": 280,
+      "count": 4
+    },
+    {
+      "lineNum": 310,
+      "count": 4
+    },
+    {
+      "lineNum": 307,
+      "count": 12
+    },
+    {
+      "lineNum": 256,
+      "count": 1
+    },
+    {
+      "lineNum": 259,
+      "count": 3
+    },
+    {
+      "lineNum": 258,
+      "count": 3
+    },
+    {
+      "lineNum": 101,
+      "count": 1
+    },
+    {
+      "lineNum": 109,
+      "count": 1
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-12-12T07:50:57.498Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 15,
+      "top_count": 3421,
+      "top_percentage": 100,
+      "histogram": {
+        "15": 3421
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 197,
+      "top_line": 200,
+      "top_count": 103,
+      "top_percentage": 3,
+      "histogram": {
+        "15": 40,
+        "19": 6,
+        "20": 5,
+        "21": 6,
+        "22": 9,
+        "23": 3,
+        "32": 5,
+        "33": 9,
+        "34": 13,
+        "36": 18,
+        "37": 11,
+        "38": 10,
+        "40": 5,
+        "41": 11,
+        "42": 9,
+        "44": 22,
+        "45": 13,
+        "46": 3,
+        "48": 5,
+        "49": 12,
+        "50": 13,
+        "52": 24,
+        "53": 14,
+        "54": 9,
+        "56": 5,
+        "57": 12,
+        "58": 9,
+        "60": 17,
+        "61": 11,
+        "62": 4,
+        "71": 3,
+        "72": 3,
+        "77": 8,
+        "78": 8,
+        "81": 3,
+        "84": 3,
+        "85": 7,
+        "91": 9,
+        "92": 3,
+        "93": 28,
+        "94": 4,
+        "99": 2,
+        "100": 2,
+        "101": 2,
+        "107": 2,
+        "108": 5,
+        "109": 2,
+        "116": 4,
+        "122": 4,
+        "124": 3,
+        "129": 45,
+        "130": 8,
+        "132": 8,
+        "136": 13,
+        "137": 8,
+        "138": 6,
+        "139": 8,
+        "143": 52,
+        "144": 6,
+        "145": 5,
+        "146": 12,
+        "150": 20,
+        "151": 6,
+        "152": 8,
+        "153": 11,
+        "157": 43,
+        "158": 5,
+        "160": 8,
+        "164": 19,
+        "165": 6,
+        "166": 8,
+        "167": 11,
+        "171": 58,
+        "172": 4,
+        "173": 6,
+        "174": 12,
+        "178": 15,
+        "179": 6,
+        "180": 6,
+        "181": 10,
+        "188": 72,
+        "189": 10,
+        "190": 4,
+        "191": 6,
+        "194": 78,
+        "195": 38,
+        "196": 2,
+        "197": 5,
+        "200": 103,
+        "201": 71,
+        "206": 82,
+        "207": 17,
+        "209": 10,
+        "212": 70,
+        "213": 8,
+        "214": 4,
+        "215": 6,
+        "218": 87,
+        "219": 16,
+        "220": 4,
+        "221": 10,
+        "224": 96,
+        "225": 68,
+        "230": 75,
+        "231": 38,
+        "232": 2,
+        "233": 5,
+        "240": 4,
+        "241": 11,
+        "242": 10,
+        "243": 10,
+        "244": 13,
+        "245": 10,
+        "246": 24,
+        "248": 4,
+        "249": 11,
+        "250": 10,
+        "251": 10,
+        "252": 9,
+        "253": 13,
+        "254": 18,
+        "256": 3,
+        "257": 14,
+        "258": 7,
+        "259": 7,
+        "260": 6,
+        "261": 13,
+        "262": 21,
+        "264": 4,
+        "265": 5,
+        "266": 11,
+        "267": 17,
+        "268": 13,
+        "269": 13,
+        "270": 21,
+        "275": 15,
+        "276": 18,
+        "277": 35,
+        "278": 34,
+        "280": 17,
+        "281": 23,
+        "282": 17,
+        "283": 44,
+        "285": 14,
+        "286": 90,
+        "287": 60,
+        "288": 10,
+        "290": 15,
+        "291": 31,
+        "292": 24,
+        "293": 25,
+        "295": 23,
+        "296": 24,
+        "297": 32,
+        "298": 33,
+        "300": 15,
+        "301": 28,
+        "302": 16,
+        "303": 24,
+        "305": 21,
+        "306": 84,
+        "307": 55,
+        "308": 8,
+        "310": 16,
+        "311": 27,
+        "312": 27,
+        "313": 28,
+        "315": 25,
+        "316": 27,
+        "317": 25,
+        "318": 25,
+        "326": 19,
+        "327": 8,
+        "329": 24,
+        "330": 2,
+        "332": 17,
+        "333": 5,
+        "335": 18,
+        "336": 5,
+        "339": 12,
+        "340": 4,
+        "342": 12,
+        "343": 4,
+        "345": 25,
+        "346": 5,
+        "348": 23,
+        "349": 5,
+        "352": 2,
+        "353": 1,
+        "354": 4,
+        "355": 1,
+        "359": 3,
+        "361": 3,
+        "365": 4,
+        "367": 3,
+        "369": 4,
+        "373": 3
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 256,
+    "part_lines_count": 256,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

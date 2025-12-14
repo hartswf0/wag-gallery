@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_1_2025-12-01_00-13-02.png",
+  "scene": "Scene 1",
+  "date": "2025-12-01",
+  "time": "00-13-02",
+  "timestamp": "2025-12-01T05:13:02.921Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 66,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE Spiral_Staircase_Tall_Tight_180.mpd\n0 Name: Tight 180° Spiral Staircase\n0 Author: Generated from Catalog\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // ╔════════════════════════════════════════════════════════════╗\n0 // ║  TIGHT SPIRAL STAIRCASE - 16 SEGMENTS                      ║\n0 // ║  Using 40243c01.dat (Complete 8 Steps)                     ║\n \n0 // ║  Overlap: 2.5 steps | Rotation: 180° | All Y negative      ║\n0 // ╚════════════════════════════════════════════════════════════╝\n\n0 STEP\n\n0 // Segment 1: Base (0° rotation)\n1 7 -300 -50 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 2: Rotated 180°, Y -182\n1 7 -300 -182 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 3: Rotated 0°, Y -314\n1 7 -300 -314 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 4: Rotated 180°, Y -446\n1 7 -300 -446 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 5: Rotated 0°, Y -578\n1 7 -300 -578 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 6: Rotated 180°, Y -710\n1 7 -300 -710 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 7: Rotated 0°, Y -842\n1 7 -300 -842 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 8: Rotated 180°, Y -974\n1 7 -300 -974 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 9: Rotated 0°, Y -1106\n1 7 -300 -1106 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 10: Rotated 180°, Y -1238\n1 7 -300 -1238 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 11: Rotated 0°, Y -1370\n1 7 -300 -1370 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 12: Rotated 180°, Y -1502\n1 7 -300 -1502 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 13: Rotated 0°, Y -1634\n1 7 -300 -1634 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 14: Rotated 180°, Y -1766\n1 7 -300 -1766 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 // Segment 15: Rotated 0°, Y -1898\n1 7 -300 -1898 200 1 0 0 0 1 0 0 0 1 parts/40243c01.dat\n\n0 // Segment 16: Rotated 180°, Y -2030\n1 7 -300 -2030 200 -1 0 0 0 1 0 0 0 -1 parts/40243c01.dat\n\n0 STEP\n0 NOFILE"
+}

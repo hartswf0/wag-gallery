@@ -1,0 +1,23 @@
+{
+  "filename": "wag_gold_scene_4_2025-11-17_05-42-23.png",
+  "scene": "Scene 4",
+  "date": "2025-11-17",
+  "time": "05-42-23",
+  "timestamp": "2025-11-17T10:42:23.987Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 53,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": false,
+    "axes": false,
+    "flipY": false,
+    "wireframe": true,
+    "showEdges": true,
+    "backfaceCull": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE circle_track.mpd\n0 Name: Circle Track 6 Studs Wide\n0 Author: Sceneerator\n0 !LDRAW_ORG Model\n0 BFC CERTIFY CCW\n\n0 STEP\n1 16 40 0 0 1 0 0 0 1 0 0 0 1 53400.dat\n\n0 STEP\n \n\n0 STEP\n1 16 28.28 0 28.28 0.7071 0 0.7071 0 1 0 -0.7071 0 0.7071 53400.dat\n\n0 STEP\n1 16 15.31 0 36.96 0.3827 0 0.9239 0 1 0 -0.9239 0 0.3827 53400.dat\n\n0 STEP\n1 16 0 0 40 0 0 1 0 1 0 -1 0 0 53400.dat\n\n0 STEP\n1 16 -15.31 0 36.96 -0.3827 0 0.9239 0 1 0 -0.9239 0 -0.3827 53400.dat\n\n0 STEP\n1 16 -28.28 0 28.28 -0.7071 0 0.7071 0 1 0 -0.7071 0 -0.7071 53400.dat\n\n0 STEP\n1 16 -36.96 0 15.31 -0.9239 0 0.3827 0 1 0 -0.3827 0 -0.9239 53400.dat\n\n0 STEP\n1 16 -40 0 0 -1 0 0 0 1 0 0 0 -1 53400.dat\n\n0 STEP\n1 16 -36.96 0 -15.31 -0.9239 0 -0.3827 0 1 0 0.3827 0 -0.9239 53400.dat\n\n0 STEP\n1 16 -28.28 0 -28.28 -0.7071 0 -0.7071 0 1 0 0.7071 0 -0.7071 53400.dat\n\n0 STEP\n1 16 -15.31 0 -36.96 -0.3827 0 -0.9239 0 1 0 0.9239 0 -0.3827 53400.dat\n\n0 STEP\n1 16 0 0 -40 0 0 -1 0 1 0 1 0 0 53400.dat\n\n0 STEP\n1 16 15.31 0 -36.96 0.3827 0 -0.9239 0 1 0 0.9239 0 0.3827 53400.dat\n\n0 STEP\n1 16 28.28 0 -28.28 0.7071 0 -0.7071 0 1 0 0.7071 0 0.7071 53400.dat\n\n0 STEP\n1 16 36.96 0 -15.31 0.9239 0 -0.3827 0 1 0 0.3827 0 0.9239 53400.dat"
+}

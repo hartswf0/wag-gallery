@@ -1,0 +1,181 @@
+{
+  "filename": "wag_gold_scene_1_2025-11-25_02-22-29.png",
+  "scene": "Scene 1",
+  "date": "2025-11-25",
+  "time": "02-22-29",
+  "timestamp": "2025-11-25T07:22:29.065Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 90,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE shield_of_achilles_fixed.mpd\n0 Name: The Shield of Achilles (Rectified)\n0 Author: Grace Assembler\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n0 //\n0 // ═══════════════════════════════════════════════════════════\n0 // STEP 1: THE FOUNDATION (The Aether)\n0 // Part: s\\52040s03.dat (Brick 12x12) - From Bucket 4\n \n0 STEP\n1 7 0 0 0 1 0 0 0 1 0 0 0 1 parts/s/52040s03.dat\n\n0 // ═══════════════════════════════════════════════════════════\n0 // STEP 2: ZONE 1 - THE OMPHALOS (Cosmos)\n0 // Center: The Sun (Wheel Cover) - From Bucket 3\n0 // Mount: Axis (Round Plate) - From Bucket 2\n0 // Ring: The Moon (Corner Rounds) - From Bucket 1\n0 // Corners: The Stars (Star Field Tiles) - From Bucket 1\n0 // ═══════════════════════════════════════════════════════════\n0 STEP\n0 // The Axis Mundi\n1 7 0 -24 0 1 0 0 0 1 0 0 0 1 parts/4032a.dat\n0 // The Sun (Radiant)\n1 14 0 -32 0 1 0 0 0 1 0 0 0 1 parts/37195.dat\n0 // The Moon Cycle (Silver/White)\n1 15 40 -24 0 1 0 0 0 1 0 0 0 1 parts/25269.dat\n1 15 -40 -24 0 -1 0 0 0 1 0 0 0 -1 parts/25269.dat\n0 // The Constellations (Corners of the Universe)\n1 0 100 -24 100 1 0 0 0 1 0 0 0 1 parts/25269p03.dat\n1 0 -100 -24 100 0 0 -1 0 1 0 1 0 0 parts/25269p03.dat\n1 0 100 -24 -100 0 0 1 0 1 0 -1 0 0 parts/25269p03.dat\n1 0 -100 -24 -100 -1 0 0 0 1 0 0 0 -1 parts/25269p03.dat\n\n0 // ═══════════════════════════════════════════════════════════\n0 // STEP 3: ZONE 2 - THE CITIES\n0 // East: The City of War (Iron Walls & Spears) - From Bucket 5\n0 // West: The City of Peace (Dancing Floor & Feast) - From Bucket 6\n0 // ═══════════════════════════════════════════════════════════\n0 STEP\n0 // --- CITY OF WAR (East) ---\n0 // The Wall (Train Track Curve)\n1 72 80 -24 0 0 0 1 0 1 0 -1 0 0 parts/u9508.dat\n0 // The Spears (Bar with Stop) sticking out\n1 4 90 -24 -20 0 0 1 1 0 0 0 1 0 parts/u9531a.dat\n1 4 90 -24 20 0 0 1 1 0 0 0 1 0 parts/u9531a.dat\n\n0 // --- CITY OF PEACE (West) ---\n0 // The Dancing Floor (Wheel Rim)\n1 14 -80 -24 0 1 0 0 0 1 0 0 0 1 parts/s/68577s01.dat\n0 // The Feast (Stein)\n1 14 -80 -34 0 1 0 0 0 1 0 0 0 1 parts/s/68495s02.dat\n0 // The Elders (Eye Arches) - ***CORRECTED FILE***\n1 19 -110 -24 0 0 0 1 0 1 0 -1 0 0 parts/s/68881p01s01.dat\n\n0 // ═══════════════════════════════════════════════════════════\n0 // STEP 4: ZONE 3 - THE EARTH\n0 // North: Agriculture (Plough & Sickle) - From Bucket 7\n0 // South: Predation (Vines & Bones) - From Bucket 7 & 8\n0 // ═══════════════════════════════════════════════════════════\n0 STEP\n0 // --- AGRICULTURE (North) ---\n0 // The Plough (Bar with Bow)\n1 6 0 -24 -80 1 0 0 0 1 0 0 0 1 parts/s/55237fs01.dat\n0 // The Sickle (Bar with Blade)\n1 4 20 -24 -80 0 0 -1 0 1 0 1 0 0 parts/s/55237cs01.dat\n\n0 // --- PREDATION (South) ---\n0 // The Vineyard (Starfish as Vines)\n1 2 0 -24 80 1 0 0 0 1 0 0 0 1 parts/s/54873s01.dat\n0 // The Fate of the Bull (Bones)\n1 15 30 -24 80 1 0 0 0 1 0 0 0 1 parts/6256p01.dat\n\n0 // ═══════════════════════════════════════════════════════════\n0 // STEP 5: ZONE 4 - OCEANUS (The Boundary)\n0 // The Blue Swirls - From Bucket 8\n0 // Placed at the 4 Cardinal Points\n0 // ═══════════════════════════════════════════════════════════\n0 STEP\n0 // North Swirl\n1 1 0 -24 -110 1 0 0 0 1 0 0 0 1 parts/6256ph1.dat\n0 // South Swirl\n1 1 0 -24 110 -1 0 0 0 1 0 0 0 -1 parts/6256ph1.dat\n0 // East Swirl\n1 1 110 -24 0 0 0 1 0 1 0 -1 0 0 parts/6256ph1.dat\n0 // West Swirl\n1 1 -110 -24 0 0 0 -1 0 1 0 1 0 0 parts/6256ph1.dat\n\n0 NOFILE",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [
+    {
+      "lineNum": 52,
+      "count": 5
+    },
+    {
+      "lineNum": 54,
+      "count": 65
+    },
+    {
+      "lineNum": 32,
+      "count": 36
+    },
+    {
+      "lineNum": 33,
+      "count": 38
+    },
+    {
+      "lineNum": 50,
+      "count": 24
+    },
+    {
+      "lineNum": 28,
+      "count": 11
+    },
+    {
+      "lineNum": 66,
+      "count": 14
+    },
+    {
+      "lineNum": 81,
+      "count": 28
+    },
+    {
+      "lineNum": 64,
+      "count": 8
+    },
+    {
+      "lineNum": 85,
+      "count": 18
+    },
+    {
+      "lineNum": 45,
+      "count": 13
+    },
+    {
+      "lineNum": 46,
+      "count": 22
+    },
+    {
+      "lineNum": 23,
+      "count": 9
+    },
+    {
+      "lineNum": 27,
+      "count": 15
+    },
+    {
+      "lineNum": 30,
+      "count": 33
+    },
+    {
+      "lineNum": 31,
+      "count": 45
+    },
+    {
+      "lineNum": 83,
+      "count": 32
+    },
+    {
+      "lineNum": 72,
+      "count": 23
+    },
+    {
+      "lineNum": 70,
+      "count": 13
+    },
+    {
+      "lineNum": 12,
+      "count": 43
+    },
+    {
+      "lineNum": 43,
+      "count": 2
+    }
+  ],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-11-25T07:22:29.066Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 12,
+      "top_count": 851,
+      "top_percentage": 100,
+      "histogram": {
+        "12": 851
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 21,
+      "top_line": 54,
+      "top_count": 132,
+      "top_percentage": 15.5,
+      "histogram": {
+        "12": 86,
+        "23": 9,
+        "27": 19,
+        "28": 13,
+        "30": 87,
+        "31": 59,
+        "32": 42,
+        "33": 50,
+        "43": 4,
+        "45": 19,
+        "46": 30,
+        "50": 49,
+        "52": 5,
+        "54": 132,
+        "64": 18,
+        "66": 31,
+        "70": 25,
+        "72": 40,
+        "81": 43,
+        "83": 55,
+        "85": 35
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 23,
+    "part_lines_count": 23,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

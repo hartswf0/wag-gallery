@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAG Castle Architect</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --panel: #141414;
+            --border: #333;
+            --accent: #ffd700;
+            --text: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 12px 20px;
+            background: var(--panel);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .controls {
+            width: 360px;
+            background: var(--panel);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .output-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #000;
+        }
+
+        button.primary {
+            margin: 16px;
+            padding: 12px;
+            background: var(--accent);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button.primary:hover {
+            opacity: 0.9;
+        }
+
+        .section {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sec-head {
+            padding: 10px 16px;
+            background: #1a1a1a;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sec-head:hover {
+            background: #222;
+        }
+
+        .sec-body {
+            padding: 16px;
+            display: none;
+        }
+
+        .sec-body.active {
+            display: block;
+        }
+
+        .row {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background: #000;
+            border: 1px solid #333;
+            color: #ccc;
+            padding: 8px;
+            font-family: monospace;
+            font-size: 11px;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+            white-space: pre;
+        }
+
+        .hint {
+            font-size: 10px;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            background: var(--panel);
+        }
+
+        .tab {
+            padding: 10px 20px;
+            font-size: 11px;
+            cursor: pointer;
+            color: #888;
+            border-right: 1px solid var(--border);
+        }
+
+        .tab.active {
+            color: var(--accent);
+            background: #000;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        textarea.out {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #050505;
+            color: #ccc;
+            padding: 20px;
+            resize: none;
+            outline: none;
+        }
+
+        .toolbar {
+            padding: 10px;
+            border-top: 1px solid var(--border);
+            background: var(--panel);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        button.sec {
+            padding: 6px 12px;
+            background: #222;
+            border: 1px solid #444;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 10px;
+            border-radius: 3px;
+        }
+
+        button.sec:hover {
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        @media(max-width:700px) {
+            main {
+                flex-direction: column;
+            }
+
+            .controls {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>WAG Architect <span style="font-size:10px; opacity:0.5; margin-left:8px">v5.0 FLAT</span></h1>
+        <a href="wag-gold-gallery.html"
+            style="color: #ffd700; text-decoration: none; font-size: 11px; border: 1px solid #ffd700; padding: 4px 8px; border-radius: 4px;">🖼️
+            Gallery</a>
+    </header>
+    <main>
+        <div class="controls">
+            <button class="primary" onclick="gen()">GENERATE SYSTEMS</button>
+
+            <div class="section">
+                <div class="sec-head" onclick="tog(this)">Castle Specs</div>
+                <div class="sec-body active">
+                    <div class="row"><label>Sizes (Small / Med / Large)</label>
+                        <div style="display:flex; gap:5px"><input id="szS" value="32"><input id="szM" value="48"><input
+                                id="szL" value="64"></div>
+                    </div>
+                    <div class="row"><label>Wall Layers</label><input id="wL" value="5"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="sec-head" onclick="tog(this)">Gate & Hero</div>
+                <div class="sec-body">
+                    <div class="row"><label>Gate Struct</label><textarea id="tGate">0 // GATE
+1 7 -60 0 0 1 0 0 0 1 0 0 0 1 3003.dat
+1 7 60 0 0 1 0 0 0 1 0 0 0 1 3003.dat
+1 25 -60 -24 0 1 0 0 0 1 0 0 0 1 3024.dat
+1 25 60 -24 0 1 0 0 0 1 0 0 0 1 3024.dat</textarea></div>
+                    <div class="row"><label>Gatekeeper</label><textarea id="tGK">0 // GK
+1 16 0 -84 0 1 0 0 0 1 0 0 0 1 3626cp7i.dat
+1 16 0 -60 0 1 0 0 0 1 0 0 0 1 24319pcfd.dat
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3815bpc39.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3817cp6u.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3816cp6u.dat</textarea></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="sec-head" onclick="tog(this)">Units</div>
+                <div class="sec-body">
+                    <div class="row"><label>Vehicle</label><textarea id="tVeh">0 // CYCLE
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 65634.dat
+1 16 0 -20 0 1 0 0 0 1 0 0 0 1 30187c03.dat
+1 15 0 -40 -10 1 0 0 0 1 0 0 0 1 13760.dat</textarea></div>
+                    <div class="row"><label>Defenders</label><textarea id="tDef">0 // DEFENDER
+1 16 0 -84 0 1 0 0 0 1 0 0 0 1 3626bpaa.dat
+1 16 0 -60 0 1 0 0 0 1 0 0 0 1 76382p1y.dat
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3815bpba.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3817cp6u.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3816cp6u.dat</textarea></div>
+                    <div class="row"><label>Invaders</label><textarea id="tInv">0 // INVADER
+1 16 0 -84 0 1 0 0 0 1 0 0 0 1 3626bp56.dat
+1 16 0 -60 0 1 0 0 0 1 0 0 0 1 76382p0h.dat
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3815bpy0.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3817cpa3.dat
+1 16 0 -16 0 1 0 0 0 1 0 0 0 1 3816cpa3.dat</textarea></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="sec-head" onclick="tog(this)">Scatter</div>
+                <div class="sec-body">
+                    <div class="row"><label>Scatter MPD (Production Set)</label><textarea id="tScat"
+                            placeholder="Paste full MPD here..."></textarea></div>
+                    <div class="row"><label>Density</label><input id="den" value="0.5"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="sec-head" onclick="tog(this)">Instructions</div>
+                <div class="sec-body">
+                    <p style="font-size:10px; color:#aaa; margin-bottom:8px">1. Click <b>Copy</b> below.<br>2. Go to <a
+                            href="https://hartswf0.github.io/tractor-dce-gyo/grecian-urn.html" target="_blank"
+                            style="color:#ffd700">Grecian Urn</a>.<br>3. Paste into the text area.<br>4. Click <b>Update
+                            Scene</b>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-panel">
+            <div class="tabs">
+                <div class="tab active" id="tabS" onclick="sw('S')">Small</div>
+                <div class="tab" id="tabM" onclick="sw('M')">Medium</div>
+                <div class="tab" id="tabL" onclick="sw('L')">Large</div>
+            </div>
+            <textarea id="out" class="out" readonly></textarea>
+            <div class="toolbar"><span id="stat" style="font-size:10px; color:#555; margin-right:auto"></span><button
+                    class="sec" onclick="cp()">Copy</button><button class="sec" onclick="dl()">Download</button></div>
+        </div>
+    </main>
+
+    <script>
+        // MATRIX MATH
+        const IDENT = [1, 0, 0, 0, 1, 0, 0, 0, 1];
+        const R_Y90 = [0, 0, -1, 0, 1, 0, 1, 0, 0];
+        const R_Y180 = [-1, 0, 0, 0, 1, 0, 0, 0, -1];
+        const R_Y270 = [0, 0, 1, 0, 1, 0, -1, 0, 0];
+
+        function matMul(pA, mA, pB, mB) {
+            // A = Parent, B = Child
+            // Pos = pA + mA * pB
+            const x = pA[0] + mA[0] * pB[0] + mA[1] * pB[1] + mA[2] * pB[2];
+            const y = pA[1] + mA[3] * pB[0] + mA[4] * pB[1] + mA[5] * pB[2];
+            const z = pA[2] + mA[6] * pB[0] + mA[7] * pB[1] + mA[8] * pB[2];
+            // Rot = mA * mB
+            const r = [
+                mA[0] * mB[0] + mA[1] * mB[3] + mA[2] * mB[6],
+                mA[0] * mB[1] + mA[1] * mB[4] + mA[2] * mB[7],
+                mA[0] * mB[2] + mA[1] * mB[5] + mA[2] * mB[8],
+
+                mA[3] * mB[0] + mA[4] * mB[3] + mA[5] * mB[6],
+                mA[3] * mB[1] + mA[4] * mB[4] + mA[5] * mB[7],
+                mA[3] * mB[2] + mA[4] * mB[5] + mA[5] * mB[8],
+
+                mA[6] * mB[0] + mA[7] * mB[3] + mA[8] * mB[6],
+                mA[6] * mB[1] + mA[7] * mB[4] + mA[8] * mB[7],
+                mA[6] * mB[2] + mA[7] * mB[5] + mA[8] * mB[8]
+            ];
+            return { p: [x, y, z], m: r };
+        }
+
+        function parseRotStr(str) { return str.trim().split(/\s+/).map(Number); }
+        function extractParts(txt) {
+            // Returns array of part objects {c, x,y,z, m:[], file}
+            let res = [];
+            if (!txt) return res;
+            txt.split('\n').forEach(l => {
+                l = l.trim();
+                if (l.startsWith('1 ')) {
+                    const t = l.split(/\s+/);
+                    if (t.length >= 15) {
+                        res.push({
+                            c: t[1],
+                            x: parseFloat(t[2]), y: parseFloat(t[3]), z: parseFloat(t[4]),
+                            m: [parseFloat(t[5]), parseFloat(t[6]), parseFloat(t[7]),
+                            parseFloat(t[8]), parseFloat(t[9]), parseFloat(t[10]),
+                            parseFloat(t[11]), parseFloat(t[12]), parseFloat(t[13])],
+                            f: t[14]
+                        });
+                    }
+                }
+            });
+            return res;
+        }
+
+        function findScatter(txt) {
+            // Heuristic: Looks for "0 // PROP ..." then grabs the part on subsequent lines
+            let items = [];
+            if (!txt) return items;
+            const lines = txt.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].match(/^0 \/\/ (PROP|TREE|CONTAINER)/)) {
+                    // grab next valid part
+                    for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
+                        if (lines[j].trim().startsWith('1 ')) {
+                            items.push(extractParts(lines[j])[0]);
+                            break;
+                        }
+                    }
+                }
+            }
+            return items;
+        }
+
+        // MAIN BUILDER
+        const STUD = 20, BRICK = 24;
+        class Arch {
+            constructor() {
+                this.out = []; // Lines
+            }
+
+            // Core addition: flat matrix transform
+            add(color, x, y, z, mat, file) {
+                // Round for clean output
+                const m = mat.map(v => Math.round(v * 10000) / 10000); // 4 decimal prc
+                this.out.push(`1 ${color} ${Math.round(x)} ${Math.round(y)} ${Math.round(z)} ${m.join(' ')} ${file}`);
+            }
+
+            // Inline a complex model
+            addModel(parts, px, py, pz, pMat, overrideColor = null) {
+                if (!parts || parts.length === 0) return;
+                parts.forEach(p => {
+                    const res = matMul([px, py, pz], pMat, [p.x, p.y, p.z], p.m);
+                    this.add(overrideColor || p.c, res.p[0], res.p[1], res.p[2], res.m, p.f);
+                });
+            }
+
+            build(size, wL, tL, cfg) {
+                const scale = Math.floor(size / 32), half = size * STUD / 2, wP = half - 40 * scale, camD = size * STUD * 1.2;
+
+                this.out = [`0 FILE CASTLE_${size}.mpd`, `0 Name: Castle ${size}`, `0 Author: WAG`, `0 !LDRAW_ORG Model`, `0 BFC CERTIFY CCW`, ``,
+                    `0 !MENTO LIGHT "Key" TYPE SUN POS -2000 -3000 2000 INTENSITY 1.2`,
+
+                    `0 // --- CINEMATIC TRACK ---`,
+                `0 !MENTO SHOT "Orbit Front" POS 0 -100 ${camD} TGT 0 -50 0 LENS 50 DURATION 5`,
+                `0 !MENTO SHOT "Orbit Right" POS ${camD} -150 0 TGT 0 -50 0 LENS 50 DURATION 5`,
+                `0 !MENTO SHOT "Orbit Back" POS 0 -200 ${-camD} TGT 0 -50 0 LENS 50 DURATION 5`,
+                `0 !MENTO SHOT "Orbit Left" POS ${-camD} -150 0 TGT 0 -50 0 LENS 50 DURATION 5`,
+                `0 !MENTO SHOT "Swoop In" POS 0 -40 ${wP + 200} TGT 0 -20 0 LENS 35 DURATION 4`,
+                `0 !MENTO SHOT "Gate Keeper" POS 0 -30 ${wP - 50} TGT 0 -45 0 LENS 85 DURATION 4`,
+
+                    `0 STEP`];
+
+                // FLOOR
+                this.out.push('0 // FLOOR');
+                const pC = Math.ceil(size / 32), pS = 32 * STUD;
+                for (let x = 0; x < pC; x++) for (let z = 0; z < pC; z++)
+                    this.add(16, (x - (pC - 1) / 2) * pS, 0, (z - (pC - 1) / 2) * pS, IDENT, "6099p01.dat");
+
+                // TOWERS
+                this.out.push('0 // TOWERS');
+                const ti = half - 60 * scale;
+                [[-ti, -ti], [ti, -ti], [-ti, ti], [ti, ti]].forEach(pos => {
+                    for (let l = 0; l < tL; l++) [[-20, -20], [20, -20], [-20, 20], [20, 20]].forEach(o =>
+                        this.add(7, pos[0] + o[0], -l * BRICK, pos[1] + o[1], IDENT, "3003.dat"));
+                });
+
+                // WALLS
+                this.out.push('0 // WALLS');
+                const sp = 80;
+                for (let l = 0; l < wL; l++) {
+                    const y = -l * BRICK;
+                    for (let x = -wP + sp; x < wP - sp / 2; x += sp) this.add(7, x, y, -wP, IDENT, "3001.dat"); // N
+                    for (let x = -wP + sp; x < wP - sp / 2; x += sp) if (Math.abs(x) > 60) this.add(7, x, y, wP, IDENT, "3001.dat"); // S
+                    for (let z = -wP + sp; z < wP - sp / 2; z += sp) {
+                        this.add(7, wP, y, z, R_Y90, "3001.dat");
+                        this.add(7, -wP, y, z, R_Y90, "3001.dat");
+                    }
+                }
+
+                // GATE
+                this.out.push('0 // GATE');
+                this.addModel(cfg.gate, 0, 0, wP, IDENT);
+
+                // UNITS
+                this.out.push('0 // UNITS');
+                // Gatekeeper
+                this.addModel(cfg.gk, 0, 0, wP - 50, R_Y180);
+
+                // Defenders
+                const wTop = -wL * BRICK;
+                [-120, -40, 40, 120].forEach(x => {
+                    if (Math.abs(x) < wP) this.addModel(cfg.def, x, wTop, -wP, R_Y180, 16 /*DefColor*/);
+                });
+
+                // Invaders
+                [[-60, 100], [0, 120], [60, 100]].forEach(p => this.addModel(cfg.inv, p[0], 0, wP + p[1], IDENT, 4 /*Red*/));
+
+                // Vehicle
+                if (cfg.veh.length) {
+                    this.addModel(cfg.veh, -120, 0, wP + 160, R_Y180);
+                    if (scale >= 2) this.addModel(cfg.veh, 120, 0, wP + 160, R_Y180);
+                }
+
+                // SCATTER
+                this.out.push('0 // SCATTER');
+                if (cfg.scat.length) {
+                    const inner = wP - 80, dens = document.getElementById('den').value;
+                    const count = Math.floor((inner * 2) ** 2 / 25000 * dens);
+                    for (let i = 0; i < count; i++) {
+                        const x = -inner + Math.random() * inner * 2;
+                        const z = -inner + Math.random() * inner * 2;
+                        if (Math.abs(x) > 50 || z < wP - 100) {
+                            const prop = cfg.scat[Math.floor(Math.random() * cfg.scat.length)];
+                            const rot = [IDENT, R_Y90, R_Y180, R_Y270][Math.floor(Math.random() * 4)];
+                            // Just add single part prop
+                            this.addModel([prop], x, 0, z, rot);
+                        }
+                    }
+                }
+
+                this.out.push("0 NOFILE");
+                return this.out.join('\n');
+            }
+        }
+
+        // UI
+        let st = { S: '', M: '', L: '' }, cur = 'S';
+        function tog(e) { e.nextElementSibling.classList.toggle('active'); }
+        function sw(t) { cur = t;['S', 'M', 'L'].forEach(x => document.getElementById('tab' + x).classList.toggle('active', x === t)); up(); }
+        function up() { document.getElementById('out').value = st[cur]; }
+        function cp() { document.getElementById('out').select(); document.execCommand('copy'); document.getElementById('stat').innerText = 'Copied!'; }
+        function dl() {
+            const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([st[cur]], { type: 'text/plain' }));
+            a.download = `CASTLE_${cur}.mpd`; a.click();
+        }
+
+        function gen() {
+            const arch = new Arch();
+            const cfg = {
+                gate: extractParts(document.getElementById('tGate').value),
+                gk: extractParts(document.getElementById('tGK').value),
+                veh: extractParts(document.getElementById('tVeh').value),
+                def: extractParts(document.getElementById('tDef').value),
+                inv: extractParts(document.getElementById('tInv').value),
+                scat: findScatter(document.getElementById('tScat').value)
+            };
+            const wL = parseInt(document.getElementById('wL').value) || 5;
+
+            st.S = arch.build(parseInt(document.getElementById('szS').value), wL, wL + 3, cfg);
+            st.M = arch.build(parseInt(document.getElementById('szM').value), wL + 1, wL + 4, cfg);
+            st.L = arch.build(parseInt(document.getElementById('szL').value), wL + 2, wL + 5, cfg);
+
+            up();
+            document.getElementById('stat').innerText = 'Generated ' + new Date().toLocaleTimeString();
+        }
+
+        window.onload = gen;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+{
+  "filename": "wag_gold_scene_1_2025-12-13_17-52-54.png",
+  "scene": "Scene 1",
+  "date": "2025-12-13",
+  "time": "17-52-54",
+  "timestamp": "2025-12-13T22:52:54.814Z",
+  "aspect_ratio": "4:3",
+  "resolution": "1600x1200",
+  "line_count": 177,
+  "locked_lines": [],
+  "theme": "dark",
+  "diagnostics": {
+    "grid": true,
+    "axes": true,
+    "flipY": false,
+    "wireframe": false,
+    "showEdges": true,
+    "backfaceCull": false,
+    "skeletonOnly": false,
+    "studNormal": false,
+    "studProblem": false,
+    "studGhost": false
+  },
+  "camera": null,
+  "errors": 0,
+  "mpd_content": "0 FILE pond_council_operation_lily_shield_v2.mpd\n0 Name: Pond Council - Operation Lily Shield (v2)\n0 Author: Grace Balanced Architect (compiled)\n0 !LDRAW_ORG Model\n0 !LICENCE Redistributable under CCAL version 2.0\n0 BFC CERTIFY CCW\n\n0 // ============================================================\n0 // ENVIRONMENT :: POND + FOREST ENCLOSURE\n0 // ============================================================\n \n0 STEP\n0 // POND CORE (Axis Mundi)\n1 16 0 0 200 1 0 0 0 1 0 0 0 1 59278.dat\n\n0 // FOREST WALLS (varied silhouettes; implied depth)\n1 16 -420 0 20 1 0 0 0 1 0 0 0 1 u9119.dat\n1 16  420 0 20 1 0 0 0 1 0 0 0 1 u9213p01s01.dat\n1 16 -360 0 420 1 0 0 0 1 0 0 0 1 52211.dat\n1 16  360 0 420 1 0 0 0 1 0 0 0 1 3470.dat\n1 16 -520 0 260 1 0 0 0 1 0 0 0 1 30339s01.dat\n1 16  520 0 300 1 0 0 0 1 0 0 0 1 2566bs01.dat\n\n0 // UNDERGROWTH (shore hints; keep it sparse)\n1 16 -120 0 360 1 0 0 0 1 0 0 0 1 6064b.dat\n1 16  120 0 360 1 0 0 0 1 0 0 0 1 6065.dat\n1 16 -240 0 300 1 0 0 0 1 0 0 0 1 6064bs01.dat\n1 16  240 0 320 1 0 0 0 1 0 0 0 1 2435.dat\n\n\n0 // ============================================================\n0 // SOUTHEAST SHORE :: WAR TABLE + BROADCAST ORACLE + TOKENS\n0 // ============================================================\n\n0 STEP\n0 // WAR TABLE (briefing platform)\n1 16 240 0 260 1 0 0 0 1 0 0 0 1 4237.dat\n\n0 // BROADCAST ORACLE (totem + screen)\n1 16 300 0 240 1 0 0 0 1 0 0 0 1 35700.dat\n1 16 320 0 240 1 0 0 0 1 0 0 0 1 2039.dat\n1 16 300 60 240 1 0 0 0 1 0 0 0 1 11293s01.dat\n\n0 // STRATEGY TOKENS (fleet miniatures staged as abstractions)\n0 // TOKEN: CAR (ground maneuver)\n1 16 220 120 240 1 0 0 0 1 0 0 0 1 3385.dat\n1 16 220 160 200 1 0 0 0 1 0 0 0 1 103918p01.dat\n1 16 220 100 240 1 0 0 0 1 0 0 0 1 244c01.dat\n1 16 220 140 300 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 // TOKEN: TRAIN (logistics / supply line)\n1 16 280 120 300 1 0 0 0 1 0 0 0 1 280c01.dat\n1 16 280 160 260 1 0 0 0 1 0 0 0 1 4866d01.dat\n1 16 280 100 300 1 0 0 0 1 0 0 0 1 285c01.dat\n1 16 280 140 360 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 // TOKEN: BOAT (naval power projection)\n1 16 340 120 220 1 0 0 0 1 0 0 0 1 59278.dat\n1 16 340 160 180 1 0 0 0 1 0 0 0 1 6070d50.dat\n1 16 340 130 140 1 0 0 0 1 0 0 0 1 3001.dat\n1 16 340 140 280 1 0 0 0 1 0 0 0 1 4229.dat\n\n0 // TOKEN: PLANE (air campaign / ISR / “shock & awe” abstraction)\n1 16 360 200 280 1 0 0 0 1 0 0 0 1 4864ad04.dat\n1 16 360 240 240 1 0 0 0 1 0 0 0 1 76796p01.dat\n1 16 360 220 280 1 0 0 0 1 0 0 0 1 6041468k.dat\n1 16 360 210 200 1 0 0 0 1 0 0 0 1 3001.dat\n1 16 360 250 360 1 0 0 0 1 0 0 0 1 3001.dat\n1 16 360 220 340 1 0 0 0 1 0 0 0 1 4868b.dat\n\n\n0 // ============================================================\n0 // COUNCIL RING (8 “animals” in diplomatic drag)\n0 // All minifigs lifted +100Y vs source to sit above ground.\n0 // ============================================================\n\n0 STEP\n0 // Council Member 1 @ (0,80)\n1 4 0 16 80 1 0 0 0 1 0 0 0 1 parts/100662.dat\n1 4 0 40 80 1 0 0 0 1 0 0 0 1 parts/10677.dat\n1 4 -15.552 49 80 1 0 0 0 1 0 0 0 1 parts/10058.dat\n1 4 15.552 49 80 1 0 0 0 1 0 0 0 1 parts/10058.dat\n1 4 0 72 80 1 0 0 0 1 0 0 0 1 parts/10679b.dat\n\n0 // Council Member 2 @ (160,200)\n1 2 160 16 200 1 0 0 0 1 0 0 0 1 parts/100662p01.dat\n1 2 160 40 200 1 0 0 0 1 0 0 0 1 parts/11938.dat\n1 2 144.448 49 200 1 0 0 0 1 0 0 0 1 parts/10303.dat\n1 2 175.552 49 200 1 0 0 0 1 0 0 0 1 parts/10303.dat\n1 2 160 72 200 1 0 0 0 1 0 0 0 1 parts/10679bp01.dat\n\n0 // Council Member 3 @ (0,320)\n1 1 0 16 320 1 0 0 0 1 0 0 0 1 parts/10756.dat\n1 1 0 16 320 1 0 0 0 1 0 0 0 1 parts/10113.dat\n1 1 0 40 320 1 0 0 0 1 0 0 0 1 parts/11938pde4.dat\n1 1 -15.552 49 320 1 0 0 0 1 0 0 0 1 parts/11097.dat\n1 1 15.552 49 320 1 0 0 0 1 0 0 0 1 parts/11097.dat\n1 1 0 72 320 1 0 0 0 1 0 0 0 1 parts/15.dat\n\n0 // Council Member 4 @ (-160,200)\n1 14 -160 16 200 1 0 0 0 1 0 0 0 1 parts/12607.dat\n1 14 -160 16 200 1 0 0 0 1 0 0 0 1 parts/10164.dat\n1 14 -160 40 200 1 0 0 0 1 0 0 0 1 parts/12896.dat\n1 14 -160 72 200 1 0 0 0 1 0 0 0 1 parts/16709.dat\n\n0 // Council Member 5 @ (120,140)\n1 6 120 16 140 1 0 0 0 1 0 0 0 1 parts/13195.dat\n1 6 120 16 140 1 0 0 0 1 0 0 0 1 parts/10164p01.dat\n1 6 120 40 140 1 0 0 0 1 0 0 0 1 parts/12896p01.dat\n1 6 120 72 140 1 0 0 0 1 0 0 0 1 parts/16709p01.dat\n\n0 // Council Member 6 @ (120,260)\n1 3 120 16 260 1 0 0 0 1 0 0 0 1 parts/13195p01.dat\n1 3 120 16 260 1 0 0 0 1 0 0 0 1 parts/11262.dat\n1 3 120 40 260 1 0 0 0 1 0 0 0 1 parts/16360.dat\n1 3 120 72 260 1 0 0 0 1 0 0 0 1 parts/16709p02.dat\n\n0 // Council Member 7 @ (-120,260)\n1 5 -120 36 260 1 0 0 0 1 0 0 0 1 parts/13809.dat\n1 5 -120 16 260 1 0 0 0 1 0 0 0 1 parts/11262p01.dat\n1 5 -120 40 260 1 0 0 0 1 0 0 0 1 parts/16360p01.dat\n1 5 -120 72 260 1 0 0 0 1 0 0 0 1 parts/16709p03.dat\n\n0 // Council Member 8 @ (-120,140)\n1 7 -120 36 140 1 0 0 0 1 0 0 0 1 parts/13809p01.dat\n1 7 -120 16 140 1 0 0 0 1 0 0 0 1 parts/11303c01.dat\n1 7 -120 40 140 1 0 0 0 1 0 0 0 1 parts/16360p2t.dat\n1 7 -120 72 140 1 0 0 0 1 0 0 0 1 parts/16709p0b.dat\n\n\n0 // ============================================================\n0 // GALLERY / FOREST PUBLIC (7 watchers as reed-clusters)\n0 // ============================================================\n\n0 STEP\n0 // Gallery Member 9 @ (-240,360)\n1 9 -240 16 360 1 0 0 0 1 0 0 0 1 parts/13809p02.dat\n1 9 -240 16 360 1 0 0 0 1 0 0 0 1 parts/11418.dat\n1 9 -240 40 360 1 0 0 0 1 0 0 0 1 parts/16360p5i.dat\n1 9 -240 72 360 1 0 0 0 1 0 0 0 1 parts/16709p0c.dat\n\n0 // Gallery Member 10 @ (-80,400)\n1 10 -80 36 400 1 0 0 0 1 0 0 0 1 parts/13809p03.dat\n1 10 -80 16 400 1 0 0 0 1 0 0 0 1 parts/14045.dat\n1 10 -80 40 400 1 0 0 0 1 0 0 0 1 parts/16360p5l.dat\n1 10 -80 72 400 1 0 0 0 1 0 0 0 1 parts/16709p0d.dat\n\n0 // Gallery Member 11 @ (80,400)\n1 4 80 36 400 1 0 0 0 1 0 0 0 1 parts/15522.dat\n1 4 80 16 400 1 0 0 0 1 0 0 0 1 parts/15553.dat\n1 4 80 40 400 1 0 0 0 1 0 0 0 1 parts/16360p87.dat\n1 4 80 72 400 1 0 0 0 1 0 0 0 1 parts/16709p0e.dat\n\n0 // Gallery Member 12 @ (240,360)\n1 2 240 36 360 1 0 0 0 1 0 0 0 1 parts/15522p01.dat\n1 2 240 16 360 1 0 0 0 1 0 0 0 1 parts/15553p01.dat\n1 2 240 40 360 1 0 0 0 1 0 0 0 1 parts/16360pckc.dat\n1 2 240 72 360 1 0 0 0 1 0 0 0 1 parts/16709p0f.dat\n\n0 // Gallery Member 13 @ (-260,120)\n1 1 -260 36 120 1 0 0 0 1 0 0 0 1 parts/15522p02.dat\n1 1 -260 16 120 1 0 0 0 1 0 0 0 1 parts/17351.dat\n1 1 -260 40 120 1 0 0 0 1 0 0 0 1 parts/16360pd11.dat\n1 1 -260 72 120 1 0 0 0 1 0 0 0 1 parts/16709p0g.dat\n\n0 // Gallery Member 14 @ (-220,40)\n1 14 -220 36 40 1 0 0 0 1 0 0 0 1 parts/15523.dat\n1 14 -220 16 40 1 0 0 0 1 0 0 0 1 parts/17351p01.dat\n1 14 -220 40 40 1 0 0 0 1 0 0 0 1 parts/16360pd12.dat\n1 14 -220 72 40 1 0 0 0 1 0 0 0 1 parts/16709p0i.dat\n\n0 // Gallery Member 15 @ (220,40)\n1 6 220 36 40 1 0 0 0 1 0 0 0 1 parts/15523p01.dat\n1 6 220 16 40 1 0 0 0 1 0 0 0 1 parts/19730.dat\n1 6 220 40 40 1 0 0 0 1 0 0 0 1 parts/16360pd1d.dat\n1 6 220 72 40 1 0 0 0 1 0 0 0 1 parts/16709p0j.dat\n",
+  "stud_skeleton": null,
+  "stud_skeleton_v2": null,
+  "grid_spec": {
+    "cellLDU": 20,
+    "layerHeightLDU": 8,
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "axis": {
+      "right": "x",
+      "up": "y",
+      "forward": "-z"
+    }
+  },
+  "ground_violations": [],
+  "part_skeletons": null,
+  "_skeleton_pathology_report": {
+    "detected_at": "2025-12-13T22:52:54.817Z",
+    "corrected_by": "Courage Stud Skeleton Export v1.0",
+    "severity": "CRITICAL",
+    "original_distribution": {
+      "distinct_lines": 1,
+      "top_line": 13,
+      "top_count": 7331,
+      "top_percentage": 100,
+      "histogram": {
+        "13": 7331
+      }
+    },
+    "corrected_distribution": {
+      "distinct_lines": 40,
+      "top_line": 17,
+      "top_count": 1927,
+      "top_percentage": 26.3,
+      "histogram": {
+        "13": 76,
+        "16": 280,
+        "17": 1927,
+        "19": 169,
+        "21": 118,
+        "24": 43,
+        "25": 45,
+        "27": 76,
+        "36": 62,
+        "39": 41,
+        "40": 119,
+        "59": 29,
+        "78": 455,
+        "85": 56,
+        "92": 70,
+        "94": 5,
+        "95": 8,
+        "96": 7,
+        "100": 30,
+        "106": 78,
+        "112": 54,
+        "114": 1,
+        "119": 55,
+        "120": 1,
+        "125": 68,
+        "142": 45,
+        "143": 57,
+        "144": 11,
+        "148": 39,
+        "149": 47,
+        "150": 9,
+        "155": 29,
+        "166": 52,
+        "167": 1072,
+        "168": 25,
+        "169": 60,
+        "172": 30,
+        "173": 1897,
+        "174": 53,
+        "175": 32
+      }
+    },
+    "correction_method": "spatial_proximity_3d_euclidean",
+    "correction_parameters": {
+      "algorithm": "nearest_neighbor_by_world_position",
+      "distance_metric": "euclidean_3d"
+    },
+    "mpd_lines_count": 97,
+    "part_lines_count": 97,
+    "recommendation": "Regenerate from source using per-line stud sampler (Courage v9+) for canonical skeleton"
+  }
+}

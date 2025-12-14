@@ -1477,22 +1477,25 @@
         // Discover scenes
         async function discoverScenes() {
             const baseUrl = window.location.href.replace(/\/[^\/]*$/, '/');
+            console.log('🔍 [Discovery] Base URL:', baseUrl);
 
             try {
                 let jsonFiles = [];
 
                 // Try manifest first (GitHub Pages compatible)
                 try {
+                    console.log('🔍 [Discovery] Attempting to load manifest: scenes_manifest.json');
                     const manifestResponse = await fetch(baseUrl + 'scenes_manifest.json');
                     if (manifestResponse.ok) {
                         jsonFiles = await manifestResponse.json();
-                        console.log('Loaded scenes from manifest');
+                        console.log('✅ [Discovery] Loaded scenes from manifest:', jsonFiles.length, 'files');
                     } else {
-                        throw new Error('No manifest');
+                        throw new Error('No manifest (status ' + manifestResponse.status + ')');
                     }
                 } catch (e) {
                     // Fallback to directory scraping (Localhost compatible)
-                    console.log('Manifest not found, falling back to directory scraping');
+                    console.warn('⚠️ [Discovery] Manifest load failed:', e.message);
+                    console.log('🔍 [Discovery] Falling back to directory scraping...');
                     const response = await fetch(baseUrl);
                     const html = await response.text();
                     const parser = new DOMParser();
@@ -1507,6 +1510,7 @@
                             }
                         }
                     });
+                    console.log('✅ [Discovery] Scraped', jsonFiles.length, 'files from directory');
                 }
 
                 // Sort just in case the manifest isn't sorted
@@ -1514,21 +1518,28 @@
 
                 for (const file of jsonFiles) {
                     try {
-                        const jsonResponse = await fetch(baseUrl + file);
+                        const jsonPath = baseUrl + file;
+                        const jsonResponse = await fetch(jsonPath);
+
+                        if (!jsonResponse.ok) {
+                            console.warn(`❌ [Load] Failed to fetch JSON: ${jsonPath} (Status: ${jsonResponse.status})`);
+                            continue;
+                        }
+
                         const data = await jsonResponse.json();
 
                         // Check if corresponding PNG exists
                         const pngPath = baseUrl + file.replace('.json', '.png');
 
-                        // Optimization: Don't HEAD check on GH Pages to save requests, assume manifest is accurate.
-                        // On localhost it's fast.
+                        // console.log(`🔹 [Load] Loaded: ${file}`);
+                        // console.log(`   --> Expecting image at: ${pngPath}`);
 
                         // Extract Name and Author from MPD content
                         const metadata = extractMpdMetadata(data.mpd_content || '');
 
                         scenes.push({
                             filename: file,
-                            jsonPath: baseUrl + file,
+                            jsonPath: jsonPath,
                             imagePath: pngPath,
                             data: data,
                             name: metadata.name,
@@ -1537,11 +1548,12 @@
                             time: data.time || ''
                         });
                     } catch (e) {
-                        console.warn('Failed to load:', file, e);
+                        console.warn('❌ [Load] Error parsing scene:', file, e);
                     }
                 }
+                console.log('✅ [Discovery] Total scenes ready:', scenes.length);
             } catch (e) {
-                console.warn('Scene discovery failed', e);
+                console.error('❌ [Discovery] Critical failure in discoverScenes:', e);
             }
         }
         // Extract Name and Author from MPD content
